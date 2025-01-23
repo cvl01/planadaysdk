@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**markBookingAsPayed**](BookingApi.md#markbookingaspayed) | **POST** /booking/payed/{booking_id} | Mark booking as payed
 
 # **createBooking**
-> \YellowWave\SwaggerClient\Model\InlineResponse200 createBooking($x_api_key, $course_id, $body)
+> \YellowWave\SwaggerClient\Model\InlineResponse200 createBooking($course_id, $body)
 
 Create booking
 
@@ -30,12 +30,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $course_id = 1.2; // float | ID of the Course to create booking for in the form of an integer
 $body = new \YellowWave\SwaggerClient\Model\BookingCourseIdBody(); // \YellowWave\SwaggerClient\Model\BookingCourseIdBody | 
 
 try {
-    $result = $apiInstance->createBooking($x_api_key, $course_id, $body);
+    $result = $apiInstance->createBooking($course_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingApi->createBooking: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +46,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **course_id** | **float**| ID of the Course to create booking for in the form of an integer |
  **body** | [**\YellowWave\SwaggerClient\Model\BookingCourseIdBody**](../Model/BookingCourseIdBody.md)|  | [optional]
 
@@ -67,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteMadeBooking**
-> \YellowWave\SwaggerClient\Model\InlineResponse2001 deleteMadeBooking($x_api_key, $booking_id, $body)
+> \YellowWave\SwaggerClient\Model\InlineResponse2001 deleteMadeBooking($booking_id, $body)
 
 Delete made booking
 
@@ -88,12 +86,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $booking_id = "booking_id_example"; // string | ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205)
 $body = new \YellowWave\SwaggerClient\Model\BookingBookingIdBody(); // \YellowWave\SwaggerClient\Model\BookingBookingIdBody | 
 
 try {
-    $result = $apiInstance->deleteMadeBooking($x_api_key, $booking_id, $body);
+    $result = $apiInstance->deleteMadeBooking($booking_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingApi->deleteMadeBooking: ', $e->getMessage(), PHP_EOL;
@@ -105,7 +102,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **booking_id** | **string**| ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) |
  **body** | [**\YellowWave\SwaggerClient\Model\BookingBookingIdBody**](../Model/BookingBookingIdBody.md)|  | [optional]
 
@@ -125,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **markBookingAsPayed**
-> \YellowWave\SwaggerClient\Model\InlineResponse2001 markBookingAsPayed($x_api_key, $booking_id, $body)
+> \YellowWave\SwaggerClient\Model\InlineResponse2001 markBookingAsPayed($booking_id, $body)
 
 Mark booking as payed
 
@@ -146,12 +142,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $booking_id = "booking_id_example"; // string | ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205)
 $body = new \YellowWave\SwaggerClient\Model\PayedBookingIdBody(); // \YellowWave\SwaggerClient\Model\PayedBookingIdBody | 
 
 try {
-    $result = $apiInstance->markBookingAsPayed($x_api_key, $booking_id, $body);
+    $result = $apiInstance->markBookingAsPayed($booking_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingApi->markBookingAsPayed: ', $e->getMessage(), PHP_EOL;
@@ -163,7 +158,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **booking_id** | **string**| ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) |
  **body** | [**\YellowWave\SwaggerClient\Model\PayedBookingIdBody**](../Model/PayedBookingIdBody.md)|  | [optional]
 

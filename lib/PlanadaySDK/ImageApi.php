@@ -92,15 +92,14 @@ class ImageApi
      * Get image blob
      *
      * @param  string $image_id ID of the Iamge in the form of an string (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function getImageBlob($image_id, $x_api_key)
+    public function getImageBlob($image_id)
     {
-        $this->getImageBlobWithHttpInfo($image_id, $x_api_key);
+        $this->getImageBlobWithHttpInfo($image_id);
     }
 
     /**
@@ -109,16 +108,15 @@ class ImageApi
      * Get image blob
      *
      * @param  string $image_id ID of the Iamge in the form of an string (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getImageBlobWithHttpInfo($image_id, $x_api_key)
+    public function getImageBlobWithHttpInfo($image_id)
     {
         $returnType = '';
-        $request = $this->getImageBlobRequest($image_id, $x_api_key);
+        $request = $this->getImageBlobRequest($image_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -163,14 +161,13 @@ class ImageApi
      * Get image blob
      *
      * @param  string $image_id ID of the Iamge in the form of an string (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getImageBlobAsync($image_id, $x_api_key)
+    public function getImageBlobAsync($image_id)
     {
-        return $this->getImageBlobAsyncWithHttpInfo($image_id, $x_api_key)
+        return $this->getImageBlobAsyncWithHttpInfo($image_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -184,15 +181,14 @@ class ImageApi
      * Get image blob
      *
      * @param  string $image_id ID of the Iamge in the form of an string (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getImageBlobAsyncWithHttpInfo($image_id, $x_api_key)
+    public function getImageBlobAsyncWithHttpInfo($image_id)
     {
         $returnType = '';
-        $request = $this->getImageBlobRequest($image_id, $x_api_key);
+        $request = $this->getImageBlobRequest($image_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -221,23 +217,16 @@ class ImageApi
      * Create request for operation 'getImageBlob'
      *
      * @param  string $image_id ID of the Iamge in the form of an string (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getImageBlobRequest($image_id, $x_api_key)
+    protected function getImageBlobRequest($image_id)
     {
         // verify the required parameter 'image_id' is set
         if ($image_id === null || (is_array($image_id) && count($image_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $image_id when calling getImageBlob'
-            );
-        }
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling getImageBlob'
             );
         }
 
@@ -248,10 +237,6 @@ class ImageApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($image_id !== null) {

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**viewListOfMaterialsOfCourse**](CourseApi.md#viewlistofmaterialsofcourse) | **GET** /course/{course_id}/materials&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit}&amp;label&#x3D;{label} | View list of materials of Course
 
 # **getAListOfCourses**
-> \YellowWave\SwaggerClient\Model\InlineResponse2002 getAListOfCourses($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
+> \YellowWave\SwaggerClient\Model\InlineResponse2002 getAListOfCourses($start, $end, $templateid, $offset, $limit, $label)
 
 Get a list of courses
 
@@ -38,10 +38,9 @@ $templateid = 1.2; // float | ID of the Coursetemplate to find courses for
 $offset = 1.2; // float | Start offset of courses to show (i.e. 25)
 $limit = 1.2; // float | Amount of courses to show in one response (i.e. 25, limited to 100)
 $label = "label_example"; // string | labels which the course MUST have (see also label API calls)
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $result = $apiInstance->getAListOfCourses($start, $end, $templateid, $offset, $limit, $label, $x_api_key);
+    $result = $apiInstance->getAListOfCourses($start, $end, $templateid, $offset, $limit, $label);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CourseApi->getAListOfCourses: ', $e->getMessage(), PHP_EOL;
@@ -59,7 +58,6 @@ Name | Type | Description  | Notes
  **offset** | **float**| Start offset of courses to show (i.e. 25) |
  **limit** | **float**| Amount of courses to show in one response (i.e. 25, limited to 100) |
  **label** | **string**| labels which the course MUST have (see also label API calls) |
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
 
 ### Return type
 
@@ -77,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **viewCourseDetail**
-> viewCourseDetail($course_id, $x_api_key)
+> viewCourseDetail($course_id)
 
 View Course Detail
 
@@ -99,10 +97,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\CourseApi(
     $config
 );
 $course_id = 1.2; // float | ID of the Course in the form of an integer
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $apiInstance->viewCourseDetail($course_id, $x_api_key);
+    $apiInstance->viewCourseDetail($course_id);
 } catch (Exception $e) {
     echo 'Exception when calling CourseApi->viewCourseDetail: ', $e->getMessage(), PHP_EOL;
 }
@@ -114,7 +111,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **course_id** | **float**| ID of the Course in the form of an integer |
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
 
 ### Return type
 

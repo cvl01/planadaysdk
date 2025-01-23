@@ -91,15 +91,14 @@ class LabelApi
      *
      * Get a list of labels
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function getAListOfLabels($x_api_key)
+    public function getAListOfLabels()
     {
-        $this->getAListOfLabelsWithHttpInfo($x_api_key);
+        $this->getAListOfLabelsWithHttpInfo();
     }
 
     /**
@@ -107,16 +106,15 @@ class LabelApi
      *
      * Get a list of labels
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfLabelsWithHttpInfo($x_api_key)
+    public function getAListOfLabelsWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->getAListOfLabelsRequest($x_api_key);
+        $request = $this->getAListOfLabelsRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -160,14 +158,13 @@ class LabelApi
      *
      * Get a list of labels
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfLabelsAsync($x_api_key)
+    public function getAListOfLabelsAsync()
     {
-        return $this->getAListOfLabelsAsyncWithHttpInfo($x_api_key)
+        return $this->getAListOfLabelsAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -180,15 +177,14 @@ class LabelApi
      *
      * Get a list of labels
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfLabelsAsyncWithHttpInfo($x_api_key)
+    public function getAListOfLabelsAsyncWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->getAListOfLabelsRequest($x_api_key);
+        $request = $this->getAListOfLabelsRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -216,19 +212,12 @@ class LabelApi
     /**
      * Create request for operation 'getAListOfLabels'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfLabelsRequest($x_api_key)
+    protected function getAListOfLabelsRequest()
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling getAListOfLabels'
-            );
-        }
 
         $resourcePath = '/label/list';
         $formParams = [];
@@ -237,10 +226,6 @@ class LabelApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
 
         // body params

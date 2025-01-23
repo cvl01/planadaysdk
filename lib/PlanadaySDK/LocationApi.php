@@ -92,15 +92,14 @@ class LocationApi
      * View Location Detail
      *
      * @param  float $location_id ID of the Location in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \YellowWave\SwaggerClient\Model\InlineResponse2006
      */
-    public function viewLocationDetail($location_id, $x_api_key)
+    public function viewLocationDetail($location_id)
     {
-        list($response) = $this->viewLocationDetailWithHttpInfo($location_id, $x_api_key);
+        list($response) = $this->viewLocationDetailWithHttpInfo($location_id);
         return $response;
     }
 
@@ -110,16 +109,15 @@ class LocationApi
      * View Location Detail
      *
      * @param  float $location_id ID of the Location in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
-    public function viewLocationDetailWithHttpInfo($location_id, $x_api_key)
+    public function viewLocationDetailWithHttpInfo($location_id)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2006';
-        $request = $this->viewLocationDetailRequest($location_id, $x_api_key);
+        $request = $this->viewLocationDetailRequest($location_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -186,14 +184,13 @@ class LocationApi
      * View Location Detail
      *
      * @param  float $location_id ID of the Location in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function viewLocationDetailAsync($location_id, $x_api_key)
+    public function viewLocationDetailAsync($location_id)
     {
-        return $this->viewLocationDetailAsyncWithHttpInfo($location_id, $x_api_key)
+        return $this->viewLocationDetailAsyncWithHttpInfo($location_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -207,15 +204,14 @@ class LocationApi
      * View Location Detail
      *
      * @param  float $location_id ID of the Location in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function viewLocationDetailAsyncWithHttpInfo($location_id, $x_api_key)
+    public function viewLocationDetailAsyncWithHttpInfo($location_id)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2006';
-        $request = $this->viewLocationDetailRequest($location_id, $x_api_key);
+        $request = $this->viewLocationDetailRequest($location_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -258,23 +254,16 @@ class LocationApi
      * Create request for operation 'viewLocationDetail'
      *
      * @param  float $location_id ID of the Location in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function viewLocationDetailRequest($location_id, $x_api_key)
+    protected function viewLocationDetailRequest($location_id)
     {
         // verify the required parameter 'location_id' is set
         if ($location_id === null || (is_array($location_id) && count($location_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $location_id when calling viewLocationDetail'
-            );
-        }
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling viewLocationDetail'
             );
         }
 
@@ -285,10 +274,6 @@ class LocationApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($location_id !== null) {

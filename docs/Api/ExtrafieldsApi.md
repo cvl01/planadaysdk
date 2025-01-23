@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getAListOfExtrafields**](ExtrafieldsApi.md#getalistofextrafields) | **GET** /extrafields/list | Get a list of extrafields
 
 # **getAListOfExtrafields**
-> getAListOfExtrafields($x_api_key)
+> getAListOfExtrafields()
 
 Get a list of extrafields
 
@@ -28,10 +28,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\ExtrafieldsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $apiInstance->getAListOfExtrafields($x_api_key);
+    $apiInstance->getAListOfExtrafields();
 } catch (Exception $e) {
     echo 'Exception when calling ExtrafieldsApi->getAListOfExtrafields: ', $e->getMessage(), PHP_EOL;
 }
@@ -39,10 +38,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
+This endpoint does not need any parameter.
 
 ### Return type
 

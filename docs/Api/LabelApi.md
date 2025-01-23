@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getAListOfLabels**](LabelApi.md#getalistoflabels) | **GET** /label/list | Get a list of labels
 
 # **getAListOfLabels**
-> getAListOfLabels($x_api_key)
+> getAListOfLabels()
 
 Get a list of labels
 
@@ -28,10 +28,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\LabelApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $apiInstance->getAListOfLabels($x_api_key);
+    $apiInstance->getAListOfLabels();
 } catch (Exception $e) {
     echo 'Exception when calling LabelApi->getAListOfLabels: ', $e->getMessage(), PHP_EOL;
 }
@@ -39,10 +38,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
+This endpoint does not need any parameter.
 
 ### Return type
 

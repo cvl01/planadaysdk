@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**viewListOfMaterialsOfADaypart**](DaypartApi.md#viewlistofmaterialsofadaypart) | **GET** /daypart/{daypart_id}/materials&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit}&amp;label&#x3D;{label} | View list of materials of a Daypart
 
 # **viewDaypartDetail**
-> viewDaypartDetail($daypart_id, $x_api_key)
+> viewDaypartDetail($daypart_id)
 
 View Daypart Detail
 
@@ -30,10 +30,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\DaypartApi(
     $config
 );
 $daypart_id = 1.2; // float | ID of the Daypart in the form of an integer
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $apiInstance->viewDaypartDetail($daypart_id, $x_api_key);
+    $apiInstance->viewDaypartDetail($daypart_id);
 } catch (Exception $e) {
     echo 'Exception when calling DaypartApi->viewDaypartDetail: ', $e->getMessage(), PHP_EOL;
 }
@@ -45,7 +44,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **daypart_id** | **float**| ID of the Daypart in the form of an integer |
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
 
 ### Return type
 

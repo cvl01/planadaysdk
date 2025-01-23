@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**viewListOfInstructors**](InstructorApi.md#viewlistofinstructors) | **GET** /instructor/list/offset&#x3D;{offset}&amp;limit&#x3D;{limit}&amp;label&#x3D;{label} | View list of instructors
 
 # **addplanAnInstructorToASpecificDaypart**
-> addplanAnInstructorToASpecificDaypart($x_api_key, $instructor_id, $body)
+> addplanAnInstructorToASpecificDaypart($instructor_id, $body)
 
 Add/plan an instructor to a specific daypart
 
@@ -32,12 +32,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $instructor_id = 1.2; // float | ID of the instructor in the form of an integer
 $body = new \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody(); // \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody | 
 
 try {
-    $apiInstance->addplanAnInstructorToASpecificDaypart($x_api_key, $instructor_id, $body);
+    $apiInstance->addplanAnInstructorToASpecificDaypart($instructor_id, $body);
 } catch (Exception $e) {
     echo 'Exception when calling InstructorApi->addplanAnInstructorToASpecificDaypart: ', $e->getMessage(), PHP_EOL;
 }
@@ -48,7 +47,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **instructor_id** | **float**| ID of the instructor in the form of an integer |
  **body** | [**\YellowWave\SwaggerClient\Model\InstructorIdDaypartBody**](../Model/InstructorIdDaypartBody.md)|  | [optional]
 
@@ -68,7 +66,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **addplanAnInstructorToAllDaypartsInASpecificCourse**
-> addplanAnInstructorToAllDaypartsInASpecificCourse($x_api_key, $instructor_id, $body)
+> addplanAnInstructorToAllDaypartsInASpecificCourse($instructor_id, $body)
 
 Add/plan an instructor to all dayparts in a specific course
 
@@ -89,12 +87,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $instructor_id = 1.2; // float | ID of the instructor in the form of an integer
 $body = new \YellowWave\SwaggerClient\Model\InstructorIdCourseBody(); // \YellowWave\SwaggerClient\Model\InstructorIdCourseBody | 
 
 try {
-    $apiInstance->addplanAnInstructorToAllDaypartsInASpecificCourse($x_api_key, $instructor_id, $body);
+    $apiInstance->addplanAnInstructorToAllDaypartsInASpecificCourse($instructor_id, $body);
 } catch (Exception $e) {
     echo 'Exception when calling InstructorApi->addplanAnInstructorToAllDaypartsInASpecificCourse: ', $e->getMessage(), PHP_EOL;
 }
@@ -105,7 +102,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **instructor_id** | **float**| ID of the instructor in the form of an integer |
  **body** | [**\YellowWave\SwaggerClient\Model\InstructorIdCourseBody**](../Model/InstructorIdCourseBody.md)|  | [optional]
 
@@ -125,7 +121,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **removeunplanAnInstructorFromASpecificDaypart**
-> removeunplanAnInstructorFromASpecificDaypart($x_api_key, $instructor_id, $body)
+> removeunplanAnInstructorFromASpecificDaypart($instructor_id, $body)
 
 Remove/unplan an instructor from a specific daypart
 
@@ -146,12 +142,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $instructor_id = 1.2; // float | ID of the instructor in the form of an integer
 $body = new \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1(); // \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 | 
 
 try {
-    $apiInstance->removeunplanAnInstructorFromASpecificDaypart($x_api_key, $instructor_id, $body);
+    $apiInstance->removeunplanAnInstructorFromASpecificDaypart($instructor_id, $body);
 } catch (Exception $e) {
     echo 'Exception when calling InstructorApi->removeunplanAnInstructorFromASpecificDaypart: ', $e->getMessage(), PHP_EOL;
 }
@@ -162,7 +157,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **instructor_id** | **float**| ID of the instructor in the form of an integer |
  **body** | [**\YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1**](../Model/InstructorIdDaypartBody1.md)|  | [optional]
 
@@ -182,7 +176,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **removeunplanAnInstructorFromAllDaypartsInASpecificCourse**
-> removeunplanAnInstructorFromAllDaypartsInASpecificCourse($x_api_key, $instructor_id, $body)
+> removeunplanAnInstructorFromAllDaypartsInASpecificCourse($instructor_id, $body)
 
 Remove/unplan an instructor from all dayparts in a specific course
 
@@ -203,12 +197,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $instructor_id = 1.2; // float | ID of the instructor in the form of an integer
 $body = new \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1(); // \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 | 
 
 try {
-    $apiInstance->removeunplanAnInstructorFromAllDaypartsInASpecificCourse($x_api_key, $instructor_id, $body);
+    $apiInstance->removeunplanAnInstructorFromAllDaypartsInASpecificCourse($instructor_id, $body);
 } catch (Exception $e) {
     echo 'Exception when calling InstructorApi->removeunplanAnInstructorFromAllDaypartsInASpecificCourse: ', $e->getMessage(), PHP_EOL;
 }
@@ -219,7 +212,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **instructor_id** | **float**| ID of the instructor in the form of an integer |
  **body** | [**\YellowWave\SwaggerClient\Model\InstructorIdCourseBody1**](../Model/InstructorIdCourseBody1.md)|  | [optional]
 
@@ -239,7 +231,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **viewListOfInstructors**
-> \YellowWave\SwaggerClient\Model\InlineResponse2005 viewListOfInstructors($offset, $limit, $x_api_key)
+> \YellowWave\SwaggerClient\Model\InlineResponse2005 viewListOfInstructors($offset, $limit)
 
 View list of instructors
 
@@ -262,10 +254,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
 );
 $offset = 1.2; // float | Start offset of instructors to show (i.e. 25)
 $limit = 1.2; // float | Amount of instructors to show in one response (i.e. 25, limited to 100)
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $result = $apiInstance->viewListOfInstructors($offset, $limit, $x_api_key);
+    $result = $apiInstance->viewListOfInstructors($offset, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InstructorApi->viewListOfInstructors: ', $e->getMessage(), PHP_EOL;
@@ -279,7 +270,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **offset** | **float**| Start offset of instructors to show (i.e. 25) |
  **limit** | **float**| Amount of instructors to show in one response (i.e. 25, limited to 100) |
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
 
 ### Return type
 

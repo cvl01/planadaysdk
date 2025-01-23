@@ -91,15 +91,14 @@ class ExtrafieldsApi
      *
      * Get a list of extrafields
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function getAListOfExtrafields($x_api_key)
+    public function getAListOfExtrafields()
     {
-        $this->getAListOfExtrafieldsWithHttpInfo($x_api_key);
+        $this->getAListOfExtrafieldsWithHttpInfo();
     }
 
     /**
@@ -107,16 +106,15 @@ class ExtrafieldsApi
      *
      * Get a list of extrafields
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfExtrafieldsWithHttpInfo($x_api_key)
+    public function getAListOfExtrafieldsWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->getAListOfExtrafieldsRequest($x_api_key);
+        $request = $this->getAListOfExtrafieldsRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -160,14 +158,13 @@ class ExtrafieldsApi
      *
      * Get a list of extrafields
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfExtrafieldsAsync($x_api_key)
+    public function getAListOfExtrafieldsAsync()
     {
-        return $this->getAListOfExtrafieldsAsyncWithHttpInfo($x_api_key)
+        return $this->getAListOfExtrafieldsAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -180,15 +177,14 @@ class ExtrafieldsApi
      *
      * Get a list of extrafields
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfExtrafieldsAsyncWithHttpInfo($x_api_key)
+    public function getAListOfExtrafieldsAsyncWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->getAListOfExtrafieldsRequest($x_api_key);
+        $request = $this->getAListOfExtrafieldsRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -216,19 +212,12 @@ class ExtrafieldsApi
     /**
      * Create request for operation 'getAListOfExtrafields'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfExtrafieldsRequest($x_api_key)
+    protected function getAListOfExtrafieldsRequest()
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling getAListOfExtrafields'
-            );
-        }
 
         $resourcePath = '/extrafields/list';
         $formParams = [];
@@ -237,10 +226,6 @@ class ExtrafieldsApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
 
         // body params

@@ -91,7 +91,6 @@ class BookingApi
      *
      * Create booking
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $course_id ID of the Course to create booking for in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingCourseIdBody $body body (optional)
      *
@@ -99,9 +98,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \YellowWave\SwaggerClient\Model\InlineResponse200
      */
-    public function createBooking($x_api_key, $course_id, $body = null)
+    public function createBooking($course_id, $body = null)
     {
-        list($response) = $this->createBookingWithHttpInfo($x_api_key, $course_id, $body);
+        list($response) = $this->createBookingWithHttpInfo($course_id, $body);
         return $response;
     }
 
@@ -110,7 +109,6 @@ class BookingApi
      *
      * Create booking
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $course_id ID of the Course to create booking for in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingCourseIdBody $body (optional)
      *
@@ -118,10 +116,10 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \YellowWave\SwaggerClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createBookingWithHttpInfo($x_api_key, $course_id, $body = null)
+    public function createBookingWithHttpInfo($course_id, $body = null)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse200';
-        $request = $this->createBookingRequest($x_api_key, $course_id, $body);
+        $request = $this->createBookingRequest($course_id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -203,16 +201,15 @@ class BookingApi
      *
      * Create booking
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $course_id ID of the Course to create booking for in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingCourseIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createBookingAsync($x_api_key, $course_id, $body = null)
+    public function createBookingAsync($course_id, $body = null)
     {
-        return $this->createBookingAsyncWithHttpInfo($x_api_key, $course_id, $body)
+        return $this->createBookingAsyncWithHttpInfo($course_id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -225,17 +222,16 @@ class BookingApi
      *
      * Create booking
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $course_id ID of the Course to create booking for in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingCourseIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createBookingAsyncWithHttpInfo($x_api_key, $course_id, $body = null)
+    public function createBookingAsyncWithHttpInfo($course_id, $body = null)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse200';
-        $request = $this->createBookingRequest($x_api_key, $course_id, $body);
+        $request = $this->createBookingRequest($course_id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -277,21 +273,14 @@ class BookingApi
     /**
      * Create request for operation 'createBooking'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $course_id ID of the Course to create booking for in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingCourseIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createBookingRequest($x_api_key, $course_id, $body = null)
+    protected function createBookingRequest($course_id, $body = null)
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling createBooking'
-            );
-        }
         // verify the required parameter 'course_id' is set
         if ($course_id === null || (is_array($course_id) && count($course_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -306,10 +295,6 @@ class BookingApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($course_id !== null) {
@@ -397,7 +382,6 @@ class BookingApi
      *
      * Delete made booking
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingBookingIdBody $body body (optional)
      *
@@ -405,9 +389,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \YellowWave\SwaggerClient\Model\InlineResponse2001
      */
-    public function deleteMadeBooking($x_api_key, $booking_id, $body = null)
+    public function deleteMadeBooking($booking_id, $body = null)
     {
-        list($response) = $this->deleteMadeBookingWithHttpInfo($x_api_key, $booking_id, $body);
+        list($response) = $this->deleteMadeBookingWithHttpInfo($booking_id, $body);
         return $response;
     }
 
@@ -416,7 +400,6 @@ class BookingApi
      *
      * Delete made booking
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingBookingIdBody $body (optional)
      *
@@ -424,10 +407,10 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteMadeBookingWithHttpInfo($x_api_key, $booking_id, $body = null)
+    public function deleteMadeBookingWithHttpInfo($booking_id, $body = null)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2001';
-        $request = $this->deleteMadeBookingRequest($x_api_key, $booking_id, $body);
+        $request = $this->deleteMadeBookingRequest($booking_id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -509,16 +492,15 @@ class BookingApi
      *
      * Delete made booking
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingBookingIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMadeBookingAsync($x_api_key, $booking_id, $body = null)
+    public function deleteMadeBookingAsync($booking_id, $body = null)
     {
-        return $this->deleteMadeBookingAsyncWithHttpInfo($x_api_key, $booking_id, $body)
+        return $this->deleteMadeBookingAsyncWithHttpInfo($booking_id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -531,17 +513,16 @@ class BookingApi
      *
      * Delete made booking
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingBookingIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMadeBookingAsyncWithHttpInfo($x_api_key, $booking_id, $body = null)
+    public function deleteMadeBookingAsyncWithHttpInfo($booking_id, $body = null)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2001';
-        $request = $this->deleteMadeBookingRequest($x_api_key, $booking_id, $body);
+        $request = $this->deleteMadeBookingRequest($booking_id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -583,21 +564,14 @@ class BookingApi
     /**
      * Create request for operation 'deleteMadeBooking'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\BookingBookingIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteMadeBookingRequest($x_api_key, $booking_id, $body = null)
+    protected function deleteMadeBookingRequest($booking_id, $body = null)
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling deleteMadeBooking'
-            );
-        }
         // verify the required parameter 'booking_id' is set
         if ($booking_id === null || (is_array($booking_id) && count($booking_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -612,10 +586,6 @@ class BookingApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($booking_id !== null) {
@@ -703,7 +673,6 @@ class BookingApi
      *
      * Mark booking as payed
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\PayedBookingIdBody $body body (optional)
      *
@@ -711,9 +680,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \YellowWave\SwaggerClient\Model\InlineResponse2001
      */
-    public function markBookingAsPayed($x_api_key, $booking_id, $body = null)
+    public function markBookingAsPayed($booking_id, $body = null)
     {
-        list($response) = $this->markBookingAsPayedWithHttpInfo($x_api_key, $booking_id, $body);
+        list($response) = $this->markBookingAsPayedWithHttpInfo($booking_id, $body);
         return $response;
     }
 
@@ -722,7 +691,6 @@ class BookingApi
      *
      * Mark booking as payed
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\PayedBookingIdBody $body (optional)
      *
@@ -730,10 +698,10 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function markBookingAsPayedWithHttpInfo($x_api_key, $booking_id, $body = null)
+    public function markBookingAsPayedWithHttpInfo($booking_id, $body = null)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2001';
-        $request = $this->markBookingAsPayedRequest($x_api_key, $booking_id, $body);
+        $request = $this->markBookingAsPayedRequest($booking_id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -815,16 +783,15 @@ class BookingApi
      *
      * Mark booking as payed
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\PayedBookingIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function markBookingAsPayedAsync($x_api_key, $booking_id, $body = null)
+    public function markBookingAsPayedAsync($booking_id, $body = null)
     {
-        return $this->markBookingAsPayedAsyncWithHttpInfo($x_api_key, $booking_id, $body)
+        return $this->markBookingAsPayedAsyncWithHttpInfo($booking_id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -837,17 +804,16 @@ class BookingApi
      *
      * Mark booking as payed
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\PayedBookingIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function markBookingAsPayedAsyncWithHttpInfo($x_api_key, $booking_id, $body = null)
+    public function markBookingAsPayedAsyncWithHttpInfo($booking_id, $body = null)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2001';
-        $request = $this->markBookingAsPayedRequest($x_api_key, $booking_id, $body);
+        $request = $this->markBookingAsPayedRequest($booking_id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -889,21 +855,14 @@ class BookingApi
     /**
      * Create request for operation 'markBookingAsPayed'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  string $booking_id ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) (required)
      * @param  \YellowWave\SwaggerClient\Model\PayedBookingIdBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function markBookingAsPayedRequest($x_api_key, $booking_id, $body = null)
+    protected function markBookingAsPayedRequest($booking_id, $body = null)
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling markBookingAsPayed'
-            );
-        }
         // verify the required parameter 'booking_id' is set
         if ($booking_id === null || (is_array($booking_id) && count($booking_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -918,10 +877,6 @@ class BookingApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($booking_id !== null) {

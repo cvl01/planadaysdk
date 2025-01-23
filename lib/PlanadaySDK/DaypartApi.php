@@ -92,15 +92,14 @@ class DaypartApi
      * View Daypart Detail
      *
      * @param  float $daypart_id ID of the Daypart in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function viewDaypartDetail($daypart_id, $x_api_key)
+    public function viewDaypartDetail($daypart_id)
     {
-        $this->viewDaypartDetailWithHttpInfo($daypart_id, $x_api_key);
+        $this->viewDaypartDetailWithHttpInfo($daypart_id);
     }
 
     /**
@@ -109,16 +108,15 @@ class DaypartApi
      * View Daypart Detail
      *
      * @param  float $daypart_id ID of the Daypart in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function viewDaypartDetailWithHttpInfo($daypart_id, $x_api_key)
+    public function viewDaypartDetailWithHttpInfo($daypart_id)
     {
         $returnType = '';
-        $request = $this->viewDaypartDetailRequest($daypart_id, $x_api_key);
+        $request = $this->viewDaypartDetailRequest($daypart_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -163,14 +161,13 @@ class DaypartApi
      * View Daypart Detail
      *
      * @param  float $daypart_id ID of the Daypart in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function viewDaypartDetailAsync($daypart_id, $x_api_key)
+    public function viewDaypartDetailAsync($daypart_id)
     {
-        return $this->viewDaypartDetailAsyncWithHttpInfo($daypart_id, $x_api_key)
+        return $this->viewDaypartDetailAsyncWithHttpInfo($daypart_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -184,15 +181,14 @@ class DaypartApi
      * View Daypart Detail
      *
      * @param  float $daypart_id ID of the Daypart in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function viewDaypartDetailAsyncWithHttpInfo($daypart_id, $x_api_key)
+    public function viewDaypartDetailAsyncWithHttpInfo($daypart_id)
     {
         $returnType = '';
-        $request = $this->viewDaypartDetailRequest($daypart_id, $x_api_key);
+        $request = $this->viewDaypartDetailRequest($daypart_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -221,23 +217,16 @@ class DaypartApi
      * Create request for operation 'viewDaypartDetail'
      *
      * @param  float $daypart_id ID of the Daypart in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function viewDaypartDetailRequest($daypart_id, $x_api_key)
+    protected function viewDaypartDetailRequest($daypart_id)
     {
         // verify the required parameter 'daypart_id' is set
         if ($daypart_id === null || (is_array($daypart_id) && count($daypart_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $daypart_id when calling viewDaypartDetail'
-            );
-        }
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling viewDaypartDetail'
             );
         }
 
@@ -248,10 +237,6 @@ class DaypartApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($daypart_id !== null) {

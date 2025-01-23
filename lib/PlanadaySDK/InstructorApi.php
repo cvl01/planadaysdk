@@ -91,7 +91,6 @@ class InstructorApi
      *
      * Add/plan an instructor to a specific daypart
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body body (optional)
      *
@@ -99,9 +98,9 @@ class InstructorApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function addplanAnInstructorToASpecificDaypart($x_api_key, $instructor_id, $body = null)
+    public function addplanAnInstructorToASpecificDaypart($instructor_id, $body = null)
     {
-        $this->addplanAnInstructorToASpecificDaypartWithHttpInfo($x_api_key, $instructor_id, $body);
+        $this->addplanAnInstructorToASpecificDaypartWithHttpInfo($instructor_id, $body);
     }
 
     /**
@@ -109,7 +108,6 @@ class InstructorApi
      *
      * Add/plan an instructor to a specific daypart
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body (optional)
      *
@@ -117,10 +115,10 @@ class InstructorApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addplanAnInstructorToASpecificDaypartWithHttpInfo($x_api_key, $instructor_id, $body = null)
+    public function addplanAnInstructorToASpecificDaypartWithHttpInfo($instructor_id, $body = null)
     {
         $returnType = '';
-        $request = $this->addplanAnInstructorToASpecificDaypartRequest($x_api_key, $instructor_id, $body);
+        $request = $this->addplanAnInstructorToASpecificDaypartRequest($instructor_id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -164,16 +162,15 @@ class InstructorApi
      *
      * Add/plan an instructor to a specific daypart
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addplanAnInstructorToASpecificDaypartAsync($x_api_key, $instructor_id, $body = null)
+    public function addplanAnInstructorToASpecificDaypartAsync($instructor_id, $body = null)
     {
-        return $this->addplanAnInstructorToASpecificDaypartAsyncWithHttpInfo($x_api_key, $instructor_id, $body)
+        return $this->addplanAnInstructorToASpecificDaypartAsyncWithHttpInfo($instructor_id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -186,17 +183,16 @@ class InstructorApi
      *
      * Add/plan an instructor to a specific daypart
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addplanAnInstructorToASpecificDaypartAsyncWithHttpInfo($x_api_key, $instructor_id, $body = null)
+    public function addplanAnInstructorToASpecificDaypartAsyncWithHttpInfo($instructor_id, $body = null)
     {
         $returnType = '';
-        $request = $this->addplanAnInstructorToASpecificDaypartRequest($x_api_key, $instructor_id, $body);
+        $request = $this->addplanAnInstructorToASpecificDaypartRequest($instructor_id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -224,21 +220,14 @@ class InstructorApi
     /**
      * Create request for operation 'addplanAnInstructorToASpecificDaypart'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addplanAnInstructorToASpecificDaypartRequest($x_api_key, $instructor_id, $body = null)
+    protected function addplanAnInstructorToASpecificDaypartRequest($instructor_id, $body = null)
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling addplanAnInstructorToASpecificDaypart'
-            );
-        }
         // verify the required parameter 'instructor_id' is set
         if ($instructor_id === null || (is_array($instructor_id) && count($instructor_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -253,10 +242,6 @@ class InstructorApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($instructor_id !== null) {
@@ -344,7 +329,6 @@ class InstructorApi
      *
      * Add/plan an instructor to all dayparts in a specific course
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body body (optional)
      *
@@ -352,9 +336,9 @@ class InstructorApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function addplanAnInstructorToAllDaypartsInASpecificCourse($x_api_key, $instructor_id, $body = null)
+    public function addplanAnInstructorToAllDaypartsInASpecificCourse($instructor_id, $body = null)
     {
-        $this->addplanAnInstructorToAllDaypartsInASpecificCourseWithHttpInfo($x_api_key, $instructor_id, $body);
+        $this->addplanAnInstructorToAllDaypartsInASpecificCourseWithHttpInfo($instructor_id, $body);
     }
 
     /**
@@ -362,7 +346,6 @@ class InstructorApi
      *
      * Add/plan an instructor to all dayparts in a specific course
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body (optional)
      *
@@ -370,10 +353,10 @@ class InstructorApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addplanAnInstructorToAllDaypartsInASpecificCourseWithHttpInfo($x_api_key, $instructor_id, $body = null)
+    public function addplanAnInstructorToAllDaypartsInASpecificCourseWithHttpInfo($instructor_id, $body = null)
     {
         $returnType = '';
-        $request = $this->addplanAnInstructorToAllDaypartsInASpecificCourseRequest($x_api_key, $instructor_id, $body);
+        $request = $this->addplanAnInstructorToAllDaypartsInASpecificCourseRequest($instructor_id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -417,16 +400,15 @@ class InstructorApi
      *
      * Add/plan an instructor to all dayparts in a specific course
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addplanAnInstructorToAllDaypartsInASpecificCourseAsync($x_api_key, $instructor_id, $body = null)
+    public function addplanAnInstructorToAllDaypartsInASpecificCourseAsync($instructor_id, $body = null)
     {
-        return $this->addplanAnInstructorToAllDaypartsInASpecificCourseAsyncWithHttpInfo($x_api_key, $instructor_id, $body)
+        return $this->addplanAnInstructorToAllDaypartsInASpecificCourseAsyncWithHttpInfo($instructor_id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -439,17 +421,16 @@ class InstructorApi
      *
      * Add/plan an instructor to all dayparts in a specific course
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addplanAnInstructorToAllDaypartsInASpecificCourseAsyncWithHttpInfo($x_api_key, $instructor_id, $body = null)
+    public function addplanAnInstructorToAllDaypartsInASpecificCourseAsyncWithHttpInfo($instructor_id, $body = null)
     {
         $returnType = '';
-        $request = $this->addplanAnInstructorToAllDaypartsInASpecificCourseRequest($x_api_key, $instructor_id, $body);
+        $request = $this->addplanAnInstructorToAllDaypartsInASpecificCourseRequest($instructor_id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -477,21 +458,14 @@ class InstructorApi
     /**
      * Create request for operation 'addplanAnInstructorToAllDaypartsInASpecificCourse'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addplanAnInstructorToAllDaypartsInASpecificCourseRequest($x_api_key, $instructor_id, $body = null)
+    protected function addplanAnInstructorToAllDaypartsInASpecificCourseRequest($instructor_id, $body = null)
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling addplanAnInstructorToAllDaypartsInASpecificCourse'
-            );
-        }
         // verify the required parameter 'instructor_id' is set
         if ($instructor_id === null || (is_array($instructor_id) && count($instructor_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -506,10 +480,6 @@ class InstructorApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($instructor_id !== null) {
@@ -597,7 +567,6 @@ class InstructorApi
      *
      * Remove/unplan an instructor from a specific daypart
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body body (optional)
      *
@@ -605,9 +574,9 @@ class InstructorApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function removeunplanAnInstructorFromASpecificDaypart($x_api_key, $instructor_id, $body = null)
+    public function removeunplanAnInstructorFromASpecificDaypart($instructor_id, $body = null)
     {
-        $this->removeunplanAnInstructorFromASpecificDaypartWithHttpInfo($x_api_key, $instructor_id, $body);
+        $this->removeunplanAnInstructorFromASpecificDaypartWithHttpInfo($instructor_id, $body);
     }
 
     /**
@@ -615,7 +584,6 @@ class InstructorApi
      *
      * Remove/unplan an instructor from a specific daypart
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body (optional)
      *
@@ -623,10 +591,10 @@ class InstructorApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function removeunplanAnInstructorFromASpecificDaypartWithHttpInfo($x_api_key, $instructor_id, $body = null)
+    public function removeunplanAnInstructorFromASpecificDaypartWithHttpInfo($instructor_id, $body = null)
     {
         $returnType = '';
-        $request = $this->removeunplanAnInstructorFromASpecificDaypartRequest($x_api_key, $instructor_id, $body);
+        $request = $this->removeunplanAnInstructorFromASpecificDaypartRequest($instructor_id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -670,16 +638,15 @@ class InstructorApi
      *
      * Remove/unplan an instructor from a specific daypart
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeunplanAnInstructorFromASpecificDaypartAsync($x_api_key, $instructor_id, $body = null)
+    public function removeunplanAnInstructorFromASpecificDaypartAsync($instructor_id, $body = null)
     {
-        return $this->removeunplanAnInstructorFromASpecificDaypartAsyncWithHttpInfo($x_api_key, $instructor_id, $body)
+        return $this->removeunplanAnInstructorFromASpecificDaypartAsyncWithHttpInfo($instructor_id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -692,17 +659,16 @@ class InstructorApi
      *
      * Remove/unplan an instructor from a specific daypart
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeunplanAnInstructorFromASpecificDaypartAsyncWithHttpInfo($x_api_key, $instructor_id, $body = null)
+    public function removeunplanAnInstructorFromASpecificDaypartAsyncWithHttpInfo($instructor_id, $body = null)
     {
         $returnType = '';
-        $request = $this->removeunplanAnInstructorFromASpecificDaypartRequest($x_api_key, $instructor_id, $body);
+        $request = $this->removeunplanAnInstructorFromASpecificDaypartRequest($instructor_id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -730,21 +696,14 @@ class InstructorApi
     /**
      * Create request for operation 'removeunplanAnInstructorFromASpecificDaypart'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function removeunplanAnInstructorFromASpecificDaypartRequest($x_api_key, $instructor_id, $body = null)
+    protected function removeunplanAnInstructorFromASpecificDaypartRequest($instructor_id, $body = null)
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling removeunplanAnInstructorFromASpecificDaypart'
-            );
-        }
         // verify the required parameter 'instructor_id' is set
         if ($instructor_id === null || (is_array($instructor_id) && count($instructor_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -759,10 +718,6 @@ class InstructorApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($instructor_id !== null) {
@@ -850,7 +805,6 @@ class InstructorApi
      *
      * Remove/unplan an instructor from all dayparts in a specific course
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body body (optional)
      *
@@ -858,9 +812,9 @@ class InstructorApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function removeunplanAnInstructorFromAllDaypartsInASpecificCourse($x_api_key, $instructor_id, $body = null)
+    public function removeunplanAnInstructorFromAllDaypartsInASpecificCourse($instructor_id, $body = null)
     {
-        $this->removeunplanAnInstructorFromAllDaypartsInASpecificCourseWithHttpInfo($x_api_key, $instructor_id, $body);
+        $this->removeunplanAnInstructorFromAllDaypartsInASpecificCourseWithHttpInfo($instructor_id, $body);
     }
 
     /**
@@ -868,7 +822,6 @@ class InstructorApi
      *
      * Remove/unplan an instructor from all dayparts in a specific course
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body (optional)
      *
@@ -876,10 +829,10 @@ class InstructorApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function removeunplanAnInstructorFromAllDaypartsInASpecificCourseWithHttpInfo($x_api_key, $instructor_id, $body = null)
+    public function removeunplanAnInstructorFromAllDaypartsInASpecificCourseWithHttpInfo($instructor_id, $body = null)
     {
         $returnType = '';
-        $request = $this->removeunplanAnInstructorFromAllDaypartsInASpecificCourseRequest($x_api_key, $instructor_id, $body);
+        $request = $this->removeunplanAnInstructorFromAllDaypartsInASpecificCourseRequest($instructor_id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -923,16 +876,15 @@ class InstructorApi
      *
      * Remove/unplan an instructor from all dayparts in a specific course
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeunplanAnInstructorFromAllDaypartsInASpecificCourseAsync($x_api_key, $instructor_id, $body = null)
+    public function removeunplanAnInstructorFromAllDaypartsInASpecificCourseAsync($instructor_id, $body = null)
     {
-        return $this->removeunplanAnInstructorFromAllDaypartsInASpecificCourseAsyncWithHttpInfo($x_api_key, $instructor_id, $body)
+        return $this->removeunplanAnInstructorFromAllDaypartsInASpecificCourseAsyncWithHttpInfo($instructor_id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -945,17 +897,16 @@ class InstructorApi
      *
      * Remove/unplan an instructor from all dayparts in a specific course
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeunplanAnInstructorFromAllDaypartsInASpecificCourseAsyncWithHttpInfo($x_api_key, $instructor_id, $body = null)
+    public function removeunplanAnInstructorFromAllDaypartsInASpecificCourseAsyncWithHttpInfo($instructor_id, $body = null)
     {
         $returnType = '';
-        $request = $this->removeunplanAnInstructorFromAllDaypartsInASpecificCourseRequest($x_api_key, $instructor_id, $body);
+        $request = $this->removeunplanAnInstructorFromAllDaypartsInASpecificCourseRequest($instructor_id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -983,21 +934,14 @@ class InstructorApi
     /**
      * Create request for operation 'removeunplanAnInstructorFromAllDaypartsInASpecificCourse'
      *
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
      * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function removeunplanAnInstructorFromAllDaypartsInASpecificCourseRequest($x_api_key, $instructor_id, $body = null)
+    protected function removeunplanAnInstructorFromAllDaypartsInASpecificCourseRequest($instructor_id, $body = null)
     {
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling removeunplanAnInstructorFromAllDaypartsInASpecificCourse'
-            );
-        }
         // verify the required parameter 'instructor_id' is set
         if ($instructor_id === null || (is_array($instructor_id) && count($instructor_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -1012,10 +956,6 @@ class InstructorApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($instructor_id !== null) {
@@ -1105,15 +1045,14 @@ class InstructorApi
      *
      * @param  float $offset Start offset of instructors to show (i.e. 25) (required)
      * @param  float $limit Amount of instructors to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \YellowWave\SwaggerClient\Model\InlineResponse2005
      */
-    public function viewListOfInstructors($offset, $limit, $x_api_key)
+    public function viewListOfInstructors($offset, $limit)
     {
-        list($response) = $this->viewListOfInstructorsWithHttpInfo($offset, $limit, $x_api_key);
+        list($response) = $this->viewListOfInstructorsWithHttpInfo($offset, $limit);
         return $response;
     }
 
@@ -1124,16 +1063,15 @@ class InstructorApi
      *
      * @param  float $offset Start offset of instructors to show (i.e. 25) (required)
      * @param  float $limit Amount of instructors to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
-    public function viewListOfInstructorsWithHttpInfo($offset, $limit, $x_api_key)
+    public function viewListOfInstructorsWithHttpInfo($offset, $limit)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2005';
-        $request = $this->viewListOfInstructorsRequest($offset, $limit, $x_api_key);
+        $request = $this->viewListOfInstructorsRequest($offset, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1201,14 +1139,13 @@ class InstructorApi
      *
      * @param  float $offset Start offset of instructors to show (i.e. 25) (required)
      * @param  float $limit Amount of instructors to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function viewListOfInstructorsAsync($offset, $limit, $x_api_key)
+    public function viewListOfInstructorsAsync($offset, $limit)
     {
-        return $this->viewListOfInstructorsAsyncWithHttpInfo($offset, $limit, $x_api_key)
+        return $this->viewListOfInstructorsAsyncWithHttpInfo($offset, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1223,15 +1160,14 @@ class InstructorApi
      *
      * @param  float $offset Start offset of instructors to show (i.e. 25) (required)
      * @param  float $limit Amount of instructors to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function viewListOfInstructorsAsyncWithHttpInfo($offset, $limit, $x_api_key)
+    public function viewListOfInstructorsAsyncWithHttpInfo($offset, $limit)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2005';
-        $request = $this->viewListOfInstructorsRequest($offset, $limit, $x_api_key);
+        $request = $this->viewListOfInstructorsRequest($offset, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1275,12 +1211,11 @@ class InstructorApi
      *
      * @param  float $offset Start offset of instructors to show (i.e. 25) (required)
      * @param  float $limit Amount of instructors to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function viewListOfInstructorsRequest($offset, $limit, $x_api_key)
+    protected function viewListOfInstructorsRequest($offset, $limit)
     {
         // verify the required parameter 'offset' is set
         if ($offset === null || (is_array($offset) && count($offset) === 0)) {
@@ -1294,12 +1229,6 @@ class InstructorApi
                 'Missing the required parameter $limit when calling viewListOfInstructors'
             );
         }
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling viewListOfInstructors'
-            );
-        }
 
         $resourcePath = '/instructor/list/offset={offset}&limit={limit}&label={label}';
         $formParams = [];
@@ -1308,10 +1237,6 @@ class InstructorApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($offset !== null) {

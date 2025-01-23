@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**viewLocationDetail**](LocationApi.md#viewlocationdetail) | **GET** /location/{location_id} | View Location Detail
 
 # **viewLocationDetail**
-> \YellowWave\SwaggerClient\Model\InlineResponse2006 viewLocationDetail($location_id, $x_api_key)
+> \YellowWave\SwaggerClient\Model\InlineResponse2006 viewLocationDetail($location_id)
 
 View Location Detail
 
@@ -29,10 +29,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\LocationApi(
     $config
 );
 $location_id = 1.2; // float | ID of the Location in the form of an integer
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $result = $apiInstance->viewLocationDetail($location_id, $x_api_key);
+    $result = $apiInstance->viewLocationDetail($location_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LocationApi->viewLocationDetail: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +44,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **location_id** | **float**| ID of the Location in the form of an integer |
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
 
 ### Return type
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**viewCoursetemplateDetail**](CoursetemplateApi.md#viewcoursetemplatedetail) | **GET** /coursetemplate/{coursetemplate_id} | View Coursetemplate Detail
 
 # **getListOfCoursetemplates**
-> getListOfCoursetemplates($x_api_key)
+> getListOfCoursetemplates()
 
 Get list of Coursetemplates
 
@@ -29,10 +29,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\CoursetemplateApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $apiInstance->getListOfCoursetemplates($x_api_key);
+    $apiInstance->getListOfCoursetemplates();
 } catch (Exception $e) {
     echo 'Exception when calling CoursetemplateApi->getListOfCoursetemplates: ', $e->getMessage(), PHP_EOL;
 }
@@ -40,10 +39,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -61,7 +57,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **viewCoursetemplateDetail**
-> viewCoursetemplateDetail($coursetemplate_id, $x_api_key)
+> viewCoursetemplateDetail($coursetemplate_id)
 
 View Coursetemplate Detail
 
@@ -83,10 +79,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\CoursetemplateApi(
     $config
 );
 $coursetemplate_id = 1.2; // float | ID of the Location in the form of an integer
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $apiInstance->viewCoursetemplateDetail($coursetemplate_id, $x_api_key);
+    $apiInstance->viewCoursetemplateDetail($coursetemplate_id);
 } catch (Exception $e) {
     echo 'Exception when calling CoursetemplateApi->viewCoursetemplateDetail: ', $e->getMessage(), PHP_EOL;
 }
@@ -98,7 +93,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **coursetemplate_id** | **float**| ID of the Location in the form of an integer |
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
 
 ### Return type
 

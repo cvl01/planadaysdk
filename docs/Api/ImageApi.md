@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getImageBlob**](ImageApi.md#getimageblob) | **GET** /image/{image_id} | Get image blob
 
 # **getImageBlob**
-> getImageBlob($image_id, $x_api_key)
+> getImageBlob($image_id)
 
 Get image blob
 
@@ -29,10 +29,9 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\ImageApi(
     $config
 );
 $image_id = "image_id_example"; // string | ID of the Iamge in the form of an string
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 
 try {
-    $apiInstance->getImageBlob($image_id, $x_api_key);
+    $apiInstance->getImageBlob($image_id);
 } catch (Exception $e) {
     echo 'Exception when calling ImageApi->getImageBlob: ', $e->getMessage(), PHP_EOL;
 }
@@ -44,7 +43,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **image_id** | **string**| ID of the Iamge in the form of an string |
- **x_api_key** | **string**| e.g. &lt;apikey&gt; |
 
 ### Return type
 

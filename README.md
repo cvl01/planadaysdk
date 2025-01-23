@@ -67,12 +67,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $course_id = 1.2; // float | ID of the Course to create booking for in the form of an integer
 $body = new \YellowWave\SwaggerClient\Model\BookingCourseIdBody(); // \YellowWave\SwaggerClient\Model\BookingCourseIdBody | 
 
 try {
-    $result = $apiInstance->createBooking($x_api_key, $course_id, $body);
+    $result = $apiInstance->createBooking($course_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingApi->createBooking: ', $e->getMessage(), PHP_EOL;
@@ -89,12 +88,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $booking_id = "booking_id_example"; // string | ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205)
 $body = new \YellowWave\SwaggerClient\Model\BookingBookingIdBody(); // \YellowWave\SwaggerClient\Model\BookingBookingIdBody | 
 
 try {
-    $result = $apiInstance->deleteMadeBooking($x_api_key, $booking_id, $body);
+    $result = $apiInstance->deleteMadeBooking($booking_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingApi->deleteMadeBooking: ', $e->getMessage(), PHP_EOL;
@@ -111,12 +109,11 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $booking_id = "booking_id_example"; // string | ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205)
 $body = new \YellowWave\SwaggerClient\Model\PayedBookingIdBody(); // \YellowWave\SwaggerClient\Model\PayedBookingIdBody | 
 
 try {
-    $result = $apiInstance->markBookingAsPayed($x_api_key, $booking_id, $body);
+    $result = $apiInstance->markBookingAsPayed($booking_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingApi->markBookingAsPayed: ', $e->getMessage(), PHP_EOL;

@@ -97,15 +97,14 @@ class CourseApi
      * @param  float $offset Start offset of courses to show (i.e. 25) (required)
      * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
      * @param  string $label labels which the course MUST have (see also label API calls) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \YellowWave\SwaggerClient\Model\InlineResponse2002
      */
-    public function getAListOfCourses($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
+    public function getAListOfCourses($start, $end, $templateid, $offset, $limit, $label)
     {
-        list($response) = $this->getAListOfCoursesWithHttpInfo($start, $end, $templateid, $offset, $limit, $label, $x_api_key);
+        list($response) = $this->getAListOfCoursesWithHttpInfo($start, $end, $templateid, $offset, $limit, $label);
         return $response;
     }
 
@@ -120,16 +119,15 @@ class CourseApi
      * @param  float $offset Start offset of courses to show (i.e. 25) (required)
      * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
      * @param  string $label labels which the course MUST have (see also label API calls) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfCoursesWithHttpInfo($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
+    public function getAListOfCoursesWithHttpInfo($start, $end, $templateid, $offset, $limit, $label)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2002';
-        $request = $this->getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label, $x_api_key);
+        $request = $this->getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label);
 
         try {
             $options = $this->createHttpClientOption();
@@ -201,14 +199,13 @@ class CourseApi
      * @param  float $offset Start offset of courses to show (i.e. 25) (required)
      * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
      * @param  string $label labels which the course MUST have (see also label API calls) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfCoursesAsync($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
+    public function getAListOfCoursesAsync($start, $end, $templateid, $offset, $limit, $label)
     {
-        return $this->getAListOfCoursesAsyncWithHttpInfo($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
+        return $this->getAListOfCoursesAsyncWithHttpInfo($start, $end, $templateid, $offset, $limit, $label)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -227,15 +224,14 @@ class CourseApi
      * @param  float $offset Start offset of courses to show (i.e. 25) (required)
      * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
      * @param  string $label labels which the course MUST have (see also label API calls) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfCoursesAsyncWithHttpInfo($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
+    public function getAListOfCoursesAsyncWithHttpInfo($start, $end, $templateid, $offset, $limit, $label)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2002';
-        $request = $this->getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label, $x_api_key);
+        $request = $this->getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -283,12 +279,11 @@ class CourseApi
      * @param  float $offset Start offset of courses to show (i.e. 25) (required)
      * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
      * @param  string $label labels which the course MUST have (see also label API calls) (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
+    protected function getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label)
     {
         // verify the required parameter 'start' is set
         if ($start === null || (is_array($start) && count($start) === 0)) {
@@ -326,12 +321,6 @@ class CourseApi
                 'Missing the required parameter $label when calling getAListOfCourses'
             );
         }
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling getAListOfCourses'
-            );
-        }
 
         $resourcePath = '/course/list?start={start}&end={end}&templateid={templateid}&offset={offset}&limit={limit}&label={label}';
         $formParams = [];
@@ -340,10 +329,6 @@ class CourseApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($start !== null) {
@@ -469,15 +454,14 @@ class CourseApi
      * View Course Detail
      *
      * @param  float $course_id ID of the Course in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function viewCourseDetail($course_id, $x_api_key)
+    public function viewCourseDetail($course_id)
     {
-        $this->viewCourseDetailWithHttpInfo($course_id, $x_api_key);
+        $this->viewCourseDetailWithHttpInfo($course_id);
     }
 
     /**
@@ -486,16 +470,15 @@ class CourseApi
      * View Course Detail
      *
      * @param  float $course_id ID of the Course in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function viewCourseDetailWithHttpInfo($course_id, $x_api_key)
+    public function viewCourseDetailWithHttpInfo($course_id)
     {
         $returnType = '';
-        $request = $this->viewCourseDetailRequest($course_id, $x_api_key);
+        $request = $this->viewCourseDetailRequest($course_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -540,14 +523,13 @@ class CourseApi
      * View Course Detail
      *
      * @param  float $course_id ID of the Course in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function viewCourseDetailAsync($course_id, $x_api_key)
+    public function viewCourseDetailAsync($course_id)
     {
-        return $this->viewCourseDetailAsyncWithHttpInfo($course_id, $x_api_key)
+        return $this->viewCourseDetailAsyncWithHttpInfo($course_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -561,15 +543,14 @@ class CourseApi
      * View Course Detail
      *
      * @param  float $course_id ID of the Course in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function viewCourseDetailAsyncWithHttpInfo($course_id, $x_api_key)
+    public function viewCourseDetailAsyncWithHttpInfo($course_id)
     {
         $returnType = '';
-        $request = $this->viewCourseDetailRequest($course_id, $x_api_key);
+        $request = $this->viewCourseDetailRequest($course_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -598,23 +579,16 @@ class CourseApi
      * Create request for operation 'viewCourseDetail'
      *
      * @param  float $course_id ID of the Course in the form of an integer (required)
-     * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function viewCourseDetailRequest($course_id, $x_api_key)
+    protected function viewCourseDetailRequest($course_id)
     {
         // verify the required parameter 'course_id' is set
         if ($course_id === null || (is_array($course_id) && count($course_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $course_id when calling viewCourseDetail'
-            );
-        }
-        // verify the required parameter 'x_api_key' is set
-        if ($x_api_key === null || (is_array($x_api_key) && count($x_api_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_api_key when calling viewCourseDetail'
             );
         }
 
@@ -625,10 +599,6 @@ class CourseApi
         $httpBody = '';
         $multipart = false;
 
-        // header params
-        if ($x_api_key !== null) {
-            $headerParams['X-Api-Key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
 
         // path params
         if ($course_id !== null) {
