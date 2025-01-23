@@ -1,4 +1,4 @@
-# YellowWave\DaypartApi
+# YellowWave\SwaggerClient\DaypartApi
 
 All URIs are relative to *https://apitest.api.planaday.net/v1*
 
@@ -19,11 +19,11 @@ Use this call to fetch detailed information about one (1) daypart.  **Error code
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\DaypartApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\DaypartApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **viewListOfMaterialsOfADaypart**
-> \YellowWave\Model\InlineResponse2004 viewListOfMaterialsOfADaypart($daypart_id, $offset, $limit)
+> \YellowWave\SwaggerClient\Model\InlineResponse2004 viewListOfMaterialsOfADaypart($daypart_id, $offset, $limit)
 
 View list of materials of a Daypart
 
@@ -74,11 +74,11 @@ Use this call to fetch the materials of one (1) daypart  **Error codes**  | Code
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\DaypartApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\DaypartApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\YellowWave\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\YellowWave\SwaggerClient\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 

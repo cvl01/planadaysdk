@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 use \ArrayAccess;
-use \YellowWave\ObjectSerializer;
+use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * InlineResponse2005Meta Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse2005Meta implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => '\YellowWave\Model\InlineResponse2005MetaPage',
+        'page' => '\YellowWave\SwaggerClient\Model\InlineResponse2005MetaPage',
         'records' => 'float'
     ];
 
@@ -210,7 +210,7 @@ class InlineResponse2005Meta implements ModelInterface, ArrayAccess
     /**
      * Gets page
      *
-     * @return \YellowWave\Model\InlineResponse2005MetaPage
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2005MetaPage
      */
     public function getPage()
     {
@@ -220,7 +220,7 @@ class InlineResponse2005Meta implements ModelInterface, ArrayAccess
     /**
      * Sets page
      *
-     * @param \YellowWave\Model\InlineResponse2005MetaPage $page page
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2005MetaPage $page page
      *
      * @return $this
      */

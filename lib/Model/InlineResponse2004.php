@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 use \ArrayAccess;
-use \YellowWave\ObjectSerializer;
+use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * InlineResponse2004 Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\YellowWave\Model\InlineResponse2003Meta',
-        'data' => '\YellowWave\Model\InlineResponse2004Data[]',
-        'links' => '\YellowWave\Model\InlineResponse2003Links'
+        'meta' => '\YellowWave\SwaggerClient\Model\InlineResponse2003Meta',
+        'data' => '\YellowWave\SwaggerClient\Model\InlineResponse2004Data[]',
+        'links' => '\YellowWave\SwaggerClient\Model\InlineResponse2003Links'
     ];
 
     /**
@@ -216,7 +216,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Gets meta
      *
-     * @return \YellowWave\Model\InlineResponse2003Meta
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2003Meta
      */
     public function getMeta()
     {
@@ -226,7 +226,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Sets meta
      *
-     * @param \YellowWave\Model\InlineResponse2003Meta $meta meta
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2003Meta $meta meta
      *
      * @return $this
      */
@@ -240,7 +240,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \YellowWave\Model\InlineResponse2004Data[]
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2004Data[]
      */
     public function getData()
     {
@@ -250,7 +250,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \YellowWave\Model\InlineResponse2004Data[] $data data
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2004Data[] $data data
      *
      * @return $this
      */
@@ -264,7 +264,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Gets links
      *
-     * @return \YellowWave\Model\InlineResponse2003Links
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2003Links
      */
     public function getLinks()
     {
@@ -274,7 +274,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \YellowWave\Model\InlineResponse2003Links $links links
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2003Links $links links
      *
      * @return $this
      */

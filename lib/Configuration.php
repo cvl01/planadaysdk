@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,14 +25,14 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave;
+namespace YellowWave\SwaggerClient;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -392,7 +392,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (YellowWave) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (YellowWave\SwaggerClient) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 1.0.0' . PHP_EOL;

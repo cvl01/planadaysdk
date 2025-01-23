@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 use \ArrayAccess;
-use \YellowWave\ObjectSerializer;
+use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * InlineResponse2006 Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,14 +59,14 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
         'id' => 'float',
         'name' => 'string',
         'code' => 'string',
-        'address' => '\YellowWave\Model\InlineResponse2006Address',
-        'contact_info' => '\YellowWave\Model\InlineResponse2006ContactInfo',
+        'address' => '\YellowWave\SwaggerClient\Model\InlineResponse2006Address',
+        'contact_info' => '\YellowWave\SwaggerClient\Model\InlineResponse2006ContactInfo',
         'description' => '',
         'capacity' => 'float',
         'overbookable' => 'bool',
         'is_virtual' => 'bool',
         'is_external' => 'bool',
-        'costs' => '\YellowWave\Model\InlineResponse2006Costs',
+        'costs' => '\YellowWave\SwaggerClient\Model\InlineResponse2006Costs',
         'href' => 'string'
     ];
 
@@ -342,7 +342,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \YellowWave\Model\InlineResponse2006Address
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2006Address
      */
     public function getAddress()
     {
@@ -352,7 +352,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \YellowWave\Model\InlineResponse2006Address $address address
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2006Address $address address
      *
      * @return $this
      */
@@ -366,7 +366,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Gets contact_info
      *
-     * @return \YellowWave\Model\InlineResponse2006ContactInfo
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2006ContactInfo
      */
     public function getContactInfo()
     {
@@ -376,7 +376,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Sets contact_info
      *
-     * @param \YellowWave\Model\InlineResponse2006ContactInfo $contact_info contact_info
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2006ContactInfo $contact_info contact_info
      *
      * @return $this
      */
@@ -510,7 +510,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Gets costs
      *
-     * @return \YellowWave\Model\InlineResponse2006Costs
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2006Costs
      */
     public function getCosts()
     {
@@ -520,7 +520,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Sets costs
      *
-     * @param \YellowWave\Model\InlineResponse2006Costs $costs costs
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2006Costs $costs costs
      *
      * @return $this
      */

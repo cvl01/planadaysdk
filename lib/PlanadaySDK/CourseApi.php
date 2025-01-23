@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\PlanadaySDK;
+namespace YellowWave\SwaggerClient\PlanadaySDK;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use YellowWave\ApiException;
-use YellowWave\Configuration;
-use YellowWave\HeaderSelector;
-use YellowWave\ObjectSerializer;
+use YellowWave\SwaggerClient\ApiException;
+use YellowWave\SwaggerClient\Configuration;
+use YellowWave\SwaggerClient\HeaderSelector;
+use YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * CourseApi Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -99,9 +99,9 @@ class CourseApi
      * @param  string $label labels which the course MUST have (see also label API calls) (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \YellowWave\Model\InlineResponse2002
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002
      */
     public function getAListOfCourses($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
     {
@@ -122,13 +122,13 @@ class CourseApi
      * @param  string $label labels which the course MUST have (see also label API calls) (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \YellowWave\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAListOfCoursesWithHttpInfo($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2002';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2002';
         $request = $this->getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label, $x_api_key);
 
         try {
@@ -180,7 +180,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\YellowWave\Model\InlineResponse2002',
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -234,7 +234,7 @@ class CourseApi
      */
     public function getAListOfCoursesAsyncWithHttpInfo($start, $end, $templateid, $offset, $limit, $label, $x_api_key)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2002';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2002';
         $request = $this->getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label, $x_api_key);
 
         return $this->client
@@ -471,7 +471,7 @@ class CourseApi
      * @param  float $course_id ID of the Course in the form of an integer (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -488,7 +488,7 @@ class CourseApi
      * @param  float $course_id ID of the Course in the form of an integer (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -717,7 +717,7 @@ class CourseApi
      * @param  float $offset Start offset of dayparts to show (i.e. 25) (required)
      * @param  float $limit Amount of dayparts to show in one response (i.e. 25, limited to 100) (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -735,7 +735,7 @@ class CourseApi
      * @param  float $offset Start offset of dayparts to show (i.e. 25) (required)
      * @param  float $limit Amount of dayparts to show in one response (i.e. 25, limited to 100) (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -985,7 +985,7 @@ class CourseApi
      * @param  float $offset Start offset of materials to show (i.e. 25) (required)
      * @param  float $limit Amount of materials to show in one response (i.e. 25, limited to 100) (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1003,7 +1003,7 @@ class CourseApi
      * @param  float $offset Start offset of materials to show (i.e. 25) (required)
      * @param  float $limit Amount of materials to show in one response (i.e. 25, limited to 100) (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1253,9 +1253,9 @@ class CourseApi
      * @param  float $offset Start offset of materials to show (i.e. 25) (required)
      * @param  float $limit Amount of materials to show in one response (i.e. 25, limited to 100) (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \YellowWave\Model\InlineResponse2003
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2003
      */
     public function viewListOfMaterialsOfCourse($course_id, $offset, $limit)
     {
@@ -1272,13 +1272,13 @@ class CourseApi
      * @param  float $offset Start offset of materials to show (i.e. 25) (required)
      * @param  float $limit Amount of materials to show in one response (i.e. 25, limited to 100) (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \YellowWave\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function viewListOfMaterialsOfCourseWithHttpInfo($course_id, $offset, $limit)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2003';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2003';
         $request = $this->viewListOfMaterialsOfCourseRequest($course_id, $offset, $limit);
 
         try {
@@ -1330,7 +1330,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\YellowWave\Model\InlineResponse2003',
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1376,7 +1376,7 @@ class CourseApi
      */
     public function viewListOfMaterialsOfCourseAsyncWithHttpInfo($course_id, $offset, $limit)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2003';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2003';
         $request = $this->viewListOfMaterialsOfCourseRequest($course_id, $offset, $limit);
 
         return $this->client

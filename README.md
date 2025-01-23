@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/cvl01/planaday-php-sdk.git"
+      "url": "https://github.com/yellowwave/planaday-php-sdk.git"
     }
   ],
   "require": {
@@ -57,11 +57,11 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\BookingApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -69,7 +69,7 @@ $apiInstance = new YellowWave\PlanadaySDK\BookingApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $course_id = 1.2; // float | ID of the Course to create booking for in the form of an integer
-$body = new \YellowWave\Model\BookingCourseIdBody(); // \YellowWave\Model\BookingCourseIdBody | 
+$body = new \YellowWave\SwaggerClient\Model\BookingCourseIdBody(); // \YellowWave\SwaggerClient\Model\BookingCourseIdBody | 
 
 try {
     $result = $apiInstance->createBooking($x_api_key, $course_id, $body);
@@ -79,11 +79,11 @@ try {
 }
 
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\BookingApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -91,7 +91,7 @@ $apiInstance = new YellowWave\PlanadaySDK\BookingApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $booking_id = "booking_id_example"; // string | ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205)
-$body = new \YellowWave\Model\BookingBookingIdBody(); // \YellowWave\Model\BookingBookingIdBody | 
+$body = new \YellowWave\SwaggerClient\Model\BookingBookingIdBody(); // \YellowWave\SwaggerClient\Model\BookingBookingIdBody | 
 
 try {
     $result = $apiInstance->deleteMadeBooking($x_api_key, $booking_id, $body);
@@ -101,11 +101,11 @@ try {
 }
 
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\BookingApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -113,7 +113,7 @@ $apiInstance = new YellowWave\PlanadaySDK\BookingApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $booking_id = "booking_id_example"; // string | ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205)
-$body = new \YellowWave\Model\PayedBookingIdBody(); // \YellowWave\Model\PayedBookingIdBody | 
+$body = new \YellowWave\SwaggerClient\Model\PayedBookingIdBody(); // \YellowWave\SwaggerClient\Model\PayedBookingIdBody | 
 
 try {
     $result = $apiInstance->markBookingAsPayed($x_api_key, $booking_id, $body);

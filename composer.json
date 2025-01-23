@@ -29,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "YellowWave\\" : "lib/" }
+        "psr-4": { "YellowWave\\SwaggerClient\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "YellowWave\\" : "test/" }
+        "psr-4": { "YellowWave\\SwaggerClient\\" : "test/" }
     }
 }

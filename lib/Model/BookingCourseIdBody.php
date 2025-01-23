@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 use \ArrayAccess;
-use \YellowWave\ObjectSerializer;
+use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * BookingCourseIdBody Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,13 +56,13 @@ class BookingCourseIdBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'students' => '\YellowWave\Model\BookingcourseIdStudents[]',
-        'company' => '\YellowWave\Model\BookingcourseIdCompany',
+        'students' => '\YellowWave\SwaggerClient\Model\BookingcourseIdStudents[]',
+        'company' => '\YellowWave\SwaggerClient\Model\BookingcourseIdCompany',
         'created_at' => 'string',
         'creating_source' => 'string',
         'course_id' => 'float',
         'dayparts' => 'float[]',
-        'attributes' => '\YellowWave\Model\BookingcourseIdAttributes[]'
+        'attributes' => '\YellowWave\SwaggerClient\Model\BookingcourseIdAttributes[]'
     ];
 
     /**
@@ -240,7 +240,7 @@ class BookingCourseIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets students
      *
-     * @return \YellowWave\Model\BookingcourseIdStudents[]
+     * @return \YellowWave\SwaggerClient\Model\BookingcourseIdStudents[]
      */
     public function getStudents()
     {
@@ -250,7 +250,7 @@ class BookingCourseIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets students
      *
-     * @param \YellowWave\Model\BookingcourseIdStudents[] $students students
+     * @param \YellowWave\SwaggerClient\Model\BookingcourseIdStudents[] $students students
      *
      * @return $this
      */
@@ -264,7 +264,7 @@ class BookingCourseIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets company
      *
-     * @return \YellowWave\Model\BookingcourseIdCompany
+     * @return \YellowWave\SwaggerClient\Model\BookingcourseIdCompany
      */
     public function getCompany()
     {
@@ -274,7 +274,7 @@ class BookingCourseIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets company
      *
-     * @param \YellowWave\Model\BookingcourseIdCompany $company company
+     * @param \YellowWave\SwaggerClient\Model\BookingcourseIdCompany $company company
      *
      * @return $this
      */
@@ -384,7 +384,7 @@ class BookingCourseIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return \YellowWave\Model\BookingcourseIdAttributes[]
+     * @return \YellowWave\SwaggerClient\Model\BookingcourseIdAttributes[]
      */
     public function getAttributes()
     {
@@ -394,7 +394,7 @@ class BookingCourseIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param \YellowWave\Model\BookingcourseIdAttributes[] $attributes attributes
+     * @param \YellowWave\SwaggerClient\Model\BookingcourseIdAttributes[] $attributes attributes
      *
      * @return $this
      */

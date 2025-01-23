@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 use \ArrayAccess;
-use \YellowWave\ObjectSerializer;
+use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * InlineResponse2002 Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,9 +65,9 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
         'status' => 'string',
         'daypart_amount' => 'float',
         'dayparts' => 'null[]',
-        'users' => '\YellowWave\Model\InlineResponse2002Users',
-        'costs' => '\YellowWave\Model\InlineResponse2002Costs',
-        'coursetemplate' => '\YellowWave\Model\InlineResponse2002Coursetemplate',
+        'users' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Users',
+        'costs' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Costs',
+        'coursetemplate' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate',
         'level' => 'string',
         'level_description' => 'string',
         'start_guaranteed' => 'bool',
@@ -79,8 +79,8 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
         'stap_only' => 'bool',
         'labels' => 'null[]',
         'language' => 'string',
-        'extrafields' => '\YellowWave\Model\InlineResponse2002Extrafields',
-        'repeating_courses' => '\YellowWave\Model\InlineResponse2002RepeatingCourses[]'
+        'extrafields' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Extrafields',
+        'repeating_courses' => '\YellowWave\SwaggerClient\Model\InlineResponse2002RepeatingCourses[]'
     ];
 
     /**
@@ -564,7 +564,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \YellowWave\Model\InlineResponse2002Users
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Users
      */
     public function getUsers()
     {
@@ -574,7 +574,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \YellowWave\Model\InlineResponse2002Users $users users
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Users $users users
      *
      * @return $this
      */
@@ -588,7 +588,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets costs
      *
-     * @return \YellowWave\Model\InlineResponse2002Costs
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Costs
      */
     public function getCosts()
     {
@@ -598,7 +598,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets costs
      *
-     * @param \YellowWave\Model\InlineResponse2002Costs $costs costs
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Costs $costs costs
      *
      * @return $this
      */
@@ -612,7 +612,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets coursetemplate
      *
-     * @return \YellowWave\Model\InlineResponse2002Coursetemplate
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate
      */
     public function getCoursetemplate()
     {
@@ -622,7 +622,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets coursetemplate
      *
-     * @param \YellowWave\Model\InlineResponse2002Coursetemplate $coursetemplate coursetemplate
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate $coursetemplate coursetemplate
      *
      * @return $this
      */
@@ -900,7 +900,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets extrafields
      *
-     * @return \YellowWave\Model\InlineResponse2002Extrafields
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Extrafields
      */
     public function getExtrafields()
     {
@@ -910,7 +910,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets extrafields
      *
-     * @param \YellowWave\Model\InlineResponse2002Extrafields $extrafields extrafields
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Extrafields $extrafields extrafields
      *
      * @return $this
      */
@@ -924,7 +924,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets repeating_courses
      *
-     * @return \YellowWave\Model\InlineResponse2002RepeatingCourses[]
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002RepeatingCourses[]
      */
     public function getRepeatingCourses()
     {
@@ -934,7 +934,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets repeating_courses
      *
-     * @param \YellowWave\Model\InlineResponse2002RepeatingCourses[] $repeating_courses repeating_courses
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002RepeatingCourses[] $repeating_courses repeating_courses
      *
      * @return $this
      */

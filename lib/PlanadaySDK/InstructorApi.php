@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\PlanadaySDK;
+namespace YellowWave\SwaggerClient\PlanadaySDK;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use YellowWave\ApiException;
-use YellowWave\Configuration;
-use YellowWave\HeaderSelector;
-use YellowWave\ObjectSerializer;
+use YellowWave\SwaggerClient\ApiException;
+use YellowWave\SwaggerClient\Configuration;
+use YellowWave\SwaggerClient\HeaderSelector;
+use YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * InstructorApi Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody $body body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body body (optional)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,9 +111,9 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body (optional)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -166,7 +166,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -188,7 +188,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -226,7 +226,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -346,9 +346,9 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody $body body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body body (optional)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -364,9 +364,9 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body (optional)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -419,7 +419,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -441,7 +441,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -479,7 +479,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -599,9 +599,9 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody1 $body body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body body (optional)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -617,9 +617,9 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody1 $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body (optional)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -672,7 +672,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody1 $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -694,7 +694,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody1 $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -732,7 +732,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdDaypartBody1 $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -852,9 +852,9 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody1 $body body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body body (optional)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -870,9 +870,9 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody1 $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body (optional)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -925,7 +925,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody1 $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -947,7 +947,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody1 $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -985,7 +985,7 @@ class InstructorApi
      *
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      * @param  float $instructor_id ID of the instructor in the form of an integer (required)
-     * @param  \YellowWave\Model\InstructorIdCourseBody1 $body (optional)
+     * @param  \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1107,9 +1107,9 @@ class InstructorApi
      * @param  float $limit Amount of instructors to show in one response (i.e. 25, limited to 100) (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \YellowWave\Model\InlineResponse2005
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2005
      */
     public function viewListOfInstructors($offset, $limit, $x_api_key)
     {
@@ -1126,13 +1126,13 @@ class InstructorApi
      * @param  float $limit Amount of instructors to show in one response (i.e. 25, limited to 100) (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \YellowWave\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function viewListOfInstructorsWithHttpInfo($offset, $limit, $x_api_key)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2005';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2005';
         $request = $this->viewListOfInstructorsRequest($offset, $limit, $x_api_key);
 
         try {
@@ -1184,7 +1184,7 @@ class InstructorApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\YellowWave\Model\InlineResponse2005',
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2005',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1230,7 +1230,7 @@ class InstructorApi
      */
     public function viewListOfInstructorsAsyncWithHttpInfo($offset, $limit, $x_api_key)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2005';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2005';
         $request = $this->viewListOfInstructorsRequest($offset, $limit, $x_api_key);
 
         return $this->client

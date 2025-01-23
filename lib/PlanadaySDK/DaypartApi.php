@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\PlanadaySDK;
+namespace YellowWave\SwaggerClient\PlanadaySDK;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use YellowWave\ApiException;
-use YellowWave\Configuration;
-use YellowWave\HeaderSelector;
-use YellowWave\ObjectSerializer;
+use YellowWave\SwaggerClient\ApiException;
+use YellowWave\SwaggerClient\Configuration;
+use YellowWave\SwaggerClient\HeaderSelector;
+use YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * DaypartApi Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class DaypartApi
      * @param  float $daypart_id ID of the Daypart in the form of an integer (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class DaypartApi
      * @param  float $daypart_id ID of the Daypart in the form of an integer (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -340,9 +340,9 @@ class DaypartApi
      * @param  float $offset Start offset of materials to show (i.e. 25) (required)
      * @param  float $limit Amount of materials to show in one response (i.e. 25, limited to 100) (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \YellowWave\Model\InlineResponse2004
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2004
      */
     public function viewListOfMaterialsOfADaypart($daypart_id, $offset, $limit)
     {
@@ -359,13 +359,13 @@ class DaypartApi
      * @param  float $offset Start offset of materials to show (i.e. 25) (required)
      * @param  float $limit Amount of materials to show in one response (i.e. 25, limited to 100) (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \YellowWave\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function viewListOfMaterialsOfADaypartWithHttpInfo($daypart_id, $offset, $limit)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2004';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2004';
         $request = $this->viewListOfMaterialsOfADaypartRequest($daypart_id, $offset, $limit);
 
         try {
@@ -417,7 +417,7 @@ class DaypartApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\YellowWave\Model\InlineResponse2004',
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -463,7 +463,7 @@ class DaypartApi
      */
     public function viewListOfMaterialsOfADaypartAsyncWithHttpInfo($daypart_id, $offset, $limit)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2004';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2004';
         $request = $this->viewListOfMaterialsOfADaypartRequest($daypart_id, $offset, $limit);
 
         return $this->client

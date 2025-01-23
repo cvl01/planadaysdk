@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave\Model
+ * @package  YellowWave\SwaggerClient\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package YellowWave\Model
+ * @package YellowWave\SwaggerClient\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

@@ -1,4 +1,4 @@
-# YellowWave\BookingApi
+# YellowWave\SwaggerClient\BookingApi
 
 All URIs are relative to *https://apitest.api.planaday.net/v1*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**markBookingAsPayed**](BookingApi.md#markbookingaspayed) | **POST** /booking/payed/{booking_id} | Mark booking as payed
 
 # **createBooking**
-> \YellowWave\Model\InlineResponse200 createBooking($x_api_key, $course_id, $body)
+> \YellowWave\SwaggerClient\Model\InlineResponse200 createBooking($x_api_key, $course_id, $body)
 
 Create booking
 
@@ -20,11 +20,11 @@ Use this call to create booking for optional company and one (1) or more student
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\BookingApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -32,7 +32,7 @@ $apiInstance = new YellowWave\PlanadaySDK\BookingApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $course_id = 1.2; // float | ID of the Course to create booking for in the form of an integer
-$body = new \YellowWave\Model\BookingCourseIdBody(); // \YellowWave\Model\BookingCourseIdBody | 
+$body = new \YellowWave\SwaggerClient\Model\BookingCourseIdBody(); // \YellowWave\SwaggerClient\Model\BookingCourseIdBody | 
 
 try {
     $result = $apiInstance->createBooking($x_api_key, $course_id, $body);
@@ -49,11 +49,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **course_id** | **float**| ID of the Course to create booking for in the form of an integer |
- **body** | [**\YellowWave\Model\BookingCourseIdBody**](../Model/BookingCourseIdBody.md)|  | [optional]
+ **body** | [**\YellowWave\SwaggerClient\Model\BookingCourseIdBody**](../Model/BookingCourseIdBody.md)|  | [optional]
 
 ### Return type
 
-[**\YellowWave\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\YellowWave\SwaggerClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteMadeBooking**
-> \YellowWave\Model\InlineResponse2001 deleteMadeBooking($x_api_key, $booking_id, $body)
+> \YellowWave\SwaggerClient\Model\InlineResponse2001 deleteMadeBooking($x_api_key, $booking_id, $body)
 
 Delete made booking
 
@@ -78,11 +78,11 @@ Use this call to delete an earlier made booking.  First we try with the {booking
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\BookingApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -90,7 +90,7 @@ $apiInstance = new YellowWave\PlanadaySDK\BookingApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $booking_id = "booking_id_example"; // string | ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205)
-$body = new \YellowWave\Model\BookingBookingIdBody(); // \YellowWave\Model\BookingBookingIdBody | 
+$body = new \YellowWave\SwaggerClient\Model\BookingBookingIdBody(); // \YellowWave\SwaggerClient\Model\BookingBookingIdBody | 
 
 try {
     $result = $apiInstance->deleteMadeBooking($x_api_key, $booking_id, $body);
@@ -107,11 +107,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **booking_id** | **string**| ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) |
- **body** | [**\YellowWave\Model\BookingBookingIdBody**](../Model/BookingBookingIdBody.md)|  | [optional]
+ **body** | [**\YellowWave\SwaggerClient\Model\BookingBookingIdBody**](../Model/BookingBookingIdBody.md)|  | [optional]
 
 ### Return type
 
-[**\YellowWave\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\YellowWave\SwaggerClient\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **markBookingAsPayed**
-> \YellowWave\Model\InlineResponse2001 markBookingAsPayed($x_api_key, $booking_id, $body)
+> \YellowWave\SwaggerClient\Model\InlineResponse2001 markBookingAsPayed($x_api_key, $booking_id, $body)
 
 Mark booking as payed
 
@@ -136,11 +136,11 @@ Use this call to mark a booking as payed. This can be handy after handeling a pa
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\BookingApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -148,7 +148,7 @@ $apiInstance = new YellowWave\PlanadaySDK\BookingApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $booking_id = "booking_id_example"; // string | ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205)
-$body = new \YellowWave\Model\PayedBookingIdBody(); // \YellowWave\Model\PayedBookingIdBody | 
+$body = new \YellowWave\SwaggerClient\Model\PayedBookingIdBody(); // \YellowWave\SwaggerClient\Model\PayedBookingIdBody | 
 
 try {
     $result = $apiInstance->markBookingAsPayed($x_api_key, $booking_id, $body);
@@ -165,11 +165,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **booking_id** | **string**| ID of the booking received in the booking post call (i.e API5ce597c40e0fc6.85265205) |
- **body** | [**\YellowWave\Model\PayedBookingIdBody**](../Model/PayedBookingIdBody.md)|  | [optional]
+ **body** | [**\YellowWave\SwaggerClient\Model\PayedBookingIdBody**](../Model/PayedBookingIdBody.md)|  | [optional]
 
 ### Return type
 
-[**\YellowWave\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\YellowWave\SwaggerClient\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 

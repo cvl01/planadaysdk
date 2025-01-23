@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 use \ArrayAccess;
-use \YellowWave\ObjectSerializer;
+use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * InlineResponse200Details Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class InlineResponse200Details implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'company' => '\YellowWave\Model\InlineResponse200DetailsCompany',
-        'students' => '\YellowWave\Model\InlineResponse200DetailsStudents[]'
+        'company' => '\YellowWave\SwaggerClient\Model\InlineResponse200DetailsCompany',
+        'students' => '\YellowWave\SwaggerClient\Model\InlineResponse200DetailsStudents[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class InlineResponse200Details implements ModelInterface, ArrayAccess
     /**
      * Gets company
      *
-     * @return \YellowWave\Model\InlineResponse200DetailsCompany
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse200DetailsCompany
      */
     public function getCompany()
     {
@@ -220,7 +220,7 @@ class InlineResponse200Details implements ModelInterface, ArrayAccess
     /**
      * Sets company
      *
-     * @param \YellowWave\Model\InlineResponse200DetailsCompany $company company
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse200DetailsCompany $company company
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class InlineResponse200Details implements ModelInterface, ArrayAccess
     /**
      * Gets students
      *
-     * @return \YellowWave\Model\InlineResponse200DetailsStudents[]
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse200DetailsStudents[]
      */
     public function getStudents()
     {
@@ -244,7 +244,7 @@ class InlineResponse200Details implements ModelInterface, ArrayAccess
     /**
      * Sets students
      *
-     * @param \YellowWave\Model\InlineResponse200DetailsStudents[] $students students
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse200DetailsStudents[] $students students
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# YellowWave\InstructorApi
+# YellowWave\SwaggerClient\InstructorApi
 
 All URIs are relative to *https://apitest.api.planaday.net/v1*
 
@@ -22,11 +22,11 @@ Use this call to add/plan an instructor to a specific daypart  **Error codes**  
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -34,7 +34,7 @@ $apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $instructor_id = 1.2; // float | ID of the instructor in the form of an integer
-$body = new \YellowWave\Model\InstructorIdDaypartBody(); // \YellowWave\Model\InstructorIdDaypartBody | 
+$body = new \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody(); // \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody | 
 
 try {
     $apiInstance->addplanAnInstructorToASpecificDaypart($x_api_key, $instructor_id, $body);
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **instructor_id** | **float**| ID of the instructor in the form of an integer |
- **body** | [**\YellowWave\Model\InstructorIdDaypartBody**](../Model/InstructorIdDaypartBody.md)|  | [optional]
+ **body** | [**\YellowWave\SwaggerClient\Model\InstructorIdDaypartBody**](../Model/InstructorIdDaypartBody.md)|  | [optional]
 
 ### Return type
 
@@ -79,11 +79,11 @@ Use this call to add/plan an instructor to all dayparts in a specific course  **
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -91,7 +91,7 @@ $apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $instructor_id = 1.2; // float | ID of the instructor in the form of an integer
-$body = new \YellowWave\Model\InstructorIdCourseBody(); // \YellowWave\Model\InstructorIdCourseBody | 
+$body = new \YellowWave\SwaggerClient\Model\InstructorIdCourseBody(); // \YellowWave\SwaggerClient\Model\InstructorIdCourseBody | 
 
 try {
     $apiInstance->addplanAnInstructorToAllDaypartsInASpecificCourse($x_api_key, $instructor_id, $body);
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **instructor_id** | **float**| ID of the instructor in the form of an integer |
- **body** | [**\YellowWave\Model\InstructorIdCourseBody**](../Model/InstructorIdCourseBody.md)|  | [optional]
+ **body** | [**\YellowWave\SwaggerClient\Model\InstructorIdCourseBody**](../Model/InstructorIdCourseBody.md)|  | [optional]
 
 ### Return type
 
@@ -136,11 +136,11 @@ Use this call to remove/unplan an instructor from a specific daypart  **Error co
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -148,7 +148,7 @@ $apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $instructor_id = 1.2; // float | ID of the instructor in the form of an integer
-$body = new \YellowWave\Model\InstructorIdDaypartBody1(); // \YellowWave\Model\InstructorIdDaypartBody1 | 
+$body = new \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1(); // \YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1 | 
 
 try {
     $apiInstance->removeunplanAnInstructorFromASpecificDaypart($x_api_key, $instructor_id, $body);
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **instructor_id** | **float**| ID of the instructor in the form of an integer |
- **body** | [**\YellowWave\Model\InstructorIdDaypartBody1**](../Model/InstructorIdDaypartBody1.md)|  | [optional]
+ **body** | [**\YellowWave\SwaggerClient\Model\InstructorIdDaypartBody1**](../Model/InstructorIdDaypartBody1.md)|  | [optional]
 
 ### Return type
 
@@ -193,11 +193,11 @@ Use this call to remove/unplan an instructor from all dayparts in a specific cou
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -205,7 +205,7 @@ $apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
 );
 $x_api_key = "x_api_key_example"; // string | e.g. <apikey>
 $instructor_id = 1.2; // float | ID of the instructor in the form of an integer
-$body = new \YellowWave\Model\InstructorIdCourseBody1(); // \YellowWave\Model\InstructorIdCourseBody1 | 
+$body = new \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1(); // \YellowWave\SwaggerClient\Model\InstructorIdCourseBody1 | 
 
 try {
     $apiInstance->removeunplanAnInstructorFromAllDaypartsInASpecificCourse($x_api_key, $instructor_id, $body);
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **string**| e.g. &lt;apikey&gt; |
  **instructor_id** | **float**| ID of the instructor in the form of an integer |
- **body** | [**\YellowWave\Model\InstructorIdCourseBody1**](../Model/InstructorIdCourseBody1.md)|  | [optional]
+ **body** | [**\YellowWave\SwaggerClient\Model\InstructorIdCourseBody1**](../Model/InstructorIdCourseBody1.md)|  | [optional]
 
 ### Return type
 
@@ -239,7 +239,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **viewListOfInstructors**
-> \YellowWave\Model\InlineResponse2005 viewListOfInstructors($offset, $limit, $x_api_key)
+> \YellowWave\SwaggerClient\Model\InlineResponse2005 viewListOfInstructors($offset, $limit, $x_api_key)
 
 View list of instructors
 
@@ -250,11 +250,11 @@ Use this call to fetch all active instructors  **Error codes**  | Code  | Messag
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: ApiKeyAuth
-$config = YellowWave\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
+$config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKey('X-Api-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = YellowWave\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
+// $config = YellowWave\SwaggerClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Api-Key', 'Bearer');
 
-$apiInstance = new YellowWave\PlanadaySDK\InstructorApi(
+$apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\InstructorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\YellowWave\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\YellowWave\SwaggerClient\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 

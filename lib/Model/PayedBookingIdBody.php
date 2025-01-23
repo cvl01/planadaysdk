@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 use \ArrayAccess;
-use \YellowWave\ObjectSerializer;
+use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * PayedBookingIdBody Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class PayedBookingIdBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'is_payed' => 'bool',
-        'payment' => '\YellowWave\Model\BookingpayedbookingIdPayment'
+        'payment' => '\YellowWave\SwaggerClient\Model\BookingpayedbookingIdPayment'
     ];
 
     /**
@@ -234,7 +234,7 @@ class PayedBookingIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets payment
      *
-     * @return \YellowWave\Model\BookingpayedbookingIdPayment
+     * @return \YellowWave\SwaggerClient\Model\BookingpayedbookingIdPayment
      */
     public function getPayment()
     {
@@ -244,7 +244,7 @@ class PayedBookingIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets payment
      *
-     * @param \YellowWave\Model\BookingpayedbookingIdPayment $payment payment
+     * @param \YellowWave\SwaggerClient\Model\BookingpayedbookingIdPayment $payment payment
      *
      * @return $this
      */

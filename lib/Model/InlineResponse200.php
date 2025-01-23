@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\Model;
+namespace YellowWave\SwaggerClient\Model;
 
 use \ArrayAccess;
-use \YellowWave\ObjectSerializer;
+use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * InlineResponse200 Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'result' => 'string',
         'booking_id' => 'string',
-        'details' => '\YellowWave\Model\InlineResponse200Details'
+        'details' => '\YellowWave\SwaggerClient\Model\InlineResponse200Details'
     ];
 
     /**
@@ -264,7 +264,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets details
      *
-     * @return \YellowWave\Model\InlineResponse200Details
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse200Details
      */
     public function getDetails()
     {
@@ -274,7 +274,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets details
      *
-     * @param \YellowWave\Model\InlineResponse200Details $details details
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse200Details $details details
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace YellowWave\PlanadaySDK;
+namespace YellowWave\SwaggerClient\PlanadaySDK;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use YellowWave\ApiException;
-use YellowWave\Configuration;
-use YellowWave\HeaderSelector;
-use YellowWave\ObjectSerializer;
+use YellowWave\SwaggerClient\ApiException;
+use YellowWave\SwaggerClient\Configuration;
+use YellowWave\SwaggerClient\HeaderSelector;
+use YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
  * LocationApi Class Doc Comment
  *
  * @category Class
- * @package  YellowWave
+ * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class LocationApi
      * @param  float $location_id ID of the Location in the form of an integer (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \YellowWave\Model\InlineResponse2006
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2006
      */
     public function viewLocationDetail($location_id, $x_api_key)
     {
@@ -112,13 +112,13 @@ class LocationApi
      * @param  float $location_id ID of the Location in the form of an integer (required)
      * @param  string $x_api_key e.g. &lt;apikey&gt; (required)
      *
-     * @throws \YellowWave\ApiException on non-2xx response
+     * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \YellowWave\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
     public function viewLocationDetailWithHttpInfo($location_id, $x_api_key)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2006';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2006';
         $request = $this->viewLocationDetailRequest($location_id, $x_api_key);
 
         try {
@@ -170,7 +170,7 @@ class LocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\YellowWave\Model\InlineResponse2006',
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class LocationApi
      */
     public function viewLocationDetailAsyncWithHttpInfo($location_id, $x_api_key)
     {
-        $returnType = '\YellowWave\Model\InlineResponse2006';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2006';
         $request = $this->viewLocationDetailRequest($location_id, $x_api_key);
 
         return $this->client

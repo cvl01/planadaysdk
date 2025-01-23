@@ -1,18 +1,8 @@
 <?php
 
-namespace YellowWave\PlanadaySDK;
+namespace YellowWave\SwaggerClient\PlanadaySDK;
 
-use YellowWave\PlanadaySDK\Configuration;
-use YellowWave\PlanadaySDK\Api\BookingApi;
-use YellowWave\PlanadaySDK\Api\CourseApi;
-use YellowWave\PlanadaySDK\Api\CoursetemplateApi;
-use YellowWave\PlanadaySDK\Api\DaypartApi;
-use YellowWave\PlanadaySDK\Api\ExtrafieldsApi;
-use YellowWave\PlanadaySDK\Api\ImageApi;
-use YellowWave\PlanadaySDK\Api\InstructorApi;
-use YellowWave\PlanadaySDK\Api\LabelApi;
-use YellowWave\PlanadaySDK\Api\LocationApi;
-use YellowWave\PlanadaySDK\Api\PingApi;
+use YellowWave\SwaggerClient\Configuration;
 
 class PlanadayClient
 {
