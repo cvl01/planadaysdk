@@ -93,16 +93,16 @@ class CourseApi
      *
      * @param  string $start Start date of planned courses to look for (YYYYMMDD) (required)
      * @param  string $end End date of planned courses to look for (YYYYMMDD) (required)
-     * @param  float $templateid ID of the Coursetemplate to find courses for (required)
-     * @param  float $offset Start offset of courses to show (i.e. 25) (required)
-     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $label labels which the course MUST have (see also label API calls) (required)
+     * @param  float $templateid ID of the Coursetemplate to find courses for (optional)
+     * @param  float $offset Start offset of courses to show (i.e. 25) (optional)
+     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (optional)
+     * @param  string $label labels which the course MUST have (see also label API calls) (optional)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \YellowWave\SwaggerClient\Model\InlineResponse2002
      */
-    public function getAListOfCourses($start, $end, $templateid, $offset, $limit, $label)
+    public function getAListOfCourses($start, $end, $templateid = null, $offset = null, $limit = null, $label = null)
     {
         list($response) = $this->getAListOfCoursesWithHttpInfo($start, $end, $templateid, $offset, $limit, $label);
         return $response;
@@ -115,16 +115,16 @@ class CourseApi
      *
      * @param  string $start Start date of planned courses to look for (YYYYMMDD) (required)
      * @param  string $end End date of planned courses to look for (YYYYMMDD) (required)
-     * @param  float $templateid ID of the Coursetemplate to find courses for (required)
-     * @param  float $offset Start offset of courses to show (i.e. 25) (required)
-     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $label labels which the course MUST have (see also label API calls) (required)
+     * @param  float $templateid ID of the Coursetemplate to find courses for (optional)
+     * @param  float $offset Start offset of courses to show (i.e. 25) (optional)
+     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (optional)
+     * @param  string $label labels which the course MUST have (see also label API calls) (optional)
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAListOfCoursesWithHttpInfo($start, $end, $templateid, $offset, $limit, $label)
+    public function getAListOfCoursesWithHttpInfo($start, $end, $templateid = null, $offset = null, $limit = null, $label = null)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2002';
         $request = $this->getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label);
@@ -195,15 +195,15 @@ class CourseApi
      *
      * @param  string $start Start date of planned courses to look for (YYYYMMDD) (required)
      * @param  string $end End date of planned courses to look for (YYYYMMDD) (required)
-     * @param  float $templateid ID of the Coursetemplate to find courses for (required)
-     * @param  float $offset Start offset of courses to show (i.e. 25) (required)
-     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $label labels which the course MUST have (see also label API calls) (required)
+     * @param  float $templateid ID of the Coursetemplate to find courses for (optional)
+     * @param  float $offset Start offset of courses to show (i.e. 25) (optional)
+     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (optional)
+     * @param  string $label labels which the course MUST have (see also label API calls) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfCoursesAsync($start, $end, $templateid, $offset, $limit, $label)
+    public function getAListOfCoursesAsync($start, $end, $templateid = null, $offset = null, $limit = null, $label = null)
     {
         return $this->getAListOfCoursesAsyncWithHttpInfo($start, $end, $templateid, $offset, $limit, $label)
             ->then(
@@ -220,15 +220,15 @@ class CourseApi
      *
      * @param  string $start Start date of planned courses to look for (YYYYMMDD) (required)
      * @param  string $end End date of planned courses to look for (YYYYMMDD) (required)
-     * @param  float $templateid ID of the Coursetemplate to find courses for (required)
-     * @param  float $offset Start offset of courses to show (i.e. 25) (required)
-     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $label labels which the course MUST have (see also label API calls) (required)
+     * @param  float $templateid ID of the Coursetemplate to find courses for (optional)
+     * @param  float $offset Start offset of courses to show (i.e. 25) (optional)
+     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (optional)
+     * @param  string $label labels which the course MUST have (see also label API calls) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAListOfCoursesAsyncWithHttpInfo($start, $end, $templateid, $offset, $limit, $label)
+    public function getAListOfCoursesAsyncWithHttpInfo($start, $end, $templateid = null, $offset = null, $limit = null, $label = null)
     {
         $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2002';
         $request = $this->getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label);
@@ -275,15 +275,15 @@ class CourseApi
      *
      * @param  string $start Start date of planned courses to look for (YYYYMMDD) (required)
      * @param  string $end End date of planned courses to look for (YYYYMMDD) (required)
-     * @param  float $templateid ID of the Coursetemplate to find courses for (required)
-     * @param  float $offset Start offset of courses to show (i.e. 25) (required)
-     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (required)
-     * @param  string $label labels which the course MUST have (see also label API calls) (required)
+     * @param  float $templateid ID of the Coursetemplate to find courses for (optional)
+     * @param  float $offset Start offset of courses to show (i.e. 25) (optional)
+     * @param  float $limit Amount of courses to show in one response (i.e. 25, limited to 100) (optional)
+     * @param  string $label labels which the course MUST have (see also label API calls) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAListOfCoursesRequest($start, $end, $templateid, $offset, $limit, $label)
+    protected function getAListOfCoursesRequest($start, $end, $templateid = null, $offset = null, $limit = null, $label = null)
     {
         // verify the required parameter 'start' is set
         if ($start === null || (is_array($start) && count($start) === 0)) {
@@ -297,30 +297,6 @@ class CourseApi
                 'Missing the required parameter $end when calling getAListOfCourses'
             );
         }
-        // verify the required parameter 'templateid' is set
-        if ($templateid === null || (is_array($templateid) && count($templateid) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $templateid when calling getAListOfCourses'
-            );
-        }
-        // verify the required parameter 'offset' is set
-        if ($offset === null || (is_array($offset) && count($offset) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $offset when calling getAListOfCourses'
-            );
-        }
-        // verify the required parameter 'limit' is set
-        if ($limit === null || (is_array($limit) && count($limit) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $limit when calling getAListOfCourses'
-            );
-        }
-        // verify the required parameter 'label' is set
-        if ($label === null || (is_array($label) && count($label) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $label when calling getAListOfCourses'
-            );
-        }
 
         $resourcePath = '/course/list?start={start}&end={end}&templateid={templateid}&offset={offset}&limit={limit}&label={label}';
         $formParams = [];
@@ -329,55 +305,31 @@ class CourseApi
         $httpBody = '';
         $multipart = false;
 
-
-        // path params
+        // query params
         if ($start !== null) {
-            $resourcePath = str_replace(
-                '{' . 'start' . '}',
-                ObjectSerializer::toPathValue($start),
-                $resourcePath
-            );
+            $queryParams['start'] = ObjectSerializer::toQueryValue($start, null);
         }
-        // path params
+        // query params
         if ($end !== null) {
-            $resourcePath = str_replace(
-                '{' . 'end' . '}',
-                ObjectSerializer::toPathValue($end),
-                $resourcePath
-            );
+            $queryParams['end'] = ObjectSerializer::toQueryValue($end, null);
         }
-        // path params
+        // query params
         if ($templateid !== null) {
-            $resourcePath = str_replace(
-                '{' . 'templateid' . '}',
-                ObjectSerializer::toPathValue($templateid),
-                $resourcePath
-            );
+            $queryParams['templateid'] = ObjectSerializer::toQueryValue($templateid, null);
         }
-        // path params
+        // query params
         if ($offset !== null) {
-            $resourcePath = str_replace(
-                '{' . 'offset' . '}',
-                ObjectSerializer::toPathValue($offset),
-                $resourcePath
-            );
+            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset, null);
         }
-        // path params
+        // query params
         if ($limit !== null) {
-            $resourcePath = str_replace(
-                '{' . 'limit' . '}',
-                ObjectSerializer::toPathValue($limit),
-                $resourcePath
-            );
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit, null);
         }
-        // path params
+        // query params
         if ($label !== null) {
-            $resourcePath = str_replace(
-                '{' . 'label' . '}',
-                ObjectSerializer::toPathValue($label),
-                $resourcePath
-            );
+            $queryParams['label'] = ObjectSerializer::toQueryValue($label, null);
         }
+
 
         // body params
         $_tempBody = null;

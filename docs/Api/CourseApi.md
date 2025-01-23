@@ -54,10 +54,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start** | **string**| Start date of planned courses to look for (YYYYMMDD) |
  **end** | **string**| End date of planned courses to look for (YYYYMMDD) |
- **templateid** | **float**| ID of the Coursetemplate to find courses for |
- **offset** | **float**| Start offset of courses to show (i.e. 25) |
- **limit** | **float**| Amount of courses to show in one response (i.e. 25, limited to 100) |
- **label** | **string**| labels which the course MUST have (see also label API calls) |
+ **templateid** | **float**| ID of the Coursetemplate to find courses for | [optional]
+ **offset** | **float**| Start offset of courses to show (i.e. 25) | [optional]
+ **limit** | **float**| Amount of courses to show in one response (i.e. 25, limited to 100) | [optional]
+ **label** | **string**| labels which the course MUST have (see also label API calls) | [optional]
 
 ### Return type
 
