@@ -298,7 +298,7 @@ class CourseApi
             );
         }
 
-        $resourcePath = '/course/list?start={start}&end={end}&templateid={templateid}&offset={offset}&limit={limit}&label={label}';
+        $resourcePath = '/course/list';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

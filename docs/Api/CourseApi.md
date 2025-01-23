@@ -4,7 +4,7 @@ All URIs are relative to *https://apitest.api.planaday.net/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAListOfCourses**](CourseApi.md#getalistofcourses) | **GET** /course/list?start&#x3D;{start}&amp;end&#x3D;{end}&amp;templateid&#x3D;{templateid}&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit}&amp;label&#x3D;{label} | Get a list of courses
+[**getAListOfCourses**](CourseApi.md#getalistofcourses) | **GET** /course/list | Get a list of courses
 [**viewCourseDetail**](CourseApi.md#viewcoursedetail) | **GET** /course/{course_id} | View Course Detail
 [**viewListOfDaypartsOfCourse**](CourseApi.md#viewlistofdaypartsofcourse) | **GET** /course/{course_id}/dayparts&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit} | View list of dayparts of Course
 [**viewListOfImagesOfCourse**](CourseApi.md#viewlistofimagesofcourse) | **GET** /course/{course_id}/images&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit} | View list of images of Course

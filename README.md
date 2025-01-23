@@ -130,7 +130,7 @@ Class | Method | HTTP request | Description
 *BookingApi* | [**createBooking**](docs/Api/BookingApi.md#createbooking) | **POST** /booking/{course_id} | Create booking
 *BookingApi* | [**deleteMadeBooking**](docs/Api/BookingApi.md#deletemadebooking) | **DELETE** /booking/{booking_id} | Delete made booking
 *BookingApi* | [**markBookingAsPayed**](docs/Api/BookingApi.md#markbookingaspayed) | **POST** /booking/payed/{booking_id} | Mark booking as payed
-*CourseApi* | [**getAListOfCourses**](docs/Api/CourseApi.md#getalistofcourses) | **GET** /course/list?start&#x3D;{start}&amp;end&#x3D;{end}&amp;templateid&#x3D;{templateid}&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit}&amp;label&#x3D;{label} | Get a list of courses
+*CourseApi* | [**getAListOfCourses**](docs/Api/CourseApi.md#getalistofcourses) | **GET** /course/list | Get a list of courses
 *CourseApi* | [**viewCourseDetail**](docs/Api/CourseApi.md#viewcoursedetail) | **GET** /course/{course_id} | View Course Detail
 *CourseApi* | [**viewListOfDaypartsOfCourse**](docs/Api/CourseApi.md#viewlistofdaypartsofcourse) | **GET** /course/{course_id}/dayparts&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit} | View list of dayparts of Course
 *CourseApi* | [**viewListOfImagesOfCourse**](docs/Api/CourseApi.md#viewlistofimagesofcourse) | **GET** /course/{course_id}/images&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit} | View list of images of Course
