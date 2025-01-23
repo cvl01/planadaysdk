@@ -1,13 +1,11 @@
-# InlineResponse2002Costs
+# InlineResponse2005Costs
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | **int** |  | 
-**course** | **int** |  | 
-**vat** | **int** |  | 
-**vat_code** | **int** |  | 
-**remark** | [****](.md) |  | 
+**price** | **float** |  | [optional] 
+**vat** | **float** |  | [optional] 
+**vat_code** | **float** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

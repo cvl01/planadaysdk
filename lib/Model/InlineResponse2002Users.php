@@ -56,10 +56,10 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'min' => 'float',
-        'max' => 'float',
-        'available' => 'float',
-        'options' => 'float'
+        'min' => 'int',
+        'max' => 'int',
+        'available' => 'int',
+        'options' => 'int'
     ];
 
     /**
@@ -204,6 +204,18 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['min'] === null) {
+            $invalidProperties[] = "'min' can't be null";
+        }
+        if ($this->container['max'] === null) {
+            $invalidProperties[] = "'max' can't be null";
+        }
+        if ($this->container['available'] === null) {
+            $invalidProperties[] = "'available' can't be null";
+        }
+        if ($this->container['options'] === null) {
+            $invalidProperties[] = "'options' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -222,7 +234,7 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     /**
      * Gets min
      *
-     * @return float
+     * @return int
      */
     public function getMin()
     {
@@ -232,7 +244,7 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     /**
      * Sets min
      *
-     * @param float $min min
+     * @param int $min min
      *
      * @return $this
      */
@@ -246,7 +258,7 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     /**
      * Gets max
      *
-     * @return float
+     * @return int
      */
     public function getMax()
     {
@@ -256,7 +268,7 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     /**
      * Sets max
      *
-     * @param float $max max
+     * @param int $max max
      *
      * @return $this
      */
@@ -270,7 +282,7 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     /**
      * Gets available
      *
-     * @return float
+     * @return int
      */
     public function getAvailable()
     {
@@ -280,7 +292,7 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     /**
      * Sets available
      *
-     * @param float $available available
+     * @param int $available available
      *
      * @return $this
      */
@@ -294,7 +306,7 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return float
+     * @return int
      */
     public function getOptions()
     {
@@ -304,7 +316,7 @@ class InlineResponse2002Users implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param float $options options
+     * @param int $options options
      *
      * @return $this
      */

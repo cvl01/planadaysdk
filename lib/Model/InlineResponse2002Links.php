@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2002Costs
+ * InlineResponse2002Links
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2002Costs Class Doc Comment
+ * InlineResponse2002Links Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2002Costs implements ModelInterface, ArrayAccess
+class InlineResponse2002Links implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_2_costs';
+    protected static $swaggerModelName = 'inline_response_200_2_links';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +56,11 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => 'int',
-        'course' => 'int',
-        'vat' => 'int',
-        'vat_code' => 'int',
-        'remark' => ''
+        'self' => 'string',
+        'first' => 'string',
+        'last' => 'string',
+        'previous' => 'string',
+        'next' => 'string'
     ];
 
     /**
@@ -69,11 +69,11 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'user' => null,
-        'course' => null,
-        'vat' => null,
-        'vat_code' => null,
-        'remark' => null
+        'self' => 'uri',
+        'first' => 'uri',
+        'last' => 'uri',
+        'previous' => 'uri',
+        'next' => 'uri'
     ];
 
     /**
@@ -103,11 +103,11 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user' => 'user',
-        'course' => 'course',
-        'vat' => 'vat',
-        'vat_code' => 'vat_code',
-        'remark' => 'remark'
+        'self' => 'self',
+        'first' => 'first',
+        'last' => 'last',
+        'previous' => 'previous',
+        'next' => 'next'
     ];
 
     /**
@@ -116,11 +116,11 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user' => 'setUser',
-        'course' => 'setCourse',
-        'vat' => 'setVat',
-        'vat_code' => 'setVatCode',
-        'remark' => 'setRemark'
+        'self' => 'setSelf',
+        'first' => 'setFirst',
+        'last' => 'setLast',
+        'previous' => 'setPrevious',
+        'next' => 'setNext'
     ];
 
     /**
@@ -129,11 +129,11 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user' => 'getUser',
-        'course' => 'getCourse',
-        'vat' => 'getVat',
-        'vat_code' => 'getVatCode',
-        'remark' => 'getRemark'
+        'self' => 'getSelf',
+        'first' => 'getFirst',
+        'last' => 'getLast',
+        'previous' => 'getPrevious',
+        'next' => 'getNext'
     ];
 
     /**
@@ -194,11 +194,11 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['course'] = isset($data['course']) ? $data['course'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
-        $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
+        $this->container['self'] = isset($data['self']) ? $data['self'] : null;
+        $this->container['first'] = isset($data['first']) ? $data['first'] : null;
+        $this->container['last'] = isset($data['last']) ? $data['last'] : null;
+        $this->container['previous'] = isset($data['previous']) ? $data['previous'] : null;
+        $this->container['next'] = isset($data['next']) ? $data['next'] : null;
     }
 
     /**
@@ -210,20 +210,20 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['user'] === null) {
-            $invalidProperties[] = "'user' can't be null";
+        if ($this->container['self'] === null) {
+            $invalidProperties[] = "'self' can't be null";
         }
-        if ($this->container['course'] === null) {
-            $invalidProperties[] = "'course' can't be null";
+        if ($this->container['first'] === null) {
+            $invalidProperties[] = "'first' can't be null";
         }
-        if ($this->container['vat'] === null) {
-            $invalidProperties[] = "'vat' can't be null";
+        if ($this->container['last'] === null) {
+            $invalidProperties[] = "'last' can't be null";
         }
-        if ($this->container['vat_code'] === null) {
-            $invalidProperties[] = "'vat_code' can't be null";
+        if ($this->container['previous'] === null) {
+            $invalidProperties[] = "'previous' can't be null";
         }
-        if ($this->container['remark'] === null) {
-            $invalidProperties[] = "'remark' can't be null";
+        if ($this->container['next'] === null) {
+            $invalidProperties[] = "'next' can't be null";
         }
         return $invalidProperties;
     }
@@ -241,121 +241,121 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user
+     * Gets self
      *
-     * @return int
+     * @return string
      */
-    public function getUser()
+    public function getSelf()
     {
-        return $this->container['user'];
+        return $this->container['self'];
     }
 
     /**
-     * Sets user
+     * Sets self
      *
-     * @param int $user user
+     * @param string $self self
      *
      * @return $this
      */
-    public function setUser($user)
+    public function setSelf($self)
     {
-        $this->container['user'] = $user;
+        $this->container['self'] = $self;
 
         return $this;
     }
 
     /**
-     * Gets course
+     * Gets first
      *
-     * @return int
+     * @return string
      */
-    public function getCourse()
+    public function getFirst()
     {
-        return $this->container['course'];
+        return $this->container['first'];
     }
 
     /**
-     * Sets course
+     * Sets first
      *
-     * @param int $course course
+     * @param string $first first
      *
      * @return $this
      */
-    public function setCourse($course)
+    public function setFirst($first)
     {
-        $this->container['course'] = $course;
+        $this->container['first'] = $first;
 
         return $this;
     }
 
     /**
-     * Gets vat
+     * Gets last
      *
-     * @return int
+     * @return string
      */
-    public function getVat()
+    public function getLast()
     {
-        return $this->container['vat'];
+        return $this->container['last'];
     }
 
     /**
-     * Sets vat
+     * Sets last
      *
-     * @param int $vat vat
+     * @param string $last last
      *
      * @return $this
      */
-    public function setVat($vat)
+    public function setLast($last)
     {
-        $this->container['vat'] = $vat;
+        $this->container['last'] = $last;
 
         return $this;
     }
 
     /**
-     * Gets vat_code
+     * Gets previous
      *
-     * @return int
+     * @return string
      */
-    public function getVatCode()
+    public function getPrevious()
     {
-        return $this->container['vat_code'];
+        return $this->container['previous'];
     }
 
     /**
-     * Sets vat_code
+     * Sets previous
      *
-     * @param int $vat_code vat_code
+     * @param string $previous previous
      *
      * @return $this
      */
-    public function setVatCode($vat_code)
+    public function setPrevious($previous)
     {
-        $this->container['vat_code'] = $vat_code;
+        $this->container['previous'] = $previous;
 
         return $this;
     }
 
     /**
-     * Gets remark
+     * Gets next
      *
-     * @return 
+     * @return string
      */
-    public function getRemark()
+    public function getNext()
     {
-        return $this->container['remark'];
+        return $this->container['next'];
     }
 
     /**
-     * Sets remark
+     * Sets next
      *
-     * @param  $remark remark
+     * @param string $next next
      *
      * @return $this
      */
-    public function setRemark($remark)
+    public function setNext($next)
     {
-        $this->container['remark'] = $remark;
+        $this->container['next'] = $next;
 
         return $this;
     }

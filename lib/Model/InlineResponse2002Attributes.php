@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2002Costs
+ * InlineResponse2002Attributes
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2002Costs Class Doc Comment
+ * InlineResponse2002Attributes Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2002Costs implements ModelInterface, ArrayAccess
+class InlineResponse2002Attributes implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_2_costs';
+    protected static $swaggerModelName = 'inline_response_200_2_attributes';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +56,13 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => 'int',
-        'course' => 'int',
+        'code' => 'string',
+        'values' => 'map[string,\YellowWave\SwaggerClient\Model\InlineResponse2002Values]',
+        'is_required' => 'bool',
+        'multiple_values_allowed' => 'bool',
+        'is_financial' => 'bool',
         'vat' => 'int',
-        'vat_code' => 'int',
-        'remark' => ''
+        'vat_code' => 'int'
     ];
 
     /**
@@ -69,11 +71,13 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'user' => null,
-        'course' => null,
+        'code' => null,
+        'values' => null,
+        'is_required' => null,
+        'multiple_values_allowed' => null,
+        'is_financial' => null,
         'vat' => null,
-        'vat_code' => null,
-        'remark' => null
+        'vat_code' => null
     ];
 
     /**
@@ -103,11 +107,13 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user' => 'user',
-        'course' => 'course',
+        'code' => 'code',
+        'values' => 'values',
+        'is_required' => 'is_required',
+        'multiple_values_allowed' => 'multiple_values_allowed',
+        'is_financial' => 'is_financial',
         'vat' => 'vat',
-        'vat_code' => 'vat_code',
-        'remark' => 'remark'
+        'vat_code' => 'vat_code'
     ];
 
     /**
@@ -116,11 +122,13 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user' => 'setUser',
-        'course' => 'setCourse',
+        'code' => 'setCode',
+        'values' => 'setValues',
+        'is_required' => 'setIsRequired',
+        'multiple_values_allowed' => 'setMultipleValuesAllowed',
+        'is_financial' => 'setIsFinancial',
         'vat' => 'setVat',
-        'vat_code' => 'setVatCode',
-        'remark' => 'setRemark'
+        'vat_code' => 'setVatCode'
     ];
 
     /**
@@ -129,11 +137,13 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user' => 'getUser',
-        'course' => 'getCourse',
+        'code' => 'getCode',
+        'values' => 'getValues',
+        'is_required' => 'getIsRequired',
+        'multiple_values_allowed' => 'getMultipleValuesAllowed',
+        'is_financial' => 'getIsFinancial',
         'vat' => 'getVat',
-        'vat_code' => 'getVatCode',
-        'remark' => 'getRemark'
+        'vat_code' => 'getVatCode'
     ];
 
     /**
@@ -194,11 +204,13 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['course'] = isset($data['course']) ? $data['course'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['is_required'] = isset($data['is_required']) ? $data['is_required'] : null;
+        $this->container['multiple_values_allowed'] = isset($data['multiple_values_allowed']) ? $data['multiple_values_allowed'] : null;
+        $this->container['is_financial'] = isset($data['is_financial']) ? $data['is_financial'] : null;
         $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
         $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
-        $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
     }
 
     /**
@@ -210,20 +222,26 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['user'] === null) {
-            $invalidProperties[] = "'user' can't be null";
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
         }
-        if ($this->container['course'] === null) {
-            $invalidProperties[] = "'course' can't be null";
+        if ($this->container['values'] === null) {
+            $invalidProperties[] = "'values' can't be null";
+        }
+        if ($this->container['is_required'] === null) {
+            $invalidProperties[] = "'is_required' can't be null";
+        }
+        if ($this->container['multiple_values_allowed'] === null) {
+            $invalidProperties[] = "'multiple_values_allowed' can't be null";
+        }
+        if ($this->container['is_financial'] === null) {
+            $invalidProperties[] = "'is_financial' can't be null";
         }
         if ($this->container['vat'] === null) {
             $invalidProperties[] = "'vat' can't be null";
         }
         if ($this->container['vat_code'] === null) {
             $invalidProperties[] = "'vat_code' can't be null";
-        }
-        if ($this->container['remark'] === null) {
-            $invalidProperties[] = "'remark' can't be null";
         }
         return $invalidProperties;
     }
@@ -241,49 +259,121 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user
+     * Gets code
      *
-     * @return int
+     * @return string
      */
-    public function getUser()
+    public function getCode()
     {
-        return $this->container['user'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets user
+     * Sets code
      *
-     * @param int $user user
+     * @param string $code code
      *
      * @return $this
      */
-    public function setUser($user)
+    public function setCode($code)
     {
-        $this->container['user'] = $user;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets course
+     * Gets values
      *
-     * @return int
+     * @return map[string,\YellowWave\SwaggerClient\Model\InlineResponse2002Values]
      */
-    public function getCourse()
+    public function getValues()
     {
-        return $this->container['course'];
+        return $this->container['values'];
     }
 
     /**
-     * Sets course
+     * Sets values
      *
-     * @param int $course course
+     * @param map[string,\YellowWave\SwaggerClient\Model\InlineResponse2002Values] $values values
      *
      * @return $this
      */
-    public function setCourse($course)
+    public function setValues($values)
     {
-        $this->container['course'] = $course;
+        $this->container['values'] = $values;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_required
+     *
+     * @return bool
+     */
+    public function getIsRequired()
+    {
+        return $this->container['is_required'];
+    }
+
+    /**
+     * Sets is_required
+     *
+     * @param bool $is_required is_required
+     *
+     * @return $this
+     */
+    public function setIsRequired($is_required)
+    {
+        $this->container['is_required'] = $is_required;
+
+        return $this;
+    }
+
+    /**
+     * Gets multiple_values_allowed
+     *
+     * @return bool
+     */
+    public function getMultipleValuesAllowed()
+    {
+        return $this->container['multiple_values_allowed'];
+    }
+
+    /**
+     * Sets multiple_values_allowed
+     *
+     * @param bool $multiple_values_allowed multiple_values_allowed
+     *
+     * @return $this
+     */
+    public function setMultipleValuesAllowed($multiple_values_allowed)
+    {
+        $this->container['multiple_values_allowed'] = $multiple_values_allowed;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_financial
+     *
+     * @return bool
+     */
+    public function getIsFinancial()
+    {
+        return $this->container['is_financial'];
+    }
+
+    /**
+     * Sets is_financial
+     *
+     * @param bool $is_financial is_financial
+     *
+     * @return $this
+     */
+    public function setIsFinancial($is_financial)
+    {
+        $this->container['is_financial'] = $is_financial;
 
         return $this;
     }
@@ -332,30 +422,6 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     public function setVatCode($vat_code)
     {
         $this->container['vat_code'] = $vat_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets remark
-     *
-     * @return 
-     */
-    public function getRemark()
-    {
-        return $this->container['remark'];
-    }
-
-    /**
-     * Sets remark
-     *
-     * @param  $remark remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        $this->container['remark'] = $remark;
 
         return $this;
     }

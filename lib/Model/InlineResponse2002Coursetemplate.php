@@ -56,7 +56,7 @@ class InlineResponse2002Coursetemplate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'float',
+        'id' => 'int',
         'href' => 'string'
     ];
 
@@ -67,7 +67,7 @@ class InlineResponse2002Coursetemplate implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'href' => null
+        'href' => 'uri'
     ];
 
     /**
@@ -192,6 +192,12 @@ class InlineResponse2002Coursetemplate implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['href'] === null) {
+            $invalidProperties[] = "'href' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -210,7 +216,7 @@ class InlineResponse2002Coursetemplate implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return float
+     * @return int
      */
     public function getId()
     {
@@ -220,7 +226,7 @@ class InlineResponse2002Coursetemplate implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param float $id id
+     * @param int $id id
      *
      * @return $this
      */

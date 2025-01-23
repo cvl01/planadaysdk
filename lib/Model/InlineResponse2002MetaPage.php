@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2002Costs
+ * InlineResponse2002MetaPage
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2002Costs Class Doc Comment
+ * InlineResponse2002MetaPage Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2002Costs implements ModelInterface, ArrayAccess
+class InlineResponse2002MetaPage implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_2_costs';
+    protected static $swaggerModelName = 'inline_response_200_2_meta_page';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +56,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => 'int',
-        'course' => 'int',
-        'vat' => 'int',
-        'vat_code' => 'int',
-        'remark' => ''
+        'offset' => 'int',
+        'limit' => 'int',
+        'total' => 'int'
     ];
 
     /**
@@ -69,11 +67,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'user' => null,
-        'course' => null,
-        'vat' => null,
-        'vat_code' => null,
-        'remark' => null
+        'offset' => null,
+        'limit' => null,
+        'total' => null
     ];
 
     /**
@@ -103,11 +99,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user' => 'user',
-        'course' => 'course',
-        'vat' => 'vat',
-        'vat_code' => 'vat_code',
-        'remark' => 'remark'
+        'offset' => 'offset',
+        'limit' => 'limit',
+        'total' => 'total'
     ];
 
     /**
@@ -116,11 +110,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user' => 'setUser',
-        'course' => 'setCourse',
-        'vat' => 'setVat',
-        'vat_code' => 'setVatCode',
-        'remark' => 'setRemark'
+        'offset' => 'setOffset',
+        'limit' => 'setLimit',
+        'total' => 'setTotal'
     ];
 
     /**
@@ -129,11 +121,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user' => 'getUser',
-        'course' => 'getCourse',
-        'vat' => 'getVat',
-        'vat_code' => 'getVatCode',
-        'remark' => 'getRemark'
+        'offset' => 'getOffset',
+        'limit' => 'getLimit',
+        'total' => 'getTotal'
     ];
 
     /**
@@ -194,11 +184,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['course'] = isset($data['course']) ? $data['course'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
-        $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -210,20 +198,14 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['user'] === null) {
-            $invalidProperties[] = "'user' can't be null";
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
         }
-        if ($this->container['course'] === null) {
-            $invalidProperties[] = "'course' can't be null";
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
         }
-        if ($this->container['vat'] === null) {
-            $invalidProperties[] = "'vat' can't be null";
-        }
-        if ($this->container['vat_code'] === null) {
-            $invalidProperties[] = "'vat_code' can't be null";
-        }
-        if ($this->container['remark'] === null) {
-            $invalidProperties[] = "'remark' can't be null";
+        if ($this->container['total'] === null) {
+            $invalidProperties[] = "'total' can't be null";
         }
         return $invalidProperties;
     }
@@ -241,121 +223,73 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user
+     * Gets offset
      *
      * @return int
      */
-    public function getUser()
+    public function getOffset()
     {
-        return $this->container['user'];
+        return $this->container['offset'];
     }
 
     /**
-     * Sets user
+     * Sets offset
      *
-     * @param int $user user
+     * @param int $offset offset
      *
      * @return $this
      */
-    public function setUser($user)
+    public function setOffset($offset)
     {
-        $this->container['user'] = $user;
+        $this->container['offset'] = $offset;
 
         return $this;
     }
 
     /**
-     * Gets course
+     * Gets limit
      *
      * @return int
      */
-    public function getCourse()
+    public function getLimit()
     {
-        return $this->container['course'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets course
+     * Sets limit
      *
-     * @param int $course course
+     * @param int $limit limit
      *
      * @return $this
      */
-    public function setCourse($course)
+    public function setLimit($limit)
     {
-        $this->container['course'] = $course;
+        $this->container['limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * Gets vat
+     * Gets total
      *
      * @return int
      */
-    public function getVat()
+    public function getTotal()
     {
-        return $this->container['vat'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets vat
+     * Sets total
      *
-     * @param int $vat vat
+     * @param int $total total
      *
      * @return $this
      */
-    public function setVat($vat)
+    public function setTotal($total)
     {
-        $this->container['vat'] = $vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat_code
-     *
-     * @return int
-     */
-    public function getVatCode()
-    {
-        return $this->container['vat_code'];
-    }
-
-    /**
-     * Sets vat_code
-     *
-     * @param int $vat_code vat_code
-     *
-     * @return $this
-     */
-    public function setVatCode($vat_code)
-    {
-        $this->container['vat_code'] = $vat_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets remark
-     *
-     * @return 
-     */
-    public function getRemark()
-    {
-        return $this->container['remark'];
-    }
-
-    /**
-     * Sets remark
-     *
-     * @param  $remark remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        $this->container['remark'] = $remark;
+        $this->container['total'] = $total;
 
         return $this;
     }

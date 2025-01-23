@@ -1,13 +1,11 @@
-# InlineResponse2002Costs
+# InlineResponse2002MetaPage
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | **int** |  | 
-**course** | **int** |  | 
-**vat** | **int** |  | 
-**vat_code** | **int** |  | 
-**remark** | [****](.md) |  | 
+**offset** | **int** |  | 
+**limit** | **int** |  | 
+**total** | **int** |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

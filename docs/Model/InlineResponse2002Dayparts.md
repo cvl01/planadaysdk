@@ -1,13 +1,11 @@
-# InlineResponse2002Costs
+# InlineResponse2002Dayparts
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | **int** |  | 
-**course** | **int** |  | 
-**vat** | **int** |  | 
-**vat_code** | **int** |  | 
-**remark** | [****](.md) |  | 
+**id** | **int** |  | 
+**href** | **string** |  | 
+**visible** | **bool** |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

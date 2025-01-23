@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2002Costs
+ * InlineResponse2005Address
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2002Costs Class Doc Comment
+ * InlineResponse2005Address Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2002Costs implements ModelInterface, ArrayAccess
+class InlineResponse2005Address implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_2_costs';
+    protected static $swaggerModelName = 'inline_response_200_5_address';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +56,15 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => 'int',
-        'course' => 'int',
-        'vat' => 'int',
-        'vat_code' => 'int',
-        'remark' => ''
+        'street_1' => '',
+        'street_2' => '',
+        'housenumber' => 'float',
+        'housenumber_extension' => '',
+        'zipcode' => 'string',
+        'city' => 'string',
+        'country' => 'string',
+        'lat' => 'float',
+        'lng' => 'float'
     ];
 
     /**
@@ -69,11 +73,15 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'user' => null,
-        'course' => null,
-        'vat' => null,
-        'vat_code' => null,
-        'remark' => null
+        'street_1' => null,
+        'street_2' => null,
+        'housenumber' => null,
+        'housenumber_extension' => null,
+        'zipcode' => null,
+        'city' => null,
+        'country' => null,
+        'lat' => null,
+        'lng' => null
     ];
 
     /**
@@ -103,11 +111,15 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user' => 'user',
-        'course' => 'course',
-        'vat' => 'vat',
-        'vat_code' => 'vat_code',
-        'remark' => 'remark'
+        'street_1' => 'street_1',
+        'street_2' => 'street_2',
+        'housenumber' => 'housenumber',
+        'housenumber_extension' => 'housenumber_extension',
+        'zipcode' => 'zipcode',
+        'city' => 'city',
+        'country' => 'country',
+        'lat' => 'lat',
+        'lng' => 'lng'
     ];
 
     /**
@@ -116,11 +128,15 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user' => 'setUser',
-        'course' => 'setCourse',
-        'vat' => 'setVat',
-        'vat_code' => 'setVatCode',
-        'remark' => 'setRemark'
+        'street_1' => 'setStreet1',
+        'street_2' => 'setStreet2',
+        'housenumber' => 'setHousenumber',
+        'housenumber_extension' => 'setHousenumberExtension',
+        'zipcode' => 'setZipcode',
+        'city' => 'setCity',
+        'country' => 'setCountry',
+        'lat' => 'setLat',
+        'lng' => 'setLng'
     ];
 
     /**
@@ -129,11 +145,15 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user' => 'getUser',
-        'course' => 'getCourse',
-        'vat' => 'getVat',
-        'vat_code' => 'getVatCode',
-        'remark' => 'getRemark'
+        'street_1' => 'getStreet1',
+        'street_2' => 'getStreet2',
+        'housenumber' => 'getHousenumber',
+        'housenumber_extension' => 'getHousenumberExtension',
+        'zipcode' => 'getZipcode',
+        'city' => 'getCity',
+        'country' => 'getCountry',
+        'lat' => 'getLat',
+        'lng' => 'getLng'
     ];
 
     /**
@@ -194,11 +214,15 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['course'] = isset($data['course']) ? $data['course'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
-        $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
+        $this->container['street_1'] = isset($data['street_1']) ? $data['street_1'] : null;
+        $this->container['street_2'] = isset($data['street_2']) ? $data['street_2'] : null;
+        $this->container['housenumber'] = isset($data['housenumber']) ? $data['housenumber'] : null;
+        $this->container['housenumber_extension'] = isset($data['housenumber_extension']) ? $data['housenumber_extension'] : null;
+        $this->container['zipcode'] = isset($data['zipcode']) ? $data['zipcode'] : null;
+        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['lat'] = isset($data['lat']) ? $data['lat'] : null;
+        $this->container['lng'] = isset($data['lng']) ? $data['lng'] : null;
     }
 
     /**
@@ -210,21 +234,6 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['user'] === null) {
-            $invalidProperties[] = "'user' can't be null";
-        }
-        if ($this->container['course'] === null) {
-            $invalidProperties[] = "'course' can't be null";
-        }
-        if ($this->container['vat'] === null) {
-            $invalidProperties[] = "'vat' can't be null";
-        }
-        if ($this->container['vat_code'] === null) {
-            $invalidProperties[] = "'vat_code' can't be null";
-        }
-        if ($this->container['remark'] === null) {
-            $invalidProperties[] = "'remark' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -241,121 +250,217 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user
-     *
-     * @return int
-     */
-    public function getUser()
-    {
-        return $this->container['user'];
-    }
-
-    /**
-     * Sets user
-     *
-     * @param int $user user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        $this->container['user'] = $user;
-
-        return $this;
-    }
-
-    /**
-     * Gets course
-     *
-     * @return int
-     */
-    public function getCourse()
-    {
-        return $this->container['course'];
-    }
-
-    /**
-     * Sets course
-     *
-     * @param int $course course
-     *
-     * @return $this
-     */
-    public function setCourse($course)
-    {
-        $this->container['course'] = $course;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat
-     *
-     * @return int
-     */
-    public function getVat()
-    {
-        return $this->container['vat'];
-    }
-
-    /**
-     * Sets vat
-     *
-     * @param int $vat vat
-     *
-     * @return $this
-     */
-    public function setVat($vat)
-    {
-        $this->container['vat'] = $vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat_code
-     *
-     * @return int
-     */
-    public function getVatCode()
-    {
-        return $this->container['vat_code'];
-    }
-
-    /**
-     * Sets vat_code
-     *
-     * @param int $vat_code vat_code
-     *
-     * @return $this
-     */
-    public function setVatCode($vat_code)
-    {
-        $this->container['vat_code'] = $vat_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets remark
+     * Gets street_1
      *
      * @return 
      */
-    public function getRemark()
+    public function getStreet1()
     {
-        return $this->container['remark'];
+        return $this->container['street_1'];
     }
 
     /**
-     * Sets remark
+     * Sets street_1
      *
-     * @param  $remark remark
+     * @param  $street_1 street_1
      *
      * @return $this
      */
-    public function setRemark($remark)
+    public function setStreet1($street_1)
     {
-        $this->container['remark'] = $remark;
+        $this->container['street_1'] = $street_1;
+
+        return $this;
+    }
+
+    /**
+     * Gets street_2
+     *
+     * @return 
+     */
+    public function getStreet2()
+    {
+        return $this->container['street_2'];
+    }
+
+    /**
+     * Sets street_2
+     *
+     * @param  $street_2 street_2
+     *
+     * @return $this
+     */
+    public function setStreet2($street_2)
+    {
+        $this->container['street_2'] = $street_2;
+
+        return $this;
+    }
+
+    /**
+     * Gets housenumber
+     *
+     * @return float
+     */
+    public function getHousenumber()
+    {
+        return $this->container['housenumber'];
+    }
+
+    /**
+     * Sets housenumber
+     *
+     * @param float $housenumber housenumber
+     *
+     * @return $this
+     */
+    public function setHousenumber($housenumber)
+    {
+        $this->container['housenumber'] = $housenumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets housenumber_extension
+     *
+     * @return 
+     */
+    public function getHousenumberExtension()
+    {
+        return $this->container['housenumber_extension'];
+    }
+
+    /**
+     * Sets housenumber_extension
+     *
+     * @param  $housenumber_extension housenumber_extension
+     *
+     * @return $this
+     */
+    public function setHousenumberExtension($housenumber_extension)
+    {
+        $this->container['housenumber_extension'] = $housenumber_extension;
+
+        return $this;
+    }
+
+    /**
+     * Gets zipcode
+     *
+     * @return string
+     */
+    public function getZipcode()
+    {
+        return $this->container['zipcode'];
+    }
+
+    /**
+     * Sets zipcode
+     *
+     * @param string $zipcode zipcode
+     *
+     * @return $this
+     */
+    public function setZipcode($zipcode)
+    {
+        $this->container['zipcode'] = $zipcode;
+
+        return $this;
+    }
+
+    /**
+     * Gets city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     *
+     * @param string $city city
+     *
+     * @return $this
+     */
+    public function setCity($city)
+    {
+        $this->container['city'] = $city;
+
+        return $this;
+    }
+
+    /**
+     * Gets country
+     *
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+     * Sets country
+     *
+     * @param string $country country
+     *
+     * @return $this
+     */
+    public function setCountry($country)
+    {
+        $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets lat
+     *
+     * @return float
+     */
+    public function getLat()
+    {
+        return $this->container['lat'];
+    }
+
+    /**
+     * Sets lat
+     *
+     * @param float $lat lat
+     *
+     * @return $this
+     */
+    public function setLat($lat)
+    {
+        $this->container['lat'] = $lat;
+
+        return $this;
+    }
+
+    /**
+     * Gets lng
+     *
+     * @return float
+     */
+    public function getLng()
+    {
+        return $this->container['lng'];
+    }
+
+    /**
+     * Sets lng
+     *
+     * @param float $lng lng
+     *
+     * @return $this
+     */
+    public function setLng($lng)
+    {
+        $this->container['lng'] = $lng;
 
         return $this;
     }

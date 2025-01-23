@@ -56,31 +56,9 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'float',
-        'href' => 'string',
-        'code' => 'string',
-        'name' => 'string',
-        'description' => 'string',
-        'type' => 'string',
-        'status' => 'string',
-        'daypart_amount' => 'float',
-        'dayparts' => 'null[]',
-        'users' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Users',
-        'costs' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Costs',
-        'coursetemplate' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate',
-        'level' => 'string',
-        'level_description' => 'string',
-        'start_guaranteed' => 'bool',
-        'moneyback_guaranteed' => 'bool',
-        'has_elearning' => 'bool',
-        'has_code95' => 'bool',
-        'has_soob' => 'bool',
-        'has_stap' => 'bool',
-        'stap_only' => 'bool',
-        'labels' => 'null[]',
-        'language' => 'string',
-        'extrafields' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Extrafields',
-        'repeating_courses' => '\YellowWave\SwaggerClient\Model\InlineResponse2002RepeatingCourses[]'
+        'meta' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Meta',
+        'data' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Data[]',
+        'links' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Links'
     ];
 
     /**
@@ -89,31 +67,9 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'href' => null,
-        'code' => null,
-        'name' => null,
-        'description' => null,
-        'type' => null,
-        'status' => null,
-        'daypart_amount' => null,
-        'dayparts' => null,
-        'users' => null,
-        'costs' => null,
-        'coursetemplate' => null,
-        'level' => null,
-        'level_description' => null,
-        'start_guaranteed' => null,
-        'moneyback_guaranteed' => null,
-        'has_elearning' => null,
-        'has_code95' => null,
-        'has_soob' => null,
-        'has_stap' => null,
-        'stap_only' => null,
-        'labels' => null,
-        'language' => null,
-        'extrafields' => null,
-        'repeating_courses' => null
+        'meta' => null,
+        'data' => null,
+        'links' => null
     ];
 
     /**
@@ -143,31 +99,9 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'href' => 'href',
-        'code' => 'code',
-        'name' => 'name',
-        'description' => 'description',
-        'type' => 'type',
-        'status' => 'status',
-        'daypart_amount' => 'daypart_amount',
-        'dayparts' => 'dayparts',
-        'users' => 'users',
-        'costs' => 'costs',
-        'coursetemplate' => 'coursetemplate',
-        'level' => 'level',
-        'level_description' => 'level_description',
-        'start_guaranteed' => 'start_guaranteed',
-        'moneyback_guaranteed' => 'moneyback_guaranteed',
-        'has_elearning' => 'has_elearning',
-        'has_code95' => 'has_code95',
-        'has_soob' => 'has_soob',
-        'has_stap' => 'has_stap',
-        'stap_only' => 'stap_only',
-        'labels' => 'labels',
-        'language' => 'language',
-        'extrafields' => 'extrafields',
-        'repeating_courses' => 'repeating_courses'
+        'meta' => 'meta',
+        'data' => 'data',
+        'links' => 'links'
     ];
 
     /**
@@ -176,31 +110,9 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'href' => 'setHref',
-        'code' => 'setCode',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'type' => 'setType',
-        'status' => 'setStatus',
-        'daypart_amount' => 'setDaypartAmount',
-        'dayparts' => 'setDayparts',
-        'users' => 'setUsers',
-        'costs' => 'setCosts',
-        'coursetemplate' => 'setCoursetemplate',
-        'level' => 'setLevel',
-        'level_description' => 'setLevelDescription',
-        'start_guaranteed' => 'setStartGuaranteed',
-        'moneyback_guaranteed' => 'setMoneybackGuaranteed',
-        'has_elearning' => 'setHasElearning',
-        'has_code95' => 'setHasCode95',
-        'has_soob' => 'setHasSoob',
-        'has_stap' => 'setHasStap',
-        'stap_only' => 'setStapOnly',
-        'labels' => 'setLabels',
-        'language' => 'setLanguage',
-        'extrafields' => 'setExtrafields',
-        'repeating_courses' => 'setRepeatingCourses'
+        'meta' => 'setMeta',
+        'data' => 'setData',
+        'links' => 'setLinks'
     ];
 
     /**
@@ -209,31 +121,9 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'href' => 'getHref',
-        'code' => 'getCode',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'type' => 'getType',
-        'status' => 'getStatus',
-        'daypart_amount' => 'getDaypartAmount',
-        'dayparts' => 'getDayparts',
-        'users' => 'getUsers',
-        'costs' => 'getCosts',
-        'coursetemplate' => 'getCoursetemplate',
-        'level' => 'getLevel',
-        'level_description' => 'getLevelDescription',
-        'start_guaranteed' => 'getStartGuaranteed',
-        'moneyback_guaranteed' => 'getMoneybackGuaranteed',
-        'has_elearning' => 'getHasElearning',
-        'has_code95' => 'getHasCode95',
-        'has_soob' => 'getHasSoob',
-        'has_stap' => 'getHasStap',
-        'stap_only' => 'getStapOnly',
-        'labels' => 'getLabels',
-        'language' => 'getLanguage',
-        'extrafields' => 'getExtrafields',
-        'repeating_courses' => 'getRepeatingCourses'
+        'meta' => 'getMeta',
+        'data' => 'getData',
+        'links' => 'getLinks'
     ];
 
     /**
@@ -294,31 +184,9 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['href'] = isset($data['href']) ? $data['href'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['daypart_amount'] = isset($data['daypart_amount']) ? $data['daypart_amount'] : null;
-        $this->container['dayparts'] = isset($data['dayparts']) ? $data['dayparts'] : null;
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
-        $this->container['costs'] = isset($data['costs']) ? $data['costs'] : null;
-        $this->container['coursetemplate'] = isset($data['coursetemplate']) ? $data['coursetemplate'] : null;
-        $this->container['level'] = isset($data['level']) ? $data['level'] : null;
-        $this->container['level_description'] = isset($data['level_description']) ? $data['level_description'] : null;
-        $this->container['start_guaranteed'] = isset($data['start_guaranteed']) ? $data['start_guaranteed'] : null;
-        $this->container['moneyback_guaranteed'] = isset($data['moneyback_guaranteed']) ? $data['moneyback_guaranteed'] : null;
-        $this->container['has_elearning'] = isset($data['has_elearning']) ? $data['has_elearning'] : null;
-        $this->container['has_code95'] = isset($data['has_code95']) ? $data['has_code95'] : null;
-        $this->container['has_soob'] = isset($data['has_soob']) ? $data['has_soob'] : null;
-        $this->container['has_stap'] = isset($data['has_stap']) ? $data['has_stap'] : null;
-        $this->container['stap_only'] = isset($data['stap_only']) ? $data['stap_only'] : null;
-        $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
-        $this->container['extrafields'] = isset($data['extrafields']) ? $data['extrafields'] : null;
-        $this->container['repeating_courses'] = isset($data['repeating_courses']) ? $data['repeating_courses'] : null;
+        $this->container['meta'] = isset($data['meta']) ? $data['meta'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -330,6 +198,15 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['meta'] === null) {
+            $invalidProperties[] = "'meta' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
+        if ($this->container['links'] === null) {
+            $invalidProperties[] = "'links' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -346,601 +223,73 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets meta
      *
-     * @return float
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Meta
      */
-    public function getId()
+    public function getMeta()
     {
-        return $this->container['id'];
+        return $this->container['meta'];
     }
 
     /**
-     * Sets id
+     * Sets meta
      *
-     * @param float $id id
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Meta $meta meta
      *
      * @return $this
      */
-    public function setId($id)
+    public function setMeta($meta)
     {
-        $this->container['id'] = $id;
+        $this->container['meta'] = $meta;
 
         return $this;
     }
 
     /**
-     * Gets href
+     * Gets data
      *
-     * @return string
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Data[]
      */
-    public function getHref()
+    public function getData()
     {
-        return $this->container['href'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets href
+     * Sets data
      *
-     * @param string $href href
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Data[] $data data
      *
      * @return $this
      */
-    public function setHref($href)
+    public function setData($data)
     {
-        $this->container['href'] = $href;
+        $this->container['data'] = $data;
 
         return $this;
     }
 
     /**
-     * Gets code
+     * Gets links
      *
-     * @return string
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Links
      */
-    public function getCode()
+    public function getLinks()
     {
-        return $this->container['code'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets code
+     * Sets links
      *
-     * @param string $code code
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Links $links links
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setLinks($links)
     {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets daypart_amount
-     *
-     * @return float
-     */
-    public function getDaypartAmount()
-    {
-        return $this->container['daypart_amount'];
-    }
-
-    /**
-     * Sets daypart_amount
-     *
-     * @param float $daypart_amount daypart_amount
-     *
-     * @return $this
-     */
-    public function setDaypartAmount($daypart_amount)
-    {
-        $this->container['daypart_amount'] = $daypart_amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets dayparts
-     *
-     * @return null[]
-     */
-    public function getDayparts()
-    {
-        return $this->container['dayparts'];
-    }
-
-    /**
-     * Sets dayparts
-     *
-     * @param null[] $dayparts dayparts
-     *
-     * @return $this
-     */
-    public function setDayparts($dayparts)
-    {
-        $this->container['dayparts'] = $dayparts;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Users
-     */
-    public function getUsers()
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Users $users users
-     *
-     * @return $this
-     */
-    public function setUsers($users)
-    {
-        $this->container['users'] = $users;
-
-        return $this;
-    }
-
-    /**
-     * Gets costs
-     *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Costs
-     */
-    public function getCosts()
-    {
-        return $this->container['costs'];
-    }
-
-    /**
-     * Sets costs
-     *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Costs $costs costs
-     *
-     * @return $this
-     */
-    public function setCosts($costs)
-    {
-        $this->container['costs'] = $costs;
-
-        return $this;
-    }
-
-    /**
-     * Gets coursetemplate
-     *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate
-     */
-    public function getCoursetemplate()
-    {
-        return $this->container['coursetemplate'];
-    }
-
-    /**
-     * Sets coursetemplate
-     *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate $coursetemplate coursetemplate
-     *
-     * @return $this
-     */
-    public function setCoursetemplate($coursetemplate)
-    {
-        $this->container['coursetemplate'] = $coursetemplate;
-
-        return $this;
-    }
-
-    /**
-     * Gets level
-     *
-     * @return string
-     */
-    public function getLevel()
-    {
-        return $this->container['level'];
-    }
-
-    /**
-     * Sets level
-     *
-     * @param string $level level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        $this->container['level'] = $level;
-
-        return $this;
-    }
-
-    /**
-     * Gets level_description
-     *
-     * @return string
-     */
-    public function getLevelDescription()
-    {
-        return $this->container['level_description'];
-    }
-
-    /**
-     * Sets level_description
-     *
-     * @param string $level_description level_description
-     *
-     * @return $this
-     */
-    public function setLevelDescription($level_description)
-    {
-        $this->container['level_description'] = $level_description;
-
-        return $this;
-    }
-
-    /**
-     * Gets start_guaranteed
-     *
-     * @return bool
-     */
-    public function getStartGuaranteed()
-    {
-        return $this->container['start_guaranteed'];
-    }
-
-    /**
-     * Sets start_guaranteed
-     *
-     * @param bool $start_guaranteed start_guaranteed
-     *
-     * @return $this
-     */
-    public function setStartGuaranteed($start_guaranteed)
-    {
-        $this->container['start_guaranteed'] = $start_guaranteed;
-
-        return $this;
-    }
-
-    /**
-     * Gets moneyback_guaranteed
-     *
-     * @return bool
-     */
-    public function getMoneybackGuaranteed()
-    {
-        return $this->container['moneyback_guaranteed'];
-    }
-
-    /**
-     * Sets moneyback_guaranteed
-     *
-     * @param bool $moneyback_guaranteed moneyback_guaranteed
-     *
-     * @return $this
-     */
-    public function setMoneybackGuaranteed($moneyback_guaranteed)
-    {
-        $this->container['moneyback_guaranteed'] = $moneyback_guaranteed;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_elearning
-     *
-     * @return bool
-     */
-    public function getHasElearning()
-    {
-        return $this->container['has_elearning'];
-    }
-
-    /**
-     * Sets has_elearning
-     *
-     * @param bool $has_elearning has_elearning
-     *
-     * @return $this
-     */
-    public function setHasElearning($has_elearning)
-    {
-        $this->container['has_elearning'] = $has_elearning;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_code95
-     *
-     * @return bool
-     */
-    public function getHasCode95()
-    {
-        return $this->container['has_code95'];
-    }
-
-    /**
-     * Sets has_code95
-     *
-     * @param bool $has_code95 has_code95
-     *
-     * @return $this
-     */
-    public function setHasCode95($has_code95)
-    {
-        $this->container['has_code95'] = $has_code95;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_soob
-     *
-     * @return bool
-     */
-    public function getHasSoob()
-    {
-        return $this->container['has_soob'];
-    }
-
-    /**
-     * Sets has_soob
-     *
-     * @param bool $has_soob has_soob
-     *
-     * @return $this
-     */
-    public function setHasSoob($has_soob)
-    {
-        $this->container['has_soob'] = $has_soob;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_stap
-     *
-     * @return bool
-     */
-    public function getHasStap()
-    {
-        return $this->container['has_stap'];
-    }
-
-    /**
-     * Sets has_stap
-     *
-     * @param bool $has_stap has_stap
-     *
-     * @return $this
-     */
-    public function setHasStap($has_stap)
-    {
-        $this->container['has_stap'] = $has_stap;
-
-        return $this;
-    }
-
-    /**
-     * Gets stap_only
-     *
-     * @return bool
-     */
-    public function getStapOnly()
-    {
-        return $this->container['stap_only'];
-    }
-
-    /**
-     * Sets stap_only
-     *
-     * @param bool $stap_only stap_only
-     *
-     * @return $this
-     */
-    public function setStapOnly($stap_only)
-    {
-        $this->container['stap_only'] = $stap_only;
-
-        return $this;
-    }
-
-    /**
-     * Gets labels
-     *
-     * @return null[]
-     */
-    public function getLabels()
-    {
-        return $this->container['labels'];
-    }
-
-    /**
-     * Sets labels
-     *
-     * @param null[] $labels labels
-     *
-     * @return $this
-     */
-    public function setLabels($labels)
-    {
-        $this->container['labels'] = $labels;
-
-        return $this;
-    }
-
-    /**
-     * Gets language
-     *
-     * @return string
-     */
-    public function getLanguage()
-    {
-        return $this->container['language'];
-    }
-
-    /**
-     * Sets language
-     *
-     * @param string $language language
-     *
-     * @return $this
-     */
-    public function setLanguage($language)
-    {
-        $this->container['language'] = $language;
-
-        return $this;
-    }
-
-    /**
-     * Gets extrafields
-     *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Extrafields
-     */
-    public function getExtrafields()
-    {
-        return $this->container['extrafields'];
-    }
-
-    /**
-     * Sets extrafields
-     *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Extrafields $extrafields extrafields
-     *
-     * @return $this
-     */
-    public function setExtrafields($extrafields)
-    {
-        $this->container['extrafields'] = $extrafields;
-
-        return $this;
-    }
-
-    /**
-     * Gets repeating_courses
-     *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002RepeatingCourses[]
-     */
-    public function getRepeatingCourses()
-    {
-        return $this->container['repeating_courses'];
-    }
-
-    /**
-     * Sets repeating_courses
-     *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002RepeatingCourses[] $repeating_courses repeating_courses
-     *
-     * @return $this
-     */
-    public function setRepeatingCourses($repeating_courses)
-    {
-        $this->container['repeating_courses'] = $repeating_courses;
+        $this->container['links'] = $links;
 
         return $this;
     }

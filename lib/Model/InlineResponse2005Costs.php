@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2002Costs
+ * InlineResponse2005Costs
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2002Costs Class Doc Comment
+ * InlineResponse2005Costs Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2002Costs implements ModelInterface, ArrayAccess
+class InlineResponse2005Costs implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_2_costs';
+    protected static $swaggerModelName = 'inline_response_200_5_costs';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +56,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => 'int',
-        'course' => 'int',
-        'vat' => 'int',
-        'vat_code' => 'int',
-        'remark' => ''
+        'price' => 'float',
+        'vat' => 'float',
+        'vat_code' => 'float'
     ];
 
     /**
@@ -69,11 +67,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'user' => null,
-        'course' => null,
+        'price' => null,
         'vat' => null,
-        'vat_code' => null,
-        'remark' => null
+        'vat_code' => null
     ];
 
     /**
@@ -103,11 +99,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user' => 'user',
-        'course' => 'course',
+        'price' => 'price',
         'vat' => 'vat',
-        'vat_code' => 'vat_code',
-        'remark' => 'remark'
+        'vat_code' => 'vat_code'
     ];
 
     /**
@@ -116,11 +110,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user' => 'setUser',
-        'course' => 'setCourse',
+        'price' => 'setPrice',
         'vat' => 'setVat',
-        'vat_code' => 'setVatCode',
-        'remark' => 'setRemark'
+        'vat_code' => 'setVatCode'
     ];
 
     /**
@@ -129,11 +121,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user' => 'getUser',
-        'course' => 'getCourse',
+        'price' => 'getPrice',
         'vat' => 'getVat',
-        'vat_code' => 'getVatCode',
-        'remark' => 'getRemark'
+        'vat_code' => 'getVatCode'
     ];
 
     /**
@@ -194,11 +184,9 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['course'] = isset($data['course']) ? $data['course'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
         $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
         $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
-        $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
     }
 
     /**
@@ -210,21 +198,6 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['user'] === null) {
-            $invalidProperties[] = "'user' can't be null";
-        }
-        if ($this->container['course'] === null) {
-            $invalidProperties[] = "'course' can't be null";
-        }
-        if ($this->container['vat'] === null) {
-            $invalidProperties[] = "'vat' can't be null";
-        }
-        if ($this->container['vat_code'] === null) {
-            $invalidProperties[] = "'vat_code' can't be null";
-        }
-        if ($this->container['remark'] === null) {
-            $invalidProperties[] = "'remark' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -241,49 +214,25 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user
+     * Gets price
      *
-     * @return int
+     * @return float
      */
-    public function getUser()
+    public function getPrice()
     {
-        return $this->container['user'];
+        return $this->container['price'];
     }
 
     /**
-     * Sets user
+     * Sets price
      *
-     * @param int $user user
+     * @param float $price price
      *
      * @return $this
      */
-    public function setUser($user)
+    public function setPrice($price)
     {
-        $this->container['user'] = $user;
-
-        return $this;
-    }
-
-    /**
-     * Gets course
-     *
-     * @return int
-     */
-    public function getCourse()
-    {
-        return $this->container['course'];
-    }
-
-    /**
-     * Sets course
-     *
-     * @param int $course course
-     *
-     * @return $this
-     */
-    public function setCourse($course)
-    {
-        $this->container['course'] = $course;
+        $this->container['price'] = $price;
 
         return $this;
     }
@@ -291,7 +240,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     /**
      * Gets vat
      *
-     * @return int
+     * @return float
      */
     public function getVat()
     {
@@ -301,7 +250,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     /**
      * Sets vat
      *
-     * @param int $vat vat
+     * @param float $vat vat
      *
      * @return $this
      */
@@ -315,7 +264,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     /**
      * Gets vat_code
      *
-     * @return int
+     * @return float
      */
     public function getVatCode()
     {
@@ -325,37 +274,13 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     /**
      * Sets vat_code
      *
-     * @param int $vat_code vat_code
+     * @param float $vat_code vat_code
      *
      * @return $this
      */
     public function setVatCode($vat_code)
     {
         $this->container['vat_code'] = $vat_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets remark
-     *
-     * @return 
-     */
-    public function getRemark()
-    {
-        return $this->container['remark'];
-    }
-
-    /**
-     * Sets remark
-     *
-     * @param  $remark remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        $this->container['remark'] = $remark;
 
         return $this;
     }
