@@ -59,7 +59,7 @@ class InlineResponse2002Data implements ModelInterface, ArrayAccess
         'id' => 'int',
         'code' => 'string',
         'name' => 'string',
-        'description' => '',
+        'description' => 'string',
         'type' => 'string',
         'status' => 'string',
         'daypart_amount' => 'int',
@@ -468,7 +468,7 @@ class InlineResponse2002Data implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return 
+     * @return string
      */
     public function getDescription()
     {
@@ -478,7 +478,7 @@ class InlineResponse2002Data implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param  $description description
+     * @param string $description description
      *
      * @return $this
      */

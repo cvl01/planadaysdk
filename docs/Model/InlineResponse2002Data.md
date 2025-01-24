@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | 
 **code** | **string** |  | 
 **name** | **string** |  | 
-**description** | [****](.md) |  | 
+**description** | **string** |  | 
 **type** | **string** |  | 
 **status** | **string** |  | 
 **daypart_amount** | **int** |  | 
