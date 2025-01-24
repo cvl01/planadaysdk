@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **code** | **string** |  | [optional] 
 **address** | [**\YellowWave\SwaggerClient\Model\InlineResponse2007Address**](InlineResponse2007Address.md) |  | [optional] 
 **contact_info** | [**\YellowWave\SwaggerClient\Model\InlineResponse2007ContactInfo**](InlineResponse2007ContactInfo.md) |  | [optional] 
-**description** | [****](.md) |  | [optional] 
+**description** | **string** |  | [optional] 
 **capacity** | **float** |  | [optional] 
 **overbookable** | **bool** |  | [optional] 
 **is_virtual** | **bool** |  | [optional] 

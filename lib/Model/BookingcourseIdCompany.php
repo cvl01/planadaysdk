@@ -60,10 +60,10 @@ class BookingcourseIdCompany implements ModelInterface, ArrayAccess
         'email' => 'string',
         'address' => 'string',
         'house_number' => 'string',
-        'house_number_extension' => '',
+        'house_number_extension' => 'string',
         'postal_code' => 'string',
         'city' => 'string',
-        'phonenumber' => '',
+        'phonenumber' => 'string',
         'invoice_email' => 'string'
     ];
 
@@ -348,7 +348,7 @@ class BookingcourseIdCompany implements ModelInterface, ArrayAccess
     /**
      * Gets house_number_extension
      *
-     * @return 
+     * @return string
      */
     public function getHouseNumberExtension()
     {
@@ -358,7 +358,7 @@ class BookingcourseIdCompany implements ModelInterface, ArrayAccess
     /**
      * Sets house_number_extension
      *
-     * @param  $house_number_extension house_number_extension
+     * @param string $house_number_extension house_number_extension
      *
      * @return $this
      */
@@ -420,7 +420,7 @@ class BookingcourseIdCompany implements ModelInterface, ArrayAccess
     /**
      * Gets phonenumber
      *
-     * @return 
+     * @return string
      */
     public function getPhonenumber()
     {
@@ -430,7 +430,7 @@ class BookingcourseIdCompany implements ModelInterface, ArrayAccess
     /**
      * Sets phonenumber
      *
-     * @param  $phonenumber phonenumber
+     * @param string $phonenumber phonenumber
      *
      * @return $this
      */

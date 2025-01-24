@@ -7,10 +7,10 @@ Name | Type | Description | Notes
 **email** | **string** |  | [optional] 
 **address** | **string** |  | [optional] 
 **house_number** | **string** |  | [optional] 
-**house_number_extension** | [****](.md) |  | [optional] 
+**house_number_extension** | **string** |  | [optional] 
 **postal_code** | **string** |  | [optional] 
 **city** | **string** |  | [optional] 
-**phonenumber** | [****](.md) |  | [optional] 
+**phonenumber** | **string** |  | [optional] 
 **invoice_email** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

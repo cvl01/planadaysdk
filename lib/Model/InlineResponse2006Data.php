@@ -59,8 +59,8 @@ class InlineResponse2006Data implements ModelInterface, ArrayAccess
         'id' => 'float',
         'last_name' => 'string',
         'first_name' => 'string',
-        'initials' => '',
-        'prefix' => '',
+        'initials' => 'string',
+        'prefix' => 'string',
         'href' => 'string'
     ];
 
@@ -324,7 +324,7 @@ class InlineResponse2006Data implements ModelInterface, ArrayAccess
     /**
      * Gets initials
      *
-     * @return 
+     * @return string
      */
     public function getInitials()
     {
@@ -334,7 +334,7 @@ class InlineResponse2006Data implements ModelInterface, ArrayAccess
     /**
      * Sets initials
      *
-     * @param  $initials initials
+     * @param string $initials initials
      *
      * @return $this
      */
@@ -348,7 +348,7 @@ class InlineResponse2006Data implements ModelInterface, ArrayAccess
     /**
      * Gets prefix
      *
-     * @return 
+     * @return string
      */
     public function getPrefix()
     {
@@ -358,7 +358,7 @@ class InlineResponse2006Data implements ModelInterface, ArrayAccess
     /**
      * Sets prefix
      *
-     * @param  $prefix prefix
+     * @param string $prefix prefix
      *
      * @return $this
      */

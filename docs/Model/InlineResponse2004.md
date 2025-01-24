@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **string** |  | 
 **id** | **int** |  | 
-**code** | [****](.md) |  | 
+**code** | **string** |  | 
 **name** | **string** |  | 
-**description** | [****](.md) |  | 
+**description** | **string** |  | 
 **status** | **string** |  | 
 **date** | [**\DateTime**](\DateTime.md) |  | 
 **date_finish_before** | [**\DateTime**](\DateTime.md) |  | 

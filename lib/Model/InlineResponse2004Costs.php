@@ -56,7 +56,7 @@ class InlineResponse2004Costs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => '',
+        'user' => 'int',
         'vat' => 'int',
         'vat_code' => 'int'
     ];
@@ -225,7 +225,7 @@ class InlineResponse2004Costs implements ModelInterface, ArrayAccess
     /**
      * Gets user
      *
-     * @return 
+     * @return int
      */
     public function getUser()
     {
@@ -235,7 +235,7 @@ class InlineResponse2004Costs implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param  $user user
+     * @param int $user user
      *
      * @return $this
      */

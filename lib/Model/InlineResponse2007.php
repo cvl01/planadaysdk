@@ -61,7 +61,7 @@ class InlineResponse2007 implements ModelInterface, ArrayAccess
         'code' => 'string',
         'address' => '\YellowWave\SwaggerClient\Model\InlineResponse2007Address',
         'contact_info' => '\YellowWave\SwaggerClient\Model\InlineResponse2007ContactInfo',
-        'description' => '',
+        'description' => 'string',
         'capacity' => 'float',
         'overbookable' => 'bool',
         'is_virtual' => 'bool',
@@ -390,7 +390,7 @@ class InlineResponse2007 implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return 
+     * @return string
      */
     public function getDescription()
     {
@@ -400,7 +400,7 @@ class InlineResponse2007 implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param  $description description
+     * @param string $description description
      *
      * @return $this
      */

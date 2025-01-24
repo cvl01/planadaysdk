@@ -56,8 +56,8 @@ class InlineResponse2007ContactInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'phonenumber_1' => '',
-        'email' => '',
+        'phonenumber_1' => 'string',
+        'email' => 'string',
         'website' => 'string'
     ];
 
@@ -216,7 +216,7 @@ class InlineResponse2007ContactInfo implements ModelInterface, ArrayAccess
     /**
      * Gets phonenumber_1
      *
-     * @return 
+     * @return string
      */
     public function getPhonenumber1()
     {
@@ -226,7 +226,7 @@ class InlineResponse2007ContactInfo implements ModelInterface, ArrayAccess
     /**
      * Sets phonenumber_1
      *
-     * @param  $phonenumber_1 phonenumber_1
+     * @param string $phonenumber_1 phonenumber_1
      *
      * @return $this
      */
@@ -240,7 +240,7 @@ class InlineResponse2007ContactInfo implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return 
+     * @return string
      */
     public function getEmail()
     {
@@ -250,7 +250,7 @@ class InlineResponse2007ContactInfo implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param  $email email
+     * @param string $email email
      *
      * @return $this
      */

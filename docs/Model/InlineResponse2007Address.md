@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**street_1** | [****](.md) |  | [optional] 
-**street_2** | [****](.md) |  | [optional] 
+**street_1** | **string** |  | [optional] 
+**street_2** | **string** |  | [optional] 
 **housenumber** | **float** |  | [optional] 
-**housenumber_extension** | [****](.md) |  | [optional] 
+**housenumber_extension** | **string** |  | [optional] 
 **zipcode** | **string** |  | [optional] 
 **city** | **string** |  | [optional] 
 **country** | **string** |  | [optional] 

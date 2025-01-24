@@ -56,10 +56,10 @@ class InlineResponse2007Address implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'street_1' => '',
-        'street_2' => '',
+        'street_1' => 'string',
+        'street_2' => 'string',
         'housenumber' => 'float',
-        'housenumber_extension' => '',
+        'housenumber_extension' => 'string',
         'zipcode' => 'string',
         'city' => 'string',
         'country' => 'string',
@@ -252,7 +252,7 @@ class InlineResponse2007Address implements ModelInterface, ArrayAccess
     /**
      * Gets street_1
      *
-     * @return 
+     * @return string
      */
     public function getStreet1()
     {
@@ -262,7 +262,7 @@ class InlineResponse2007Address implements ModelInterface, ArrayAccess
     /**
      * Sets street_1
      *
-     * @param  $street_1 street_1
+     * @param string $street_1 street_1
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class InlineResponse2007Address implements ModelInterface, ArrayAccess
     /**
      * Gets street_2
      *
-     * @return 
+     * @return string
      */
     public function getStreet2()
     {
@@ -286,7 +286,7 @@ class InlineResponse2007Address implements ModelInterface, ArrayAccess
     /**
      * Sets street_2
      *
-     * @param  $street_2 street_2
+     * @param string $street_2 street_2
      *
      * @return $this
      */
@@ -324,7 +324,7 @@ class InlineResponse2007Address implements ModelInterface, ArrayAccess
     /**
      * Gets housenumber_extension
      *
-     * @return 
+     * @return string
      */
     public function getHousenumberExtension()
     {
@@ -334,7 +334,7 @@ class InlineResponse2007Address implements ModelInterface, ArrayAccess
     /**
      * Sets housenumber_extension
      *
-     * @param  $housenumber_extension housenumber_extension
+     * @param string $housenumber_extension housenumber_extension
      *
      * @return $this
      */

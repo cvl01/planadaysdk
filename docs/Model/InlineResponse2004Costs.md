@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | [****](.md) |  | 
+**user** | **int** |  | 
 **vat** | **int** |  | 
 **vat_code** | **int** |  | 
 

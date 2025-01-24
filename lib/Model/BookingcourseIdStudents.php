@@ -64,11 +64,11 @@ class BookingcourseIdStudents implements ModelInterface, ArrayAccess
         'email' => 'string',
         'address' => 'string',
         'house_number' => 'string',
-        'house_number_extension' => '',
+        'house_number_extension' => 'string',
         'postal_code' => 'string',
         'city' => 'string',
-        'phonenumber' => '',
-        'date_of_birth' => '',
+        'phonenumber' => 'string',
+        'date_of_birth' => 'string',
         'employee_id' => 'string',
         'costcentercode' => 'string',
         'company_position' => 'string',
@@ -510,7 +510,7 @@ class BookingcourseIdStudents implements ModelInterface, ArrayAccess
     /**
      * Gets house_number_extension
      *
-     * @return 
+     * @return string
      */
     public function getHouseNumberExtension()
     {
@@ -520,7 +520,7 @@ class BookingcourseIdStudents implements ModelInterface, ArrayAccess
     /**
      * Sets house_number_extension
      *
-     * @param  $house_number_extension house_number_extension
+     * @param string $house_number_extension house_number_extension
      *
      * @return $this
      */
@@ -582,7 +582,7 @@ class BookingcourseIdStudents implements ModelInterface, ArrayAccess
     /**
      * Gets phonenumber
      *
-     * @return 
+     * @return string
      */
     public function getPhonenumber()
     {
@@ -592,7 +592,7 @@ class BookingcourseIdStudents implements ModelInterface, ArrayAccess
     /**
      * Sets phonenumber
      *
-     * @param  $phonenumber phonenumber
+     * @param string $phonenumber phonenumber
      *
      * @return $this
      */
@@ -606,7 +606,7 @@ class BookingcourseIdStudents implements ModelInterface, ArrayAccess
     /**
      * Gets date_of_birth
      *
-     * @return 
+     * @return string
      */
     public function getDateOfBirth()
     {
@@ -616,7 +616,7 @@ class BookingcourseIdStudents implements ModelInterface, ArrayAccess
     /**
      * Sets date_of_birth
      *
-     * @param  $date_of_birth date_of_birth
+     * @param string $date_of_birth date_of_birth
      *
      * @return $this
      */

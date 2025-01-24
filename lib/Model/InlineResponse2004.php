@@ -58,9 +58,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'href' => 'string',
         'id' => 'int',
-        'code' => '',
+        'code' => 'string',
         'name' => 'string',
-        'description' => '',
+        'description' => 'string',
         'status' => 'string',
         'date' => '\DateTime',
         'date_finish_before' => '\DateTime',
@@ -426,7 +426,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return 
+     * @return string
      */
     public function getCode()
     {
@@ -436,7 +436,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param  $code code
+     * @param string $code code
      *
      * @return $this
      */
@@ -474,7 +474,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return 
+     * @return string
      */
     public function getDescription()
     {
@@ -484,7 +484,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param  $description description
+     * @param string $description description
      *
      * @return $this
      */
