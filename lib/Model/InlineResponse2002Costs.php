@@ -60,7 +60,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
         'course' => 'int',
         'vat' => 'int',
         'vat_code' => 'int',
-        'remark' => ''
+        'remark' => 'string'
     ];
 
     /**
@@ -339,7 +339,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     /**
      * Gets remark
      *
-     * @return 
+     * @return string
      */
     public function getRemark()
     {
@@ -349,7 +349,7 @@ class InlineResponse2002Costs implements ModelInterface, ArrayAccess
     /**
      * Sets remark
      *
-     * @param  $remark remark
+     * @param string $remark remark
      *
      * @return $this
      */
