@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**viewLocationDetail**](LocationApi.md#viewlocationdetail) | **GET** /location/{location_id} | View Location Detail
 
 # **viewLocationDetail**
-> \YellowWave\SwaggerClient\Model\InlineResponse2006 viewLocationDetail($location_id)
+> \YellowWave\SwaggerClient\Model\InlineResponse2007 viewLocationDetail($location_id)
 
 View Location Detail
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\YellowWave\SwaggerClient\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\YellowWave\SwaggerClient\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 

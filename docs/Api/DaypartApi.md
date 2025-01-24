@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**viewListOfMaterialsOfADaypart**](DaypartApi.md#viewlistofmaterialsofadaypart) | **GET** /daypart/{daypart_id}/materials&amp;offset&#x3D;{offset}&amp;limit&#x3D;{limit}&amp;label&#x3D;{label} | View list of materials of a Daypart
 
 # **viewDaypartDetail**
-> viewDaypartDetail($daypart_id)
+> \YellowWave\SwaggerClient\Model\InlineResponse2004 viewDaypartDetail($daypart_id)
 
 View Daypart Detail
 
@@ -32,7 +32,8 @@ $apiInstance = new YellowWave\SwaggerClient\PlanadaySDK\DaypartApi(
 $daypart_id = 1.2; // float | ID of the Daypart in the form of an integer
 
 try {
-    $apiInstance->viewDaypartDetail($daypart_id);
+    $result = $apiInstance->viewDaypartDetail($daypart_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DaypartApi->viewDaypartDetail: ', $e->getMessage(), PHP_EOL;
 }
@@ -47,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\YellowWave\SwaggerClient\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -56,12 +57,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **viewListOfMaterialsOfADaypart**
-> \YellowWave\SwaggerClient\Model\InlineResponse2004 viewListOfMaterialsOfADaypart($daypart_id, $offset, $limit)
+> \YellowWave\SwaggerClient\Model\InlineResponse2005 viewListOfMaterialsOfADaypart($daypart_id, $offset, $limit)
 
 View list of materials of a Daypart
 
@@ -105,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\YellowWave\SwaggerClient\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\YellowWave\SwaggerClient\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 

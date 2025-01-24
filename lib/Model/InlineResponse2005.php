@@ -56,9 +56,9 @@ class InlineResponse2005 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\YellowWave\SwaggerClient\Model\InlineResponse2005Meta',
+        'meta' => '\YellowWave\SwaggerClient\Model\InlineResponse2003Meta',
         'data' => '\YellowWave\SwaggerClient\Model\InlineResponse2005Data[]',
-        'links' => '\YellowWave\SwaggerClient\Model\InlineResponse2005Links'
+        'links' => '\YellowWave\SwaggerClient\Model\InlineResponse2003Links'
     ];
 
     /**
@@ -216,7 +216,7 @@ class InlineResponse2005 implements ModelInterface, ArrayAccess
     /**
      * Gets meta
      *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2005Meta
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2003Meta
      */
     public function getMeta()
     {
@@ -226,7 +226,7 @@ class InlineResponse2005 implements ModelInterface, ArrayAccess
     /**
      * Sets meta
      *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2005Meta $meta meta
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2003Meta $meta meta
      *
      * @return $this
      */
@@ -264,7 +264,7 @@ class InlineResponse2005 implements ModelInterface, ArrayAccess
     /**
      * Gets links
      *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2005Links
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2003Links
      */
     public function getLinks()
     {
@@ -274,7 +274,7 @@ class InlineResponse2005 implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2005Links $links links
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2003Links $links links
      *
      * @return $this
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2005Data
+ * InlineResponse2007
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2005Data Class Doc Comment
+ * InlineResponse2007 Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2005Data implements ModelInterface, ArrayAccess
+class InlineResponse2007 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_5_data';
+    protected static $swaggerModelName = 'inline_response_200_7';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,17 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'float',
-        'code' => 'string',
         'name' => 'string',
-        'description' => 'string',
-        'selling_price' => 'float',
-        'vat' => 'float',
-        'vat_code' => 'float'
+        'code' => 'string',
+        'address' => '\YellowWave\SwaggerClient\Model\InlineResponse2007Address',
+        'contact_info' => '\YellowWave\SwaggerClient\Model\InlineResponse2007ContactInfo',
+        'description' => '',
+        'capacity' => 'float',
+        'overbookable' => 'bool',
+        'is_virtual' => 'bool',
+        'is_external' => 'bool',
+        'costs' => '\YellowWave\SwaggerClient\Model\InlineResponse2007Costs',
+        'href' => 'string'
     ];
 
     /**
@@ -72,12 +77,17 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'code' => null,
         'name' => null,
+        'code' => null,
+        'address' => null,
+        'contact_info' => null,
         'description' => null,
-        'selling_price' => null,
-        'vat' => null,
-        'vat_code' => null
+        'capacity' => null,
+        'overbookable' => null,
+        'is_virtual' => null,
+        'is_external' => null,
+        'costs' => null,
+        'href' => null
     ];
 
     /**
@@ -108,12 +118,17 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'code' => 'code',
         'name' => 'name',
+        'code' => 'code',
+        'address' => 'address',
+        'contact_info' => 'contact_info',
         'description' => 'description',
-        'selling_price' => 'selling_price',
-        'vat' => 'vat',
-        'vat_code' => 'vat_code'
+        'capacity' => 'capacity',
+        'overbookable' => 'overbookable',
+        'is_virtual' => 'is_virtual',
+        'is_external' => 'is_external',
+        'costs' => 'costs',
+        'href' => 'href'
     ];
 
     /**
@@ -123,12 +138,17 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'code' => 'setCode',
         'name' => 'setName',
+        'code' => 'setCode',
+        'address' => 'setAddress',
+        'contact_info' => 'setContactInfo',
         'description' => 'setDescription',
-        'selling_price' => 'setSellingPrice',
-        'vat' => 'setVat',
-        'vat_code' => 'setVatCode'
+        'capacity' => 'setCapacity',
+        'overbookable' => 'setOverbookable',
+        'is_virtual' => 'setIsVirtual',
+        'is_external' => 'setIsExternal',
+        'costs' => 'setCosts',
+        'href' => 'setHref'
     ];
 
     /**
@@ -138,12 +158,17 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'code' => 'getCode',
         'name' => 'getName',
+        'code' => 'getCode',
+        'address' => 'getAddress',
+        'contact_info' => 'getContactInfo',
         'description' => 'getDescription',
-        'selling_price' => 'getSellingPrice',
-        'vat' => 'getVat',
-        'vat_code' => 'getVatCode'
+        'capacity' => 'getCapacity',
+        'overbookable' => 'getOverbookable',
+        'is_virtual' => 'getIsVirtual',
+        'is_external' => 'getIsExternal',
+        'costs' => 'getCosts',
+        'href' => 'getHref'
     ];
 
     /**
@@ -205,12 +230,17 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['contact_info'] = isset($data['contact_info']) ? $data['contact_info'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['selling_price'] = isset($data['selling_price']) ? $data['selling_price'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
+        $this->container['capacity'] = isset($data['capacity']) ? $data['capacity'] : null;
+        $this->container['overbookable'] = isset($data['overbookable']) ? $data['overbookable'] : null;
+        $this->container['is_virtual'] = isset($data['is_virtual']) ? $data['is_virtual'] : null;
+        $this->container['is_external'] = isset($data['is_external']) ? $data['is_external'] : null;
+        $this->container['costs'] = isset($data['costs']) ? $data['costs'] : null;
+        $this->container['href'] = isset($data['href']) ? $data['href'] : null;
     }
 
     /**
@@ -262,30 +292,6 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets code
-     *
-     * @return string
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param string $code code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      *
      * @return string
@@ -310,9 +316,81 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets description
+     * Gets code
      *
      * @return string
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     *
+     * @param string $code code
+     *
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     *
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2007Address
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2007Address $address address
+     *
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets contact_info
+     *
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2007ContactInfo
+     */
+    public function getContactInfo()
+    {
+        return $this->container['contact_info'];
+    }
+
+    /**
+     * Sets contact_info
+     *
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2007ContactInfo $contact_info contact_info
+     *
+     * @return $this
+     */
+    public function setContactInfo($contact_info)
+    {
+        $this->container['contact_info'] = $contact_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return 
      */
     public function getDescription()
     {
@@ -322,7 +400,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description description
+     * @param  $description description
      *
      * @return $this
      */
@@ -334,73 +412,145 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets selling_price
+     * Gets capacity
      *
      * @return float
      */
-    public function getSellingPrice()
+    public function getCapacity()
     {
-        return $this->container['selling_price'];
+        return $this->container['capacity'];
     }
 
     /**
-     * Sets selling_price
+     * Sets capacity
      *
-     * @param float $selling_price selling_price
+     * @param float $capacity capacity
      *
      * @return $this
      */
-    public function setSellingPrice($selling_price)
+    public function setCapacity($capacity)
     {
-        $this->container['selling_price'] = $selling_price;
+        $this->container['capacity'] = $capacity;
 
         return $this;
     }
 
     /**
-     * Gets vat
+     * Gets overbookable
      *
-     * @return float
+     * @return bool
      */
-    public function getVat()
+    public function getOverbookable()
     {
-        return $this->container['vat'];
+        return $this->container['overbookable'];
     }
 
     /**
-     * Sets vat
+     * Sets overbookable
      *
-     * @param float $vat vat
+     * @param bool $overbookable overbookable
      *
      * @return $this
      */
-    public function setVat($vat)
+    public function setOverbookable($overbookable)
     {
-        $this->container['vat'] = $vat;
+        $this->container['overbookable'] = $overbookable;
 
         return $this;
     }
 
     /**
-     * Gets vat_code
+     * Gets is_virtual
      *
-     * @return float
+     * @return bool
      */
-    public function getVatCode()
+    public function getIsVirtual()
     {
-        return $this->container['vat_code'];
+        return $this->container['is_virtual'];
     }
 
     /**
-     * Sets vat_code
+     * Sets is_virtual
      *
-     * @param float $vat_code vat_code
+     * @param bool $is_virtual is_virtual
      *
      * @return $this
      */
-    public function setVatCode($vat_code)
+    public function setIsVirtual($is_virtual)
     {
-        $this->container['vat_code'] = $vat_code;
+        $this->container['is_virtual'] = $is_virtual;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_external
+     *
+     * @return bool
+     */
+    public function getIsExternal()
+    {
+        return $this->container['is_external'];
+    }
+
+    /**
+     * Sets is_external
+     *
+     * @param bool $is_external is_external
+     *
+     * @return $this
+     */
+    public function setIsExternal($is_external)
+    {
+        $this->container['is_external'] = $is_external;
+
+        return $this;
+    }
+
+    /**
+     * Gets costs
+     *
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2007Costs
+     */
+    public function getCosts()
+    {
+        return $this->container['costs'];
+    }
+
+    /**
+     * Sets costs
+     *
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2007Costs $costs costs
+     *
+     * @return $this
+     */
+    public function setCosts($costs)
+    {
+        $this->container['costs'] = $costs;
+
+        return $this;
+    }
+
+    /**
+     * Gets href
+     *
+     * @return string
+     */
+    public function getHref()
+    {
+        return $this->container['href'];
+    }
+
+    /**
+     * Sets href
+     *
+     * @param string $href href
+     *
+     * @return $this
+     */
+    public function setHref($href)
+    {
+        $this->container['href'] = $href;
 
         return $this;
     }

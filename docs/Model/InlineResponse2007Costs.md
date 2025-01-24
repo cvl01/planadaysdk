@@ -1,13 +1,9 @@
-# InlineResponse2005Data
+# InlineResponse2007Costs
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **float** |  | [optional] 
-**code** | **string** |  | [optional] 
-**name** | **string** |  | [optional] 
-**description** | **string** |  | [optional] 
-**selling_price** | **float** |  | [optional] 
+**price** | **float** |  | [optional] 
 **vat** | **float** |  | [optional] 
 **vat_code** | **float** |  | [optional] 
 

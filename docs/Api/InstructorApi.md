@@ -231,7 +231,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **viewListOfInstructors**
-> \YellowWave\SwaggerClient\Model\InlineResponse2005 viewListOfInstructors($offset, $limit)
+> \YellowWave\SwaggerClient\Model\InlineResponse2006 viewListOfInstructors($offset, $limit)
 
 View list of instructors
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\YellowWave\SwaggerClient\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\YellowWave\SwaggerClient\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 

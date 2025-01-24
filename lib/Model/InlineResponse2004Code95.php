@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2005Data
+ * InlineResponse2004Code95
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2005Data Class Doc Comment
+ * InlineResponse2004Code95 Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2005Data implements ModelInterface, ArrayAccess
+class InlineResponse2004Code95 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_5_data';
+    protected static $swaggerModelName = 'inline_response_200_4_code95';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,13 +56,8 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'float',
-        'code' => 'string',
-        'name' => 'string',
-        'description' => 'string',
-        'selling_price' => 'float',
-        'vat' => 'float',
-        'vat_code' => 'float'
+        'practice' => 'int',
+        'theory' => 'int'
     ];
 
     /**
@@ -71,13 +66,8 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'code' => null,
-        'name' => null,
-        'description' => null,
-        'selling_price' => null,
-        'vat' => null,
-        'vat_code' => null
+        'practice' => null,
+        'theory' => null
     ];
 
     /**
@@ -107,13 +97,8 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'code' => 'code',
-        'name' => 'name',
-        'description' => 'description',
-        'selling_price' => 'selling_price',
-        'vat' => 'vat',
-        'vat_code' => 'vat_code'
+        'practice' => 'practice',
+        'theory' => 'theory'
     ];
 
     /**
@@ -122,13 +107,8 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'code' => 'setCode',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'selling_price' => 'setSellingPrice',
-        'vat' => 'setVat',
-        'vat_code' => 'setVatCode'
+        'practice' => 'setPractice',
+        'theory' => 'setTheory'
     ];
 
     /**
@@ -137,13 +117,8 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'code' => 'getCode',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'selling_price' => 'getSellingPrice',
-        'vat' => 'getVat',
-        'vat_code' => 'getVatCode'
+        'practice' => 'getPractice',
+        'theory' => 'getTheory'
     ];
 
     /**
@@ -204,13 +179,8 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['selling_price'] = isset($data['selling_price']) ? $data['selling_price'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
+        $this->container['practice'] = isset($data['practice']) ? $data['practice'] : null;
+        $this->container['theory'] = isset($data['theory']) ? $data['theory'] : null;
     }
 
     /**
@@ -222,6 +192,12 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['practice'] === null) {
+            $invalidProperties[] = "'practice' can't be null";
+        }
+        if ($this->container['theory'] === null) {
+            $invalidProperties[] = "'theory' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -238,169 +214,49 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets practice
      *
-     * @return float
+     * @return int
      */
-    public function getId()
+    public function getPractice()
     {
-        return $this->container['id'];
+        return $this->container['practice'];
     }
 
     /**
-     * Sets id
+     * Sets practice
      *
-     * @param float $id id
+     * @param int $practice practice
      *
      * @return $this
      */
-    public function setId($id)
+    public function setPractice($practice)
     {
-        $this->container['id'] = $id;
+        $this->container['practice'] = $practice;
 
         return $this;
     }
 
     /**
-     * Gets code
+     * Gets theory
      *
-     * @return string
+     * @return int
      */
-    public function getCode()
+    public function getTheory()
     {
-        return $this->container['code'];
+        return $this->container['theory'];
     }
 
     /**
-     * Sets code
+     * Sets theory
      *
-     * @param string $code code
+     * @param int $theory theory
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setTheory($theory)
     {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets selling_price
-     *
-     * @return float
-     */
-    public function getSellingPrice()
-    {
-        return $this->container['selling_price'];
-    }
-
-    /**
-     * Sets selling_price
-     *
-     * @param float $selling_price selling_price
-     *
-     * @return $this
-     */
-    public function setSellingPrice($selling_price)
-    {
-        $this->container['selling_price'] = $selling_price;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat
-     *
-     * @return float
-     */
-    public function getVat()
-    {
-        return $this->container['vat'];
-    }
-
-    /**
-     * Sets vat
-     *
-     * @param float $vat vat
-     *
-     * @return $this
-     */
-    public function setVat($vat)
-    {
-        $this->container['vat'] = $vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat_code
-     *
-     * @return float
-     */
-    public function getVatCode()
-    {
-        return $this->container['vat_code'];
-    }
-
-    /**
-     * Sets vat_code
-     *
-     * @param float $vat_code vat_code
-     *
-     * @return $this
-     */
-    public function setVatCode($vat_code)
-    {
-        $this->container['vat_code'] = $vat_code;
+        $this->container['theory'] = $theory;
 
         return $this;
     }

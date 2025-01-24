@@ -95,7 +95,7 @@ class LocationApi
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2006
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2007
      */
     public function viewLocationDetail($location_id)
     {
@@ -112,11 +112,11 @@ class LocationApi
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
     public function viewLocationDetailWithHttpInfo($location_id)
     {
-        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2006';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2007';
         $request = $this->viewLocationDetailRequest($location_id);
 
         try {
@@ -168,7 +168,7 @@ class LocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\YellowWave\SwaggerClient\Model\InlineResponse2006',
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2007',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class LocationApi
      */
     public function viewLocationDetailAsyncWithHttpInfo($location_id)
     {
-        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2006';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2007';
         $request = $this->viewLocationDetailRequest($location_id);
 
         return $this->client

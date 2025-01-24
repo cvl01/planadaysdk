@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2005Data
+ * InlineResponse2004Costs
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2005Data Class Doc Comment
+ * InlineResponse2004Costs Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2005Data implements ModelInterface, ArrayAccess
+class InlineResponse2004Costs implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_5_data';
+    protected static $swaggerModelName = 'inline_response_200_4_costs';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,13 +56,9 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'float',
-        'code' => 'string',
-        'name' => 'string',
-        'description' => 'string',
-        'selling_price' => 'float',
-        'vat' => 'float',
-        'vat_code' => 'float'
+        'user' => '',
+        'vat' => 'int',
+        'vat_code' => 'int'
     ];
 
     /**
@@ -71,11 +67,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'code' => null,
-        'name' => null,
-        'description' => null,
-        'selling_price' => null,
+        'user' => null,
         'vat' => null,
         'vat_code' => null
     ];
@@ -107,11 +99,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'code' => 'code',
-        'name' => 'name',
-        'description' => 'description',
-        'selling_price' => 'selling_price',
+        'user' => 'user',
         'vat' => 'vat',
         'vat_code' => 'vat_code'
     ];
@@ -122,11 +110,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'code' => 'setCode',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'selling_price' => 'setSellingPrice',
+        'user' => 'setUser',
         'vat' => 'setVat',
         'vat_code' => 'setVatCode'
     ];
@@ -137,11 +121,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'code' => 'getCode',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'selling_price' => 'getSellingPrice',
+        'user' => 'getUser',
         'vat' => 'getVat',
         'vat_code' => 'getVatCode'
     ];
@@ -204,11 +184,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['selling_price'] = isset($data['selling_price']) ? $data['selling_price'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
         $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
     }
@@ -222,6 +198,15 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['user'] === null) {
+            $invalidProperties[] = "'user' can't be null";
+        }
+        if ($this->container['vat'] === null) {
+            $invalidProperties[] = "'vat' can't be null";
+        }
+        if ($this->container['vat_code'] === null) {
+            $invalidProperties[] = "'vat_code' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -238,121 +223,25 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets user
      *
-     * @return float
+     * @return 
      */
-    public function getId()
+    public function getUser()
     {
-        return $this->container['id'];
+        return $this->container['user'];
     }
 
     /**
-     * Sets id
+     * Sets user
      *
-     * @param float $id id
+     * @param  $user user
      *
      * @return $this
      */
-    public function setId($id)
+    public function setUser($user)
     {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets code
-     *
-     * @return string
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param string $code code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets selling_price
-     *
-     * @return float
-     */
-    public function getSellingPrice()
-    {
-        return $this->container['selling_price'];
-    }
-
-    /**
-     * Sets selling_price
-     *
-     * @param float $selling_price selling_price
-     *
-     * @return $this
-     */
-    public function setSellingPrice($selling_price)
-    {
-        $this->container['selling_price'] = $selling_price;
+        $this->container['user'] = $user;
 
         return $this;
     }
@@ -360,7 +249,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     /**
      * Gets vat
      *
-     * @return float
+     * @return int
      */
     public function getVat()
     {
@@ -370,7 +259,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     /**
      * Sets vat
      *
-     * @param float $vat vat
+     * @param int $vat vat
      *
      * @return $this
      */
@@ -384,7 +273,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     /**
      * Gets vat_code
      *
-     * @return float
+     * @return int
      */
     public function getVatCode()
     {
@@ -394,7 +283,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     /**
      * Sets vat_code
      *
-     * @param float $vat_code vat_code
+     * @param int $vat_code vat_code
      *
      * @return $this
      */

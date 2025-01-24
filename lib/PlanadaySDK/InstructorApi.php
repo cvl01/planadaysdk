@@ -1048,7 +1048,7 @@ class InstructorApi
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2005
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2006
      */
     public function viewListOfInstructors($offset, $limit)
     {
@@ -1066,11 +1066,11 @@ class InstructorApi
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
     public function viewListOfInstructorsWithHttpInfo($offset, $limit)
     {
-        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2005';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2006';
         $request = $this->viewListOfInstructorsRequest($offset, $limit);
 
         try {
@@ -1122,7 +1122,7 @@ class InstructorApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\YellowWave\SwaggerClient\Model\InlineResponse2005',
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1166,7 +1166,7 @@ class InstructorApi
      */
     public function viewListOfInstructorsAsyncWithHttpInfo($offset, $limit)
     {
-        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2005';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2006';
         $request = $this->viewListOfInstructorsRequest($offset, $limit);
 
         return $this->client

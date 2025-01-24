@@ -56,9 +56,26 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\YellowWave\SwaggerClient\Model\InlineResponse2003Meta',
-        'data' => '\YellowWave\SwaggerClient\Model\InlineResponse2004Data[]',
-        'links' => '\YellowWave\SwaggerClient\Model\InlineResponse2003Links'
+        'href' => 'string',
+        'id' => 'int',
+        'code' => '',
+        'name' => 'string',
+        'description' => '',
+        'status' => 'string',
+        'date' => '\DateTime',
+        'date_finish_before' => '\DateTime',
+        'start_time' => 'string',
+        'end_time' => 'string',
+        'locations' => 'object[]',
+        'instructors' => '\YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate[]',
+        'users' => '\YellowWave\SwaggerClient\Model\InlineResponse2004Users',
+        'costs' => '\YellowWave\SwaggerClient\Model\InlineResponse2004Costs',
+        'has_code95' => 'int',
+        'code95' => '\YellowWave\SwaggerClient\Model\InlineResponse2004Code95',
+        'is_elearning' => 'int',
+        'visible' => 'bool',
+        'labels' => 'string[]',
+        'attributes' => 'map[string,\YellowWave\SwaggerClient\Model\InlineResponse2002Attributes]'
     ];
 
     /**
@@ -67,9 +84,26 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'meta' => null,
-        'data' => null,
-        'links' => null
+        'href' => 'uri',
+        'id' => null,
+        'code' => null,
+        'name' => null,
+        'description' => null,
+        'status' => null,
+        'date' => 'date',
+        'date_finish_before' => 'date',
+        'start_time' => null,
+        'end_time' => null,
+        'locations' => null,
+        'instructors' => null,
+        'users' => null,
+        'costs' => null,
+        'has_code95' => null,
+        'code95' => null,
+        'is_elearning' => null,
+        'visible' => null,
+        'labels' => null,
+        'attributes' => null
     ];
 
     /**
@@ -99,9 +133,26 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'meta' => 'meta',
-        'data' => 'data',
-        'links' => 'links'
+        'href' => 'href',
+        'id' => 'id',
+        'code' => 'code',
+        'name' => 'name',
+        'description' => 'description',
+        'status' => 'status',
+        'date' => 'date',
+        'date_finish_before' => 'date_finish_before',
+        'start_time' => 'start_time',
+        'end_time' => 'end_time',
+        'locations' => 'locations',
+        'instructors' => 'instructors',
+        'users' => 'users',
+        'costs' => 'costs',
+        'has_code95' => 'has_code95',
+        'code95' => 'code95',
+        'is_elearning' => 'is_elearning',
+        'visible' => 'visible',
+        'labels' => 'labels',
+        'attributes' => 'attributes'
     ];
 
     /**
@@ -110,9 +161,26 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'meta' => 'setMeta',
-        'data' => 'setData',
-        'links' => 'setLinks'
+        'href' => 'setHref',
+        'id' => 'setId',
+        'code' => 'setCode',
+        'name' => 'setName',
+        'description' => 'setDescription',
+        'status' => 'setStatus',
+        'date' => 'setDate',
+        'date_finish_before' => 'setDateFinishBefore',
+        'start_time' => 'setStartTime',
+        'end_time' => 'setEndTime',
+        'locations' => 'setLocations',
+        'instructors' => 'setInstructors',
+        'users' => 'setUsers',
+        'costs' => 'setCosts',
+        'has_code95' => 'setHasCode95',
+        'code95' => 'setCode95',
+        'is_elearning' => 'setIsElearning',
+        'visible' => 'setVisible',
+        'labels' => 'setLabels',
+        'attributes' => 'setAttributes'
     ];
 
     /**
@@ -121,9 +189,26 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'meta' => 'getMeta',
-        'data' => 'getData',
-        'links' => 'getLinks'
+        'href' => 'getHref',
+        'id' => 'getId',
+        'code' => 'getCode',
+        'name' => 'getName',
+        'description' => 'getDescription',
+        'status' => 'getStatus',
+        'date' => 'getDate',
+        'date_finish_before' => 'getDateFinishBefore',
+        'start_time' => 'getStartTime',
+        'end_time' => 'getEndTime',
+        'locations' => 'getLocations',
+        'instructors' => 'getInstructors',
+        'users' => 'getUsers',
+        'costs' => 'getCosts',
+        'has_code95' => 'getHasCode95',
+        'code95' => 'getCode95',
+        'is_elearning' => 'getIsElearning',
+        'visible' => 'getVisible',
+        'labels' => 'getLabels',
+        'attributes' => 'getAttributes'
     ];
 
     /**
@@ -184,9 +269,26 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['meta'] = isset($data['meta']) ? $data['meta'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['href'] = isset($data['href']) ? $data['href'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
+        $this->container['date_finish_before'] = isset($data['date_finish_before']) ? $data['date_finish_before'] : null;
+        $this->container['start_time'] = isset($data['start_time']) ? $data['start_time'] : null;
+        $this->container['end_time'] = isset($data['end_time']) ? $data['end_time'] : null;
+        $this->container['locations'] = isset($data['locations']) ? $data['locations'] : null;
+        $this->container['instructors'] = isset($data['instructors']) ? $data['instructors'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['costs'] = isset($data['costs']) ? $data['costs'] : null;
+        $this->container['has_code95'] = isset($data['has_code95']) ? $data['has_code95'] : null;
+        $this->container['code95'] = isset($data['code95']) ? $data['code95'] : null;
+        $this->container['is_elearning'] = isset($data['is_elearning']) ? $data['is_elearning'] : null;
+        $this->container['visible'] = isset($data['visible']) ? $data['visible'] : null;
+        $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
+        $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
     }
 
     /**
@@ -198,6 +300,66 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['href'] === null) {
+            $invalidProperties[] = "'href' can't be null";
+        }
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['date'] === null) {
+            $invalidProperties[] = "'date' can't be null";
+        }
+        if ($this->container['date_finish_before'] === null) {
+            $invalidProperties[] = "'date_finish_before' can't be null";
+        }
+        if ($this->container['start_time'] === null) {
+            $invalidProperties[] = "'start_time' can't be null";
+        }
+        if ($this->container['end_time'] === null) {
+            $invalidProperties[] = "'end_time' can't be null";
+        }
+        if ($this->container['locations'] === null) {
+            $invalidProperties[] = "'locations' can't be null";
+        }
+        if ($this->container['instructors'] === null) {
+            $invalidProperties[] = "'instructors' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
+        if ($this->container['costs'] === null) {
+            $invalidProperties[] = "'costs' can't be null";
+        }
+        if ($this->container['has_code95'] === null) {
+            $invalidProperties[] = "'has_code95' can't be null";
+        }
+        if ($this->container['code95'] === null) {
+            $invalidProperties[] = "'code95' can't be null";
+        }
+        if ($this->container['is_elearning'] === null) {
+            $invalidProperties[] = "'is_elearning' can't be null";
+        }
+        if ($this->container['visible'] === null) {
+            $invalidProperties[] = "'visible' can't be null";
+        }
+        if ($this->container['labels'] === null) {
+            $invalidProperties[] = "'labels' can't be null";
+        }
+        if ($this->container['attributes'] === null) {
+            $invalidProperties[] = "'attributes' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -214,73 +376,481 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets meta
+     * Gets href
      *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2003Meta
+     * @return string
      */
-    public function getMeta()
+    public function getHref()
     {
-        return $this->container['meta'];
+        return $this->container['href'];
     }
 
     /**
-     * Sets meta
+     * Sets href
      *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2003Meta $meta meta
+     * @param string $href href
      *
      * @return $this
      */
-    public function setMeta($meta)
+    public function setHref($href)
     {
-        $this->container['meta'] = $meta;
+        $this->container['href'] = $href;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets id
      *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2004Data[]
+     * @return int
      */
-    public function getData()
+    public function getId()
     {
-        return $this->container['data'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets data
+     * Sets id
      *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2004Data[] $data data
+     * @param int $id id
      *
      * @return $this
      */
-    public function setData($data)
+    public function setId($id)
     {
-        $this->container['data'] = $data;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets links
+     * Gets code
      *
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2003Links
+     * @return 
      */
-    public function getLinks()
+    public function getCode()
     {
-        return $this->container['links'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets links
+     * Sets code
      *
-     * @param \YellowWave\SwaggerClient\Model\InlineResponse2003Links $links links
+     * @param  $code code
      *
      * @return $this
      */
-    public function setLinks($links)
+    public function setCode($code)
     {
-        $this->container['links'] = $links;
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return 
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param  $description description
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param string $status status
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->container['date'];
+    }
+
+    /**
+     * Sets date
+     *
+     * @param \DateTime $date date
+     *
+     * @return $this
+     */
+    public function setDate($date)
+    {
+        $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_finish_before
+     *
+     * @return \DateTime
+     */
+    public function getDateFinishBefore()
+    {
+        return $this->container['date_finish_before'];
+    }
+
+    /**
+     * Sets date_finish_before
+     *
+     * @param \DateTime $date_finish_before date_finish_before
+     *
+     * @return $this
+     */
+    public function setDateFinishBefore($date_finish_before)
+    {
+        $this->container['date_finish_before'] = $date_finish_before;
+
+        return $this;
+    }
+
+    /**
+     * Gets start_time
+     *
+     * @return string
+     */
+    public function getStartTime()
+    {
+        return $this->container['start_time'];
+    }
+
+    /**
+     * Sets start_time
+     *
+     * @param string $start_time start_time
+     *
+     * @return $this
+     */
+    public function setStartTime($start_time)
+    {
+        $this->container['start_time'] = $start_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets end_time
+     *
+     * @return string
+     */
+    public function getEndTime()
+    {
+        return $this->container['end_time'];
+    }
+
+    /**
+     * Sets end_time
+     *
+     * @param string $end_time end_time
+     *
+     * @return $this
+     */
+    public function setEndTime($end_time)
+    {
+        $this->container['end_time'] = $end_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets locations
+     *
+     * @return object[]
+     */
+    public function getLocations()
+    {
+        return $this->container['locations'];
+    }
+
+    /**
+     * Sets locations
+     *
+     * @param object[] $locations locations
+     *
+     * @return $this
+     */
+    public function setLocations($locations)
+    {
+        $this->container['locations'] = $locations;
+
+        return $this;
+    }
+
+    /**
+     * Gets instructors
+     *
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate[]
+     */
+    public function getInstructors()
+    {
+        return $this->container['instructors'];
+    }
+
+    /**
+     * Sets instructors
+     *
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2002Coursetemplate[] $instructors instructors
+     *
+     * @return $this
+     */
+    public function setInstructors($instructors)
+    {
+        $this->container['instructors'] = $instructors;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2004Users
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2004Users $users users
+     *
+     * @return $this
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets costs
+     *
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2004Costs
+     */
+    public function getCosts()
+    {
+        return $this->container['costs'];
+    }
+
+    /**
+     * Sets costs
+     *
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2004Costs $costs costs
+     *
+     * @return $this
+     */
+    public function setCosts($costs)
+    {
+        $this->container['costs'] = $costs;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_code95
+     *
+     * @return int
+     */
+    public function getHasCode95()
+    {
+        return $this->container['has_code95'];
+    }
+
+    /**
+     * Sets has_code95
+     *
+     * @param int $has_code95 has_code95
+     *
+     * @return $this
+     */
+    public function setHasCode95($has_code95)
+    {
+        $this->container['has_code95'] = $has_code95;
+
+        return $this;
+    }
+
+    /**
+     * Gets code95
+     *
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2004Code95
+     */
+    public function getCode95()
+    {
+        return $this->container['code95'];
+    }
+
+    /**
+     * Sets code95
+     *
+     * @param \YellowWave\SwaggerClient\Model\InlineResponse2004Code95 $code95 code95
+     *
+     * @return $this
+     */
+    public function setCode95($code95)
+    {
+        $this->container['code95'] = $code95;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_elearning
+     *
+     * @return int
+     */
+    public function getIsElearning()
+    {
+        return $this->container['is_elearning'];
+    }
+
+    /**
+     * Sets is_elearning
+     *
+     * @param int $is_elearning is_elearning
+     *
+     * @return $this
+     */
+    public function setIsElearning($is_elearning)
+    {
+        $this->container['is_elearning'] = $is_elearning;
+
+        return $this;
+    }
+
+    /**
+     * Gets visible
+     *
+     * @return bool
+     */
+    public function getVisible()
+    {
+        return $this->container['visible'];
+    }
+
+    /**
+     * Sets visible
+     *
+     * @param bool $visible visible
+     *
+     * @return $this
+     */
+    public function setVisible($visible)
+    {
+        $this->container['visible'] = $visible;
+
+        return $this;
+    }
+
+    /**
+     * Gets labels
+     *
+     * @return string[]
+     */
+    public function getLabels()
+    {
+        return $this->container['labels'];
+    }
+
+    /**
+     * Sets labels
+     *
+     * @param string[] $labels labels
+     *
+     * @return $this
+     */
+    public function setLabels($labels)
+    {
+        $this->container['labels'] = $labels;
+
+        return $this;
+    }
+
+    /**
+     * Gets attributes
+     *
+     * @return map[string,\YellowWave\SwaggerClient\Model\InlineResponse2002Attributes]
+     */
+    public function getAttributes()
+    {
+        return $this->container['attributes'];
+    }
+
+    /**
+     * Sets attributes
+     *
+     * @param map[string,\YellowWave\SwaggerClient\Model\InlineResponse2002Attributes] $attributes attributes
+     *
+     * @return $this
+     */
+    public function setAttributes($attributes)
+    {
+        $this->container['attributes'] = $attributes;
 
         return $this;
     }

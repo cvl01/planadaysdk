@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2005Data
+ * InlineResponse2007Address
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2005Data Class Doc Comment
+ * InlineResponse2007Address Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2005Data implements ModelInterface, ArrayAccess
+class InlineResponse2007Address implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_5_data';
+    protected static $swaggerModelName = 'inline_response_200_7_address';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,13 +56,15 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'float',
-        'code' => 'string',
-        'name' => 'string',
-        'description' => 'string',
-        'selling_price' => 'float',
-        'vat' => 'float',
-        'vat_code' => 'float'
+        'street_1' => '',
+        'street_2' => '',
+        'housenumber' => 'float',
+        'housenumber_extension' => '',
+        'zipcode' => 'string',
+        'city' => 'string',
+        'country' => 'string',
+        'lat' => 'float',
+        'lng' => 'float'
     ];
 
     /**
@@ -71,13 +73,15 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'code' => null,
-        'name' => null,
-        'description' => null,
-        'selling_price' => null,
-        'vat' => null,
-        'vat_code' => null
+        'street_1' => null,
+        'street_2' => null,
+        'housenumber' => null,
+        'housenumber_extension' => null,
+        'zipcode' => null,
+        'city' => null,
+        'country' => null,
+        'lat' => null,
+        'lng' => null
     ];
 
     /**
@@ -107,13 +111,15 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'code' => 'code',
-        'name' => 'name',
-        'description' => 'description',
-        'selling_price' => 'selling_price',
-        'vat' => 'vat',
-        'vat_code' => 'vat_code'
+        'street_1' => 'street_1',
+        'street_2' => 'street_2',
+        'housenumber' => 'housenumber',
+        'housenumber_extension' => 'housenumber_extension',
+        'zipcode' => 'zipcode',
+        'city' => 'city',
+        'country' => 'country',
+        'lat' => 'lat',
+        'lng' => 'lng'
     ];
 
     /**
@@ -122,13 +128,15 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'code' => 'setCode',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'selling_price' => 'setSellingPrice',
-        'vat' => 'setVat',
-        'vat_code' => 'setVatCode'
+        'street_1' => 'setStreet1',
+        'street_2' => 'setStreet2',
+        'housenumber' => 'setHousenumber',
+        'housenumber_extension' => 'setHousenumberExtension',
+        'zipcode' => 'setZipcode',
+        'city' => 'setCity',
+        'country' => 'setCountry',
+        'lat' => 'setLat',
+        'lng' => 'setLng'
     ];
 
     /**
@@ -137,13 +145,15 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'code' => 'getCode',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'selling_price' => 'getSellingPrice',
-        'vat' => 'getVat',
-        'vat_code' => 'getVatCode'
+        'street_1' => 'getStreet1',
+        'street_2' => 'getStreet2',
+        'housenumber' => 'getHousenumber',
+        'housenumber_extension' => 'getHousenumberExtension',
+        'zipcode' => 'getZipcode',
+        'city' => 'getCity',
+        'country' => 'getCountry',
+        'lat' => 'getLat',
+        'lng' => 'getLng'
     ];
 
     /**
@@ -204,13 +214,15 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['selling_price'] = isset($data['selling_price']) ? $data['selling_price'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
+        $this->container['street_1'] = isset($data['street_1']) ? $data['street_1'] : null;
+        $this->container['street_2'] = isset($data['street_2']) ? $data['street_2'] : null;
+        $this->container['housenumber'] = isset($data['housenumber']) ? $data['housenumber'] : null;
+        $this->container['housenumber_extension'] = isset($data['housenumber_extension']) ? $data['housenumber_extension'] : null;
+        $this->container['zipcode'] = isset($data['zipcode']) ? $data['zipcode'] : null;
+        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['lat'] = isset($data['lat']) ? $data['lat'] : null;
+        $this->container['lng'] = isset($data['lng']) ? $data['lng'] : null;
     }
 
     /**
@@ -238,169 +250,217 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets street_1
      *
-     * @return float
+     * @return 
      */
-    public function getId()
+    public function getStreet1()
     {
-        return $this->container['id'];
+        return $this->container['street_1'];
     }
 
     /**
-     * Sets id
+     * Sets street_1
      *
-     * @param float $id id
+     * @param  $street_1 street_1
      *
      * @return $this
      */
-    public function setId($id)
+    public function setStreet1($street_1)
     {
-        $this->container['id'] = $id;
+        $this->container['street_1'] = $street_1;
 
         return $this;
     }
 
     /**
-     * Gets code
+     * Gets street_2
+     *
+     * @return 
+     */
+    public function getStreet2()
+    {
+        return $this->container['street_2'];
+    }
+
+    /**
+     * Sets street_2
+     *
+     * @param  $street_2 street_2
+     *
+     * @return $this
+     */
+    public function setStreet2($street_2)
+    {
+        $this->container['street_2'] = $street_2;
+
+        return $this;
+    }
+
+    /**
+     * Gets housenumber
+     *
+     * @return float
+     */
+    public function getHousenumber()
+    {
+        return $this->container['housenumber'];
+    }
+
+    /**
+     * Sets housenumber
+     *
+     * @param float $housenumber housenumber
+     *
+     * @return $this
+     */
+    public function setHousenumber($housenumber)
+    {
+        $this->container['housenumber'] = $housenumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets housenumber_extension
+     *
+     * @return 
+     */
+    public function getHousenumberExtension()
+    {
+        return $this->container['housenumber_extension'];
+    }
+
+    /**
+     * Sets housenumber_extension
+     *
+     * @param  $housenumber_extension housenumber_extension
+     *
+     * @return $this
+     */
+    public function setHousenumberExtension($housenumber_extension)
+    {
+        $this->container['housenumber_extension'] = $housenumber_extension;
+
+        return $this;
+    }
+
+    /**
+     * Gets zipcode
      *
      * @return string
      */
-    public function getCode()
+    public function getZipcode()
     {
-        return $this->container['code'];
+        return $this->container['zipcode'];
     }
 
     /**
-     * Sets code
+     * Sets zipcode
      *
-     * @param string $code code
+     * @param string $zipcode zipcode
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setZipcode($zipcode)
     {
-        $this->container['code'] = $code;
+        $this->container['zipcode'] = $zipcode;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets city
      *
      * @return string
      */
-    public function getName()
+    public function getCity()
     {
-        return $this->container['name'];
+        return $this->container['city'];
     }
 
     /**
-     * Sets name
+     * Sets city
      *
-     * @param string $name name
+     * @param string $city city
      *
      * @return $this
      */
-    public function setName($name)
+    public function setCity($city)
     {
-        $this->container['name'] = $name;
+        $this->container['city'] = $city;
 
         return $this;
     }
 
     /**
-     * Gets description
+     * Gets country
      *
      * @return string
      */
-    public function getDescription()
+    public function getCountry()
     {
-        return $this->container['description'];
+        return $this->container['country'];
     }
 
     /**
-     * Sets description
+     * Sets country
      *
-     * @param string $description description
+     * @param string $country country
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setCountry($country)
     {
-        $this->container['description'] = $description;
+        $this->container['country'] = $country;
 
         return $this;
     }
 
     /**
-     * Gets selling_price
+     * Gets lat
      *
      * @return float
      */
-    public function getSellingPrice()
+    public function getLat()
     {
-        return $this->container['selling_price'];
+        return $this->container['lat'];
     }
 
     /**
-     * Sets selling_price
+     * Sets lat
      *
-     * @param float $selling_price selling_price
+     * @param float $lat lat
      *
      * @return $this
      */
-    public function setSellingPrice($selling_price)
+    public function setLat($lat)
     {
-        $this->container['selling_price'] = $selling_price;
+        $this->container['lat'] = $lat;
 
         return $this;
     }
 
     /**
-     * Gets vat
+     * Gets lng
      *
      * @return float
      */
-    public function getVat()
+    public function getLng()
     {
-        return $this->container['vat'];
+        return $this->container['lng'];
     }
 
     /**
-     * Sets vat
+     * Sets lng
      *
-     * @param float $vat vat
+     * @param float $lng lng
      *
      * @return $this
      */
-    public function setVat($vat)
+    public function setLng($lng)
     {
-        $this->container['vat'] = $vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat_code
-     *
-     * @return float
-     */
-    public function getVatCode()
-    {
-        return $this->container['vat_code'];
-    }
-
-    /**
-     * Sets vat_code
-     *
-     * @param float $vat_code vat_code
-     *
-     * @return $this
-     */
-    public function setVatCode($vat_code)
-    {
-        $this->container['vat_code'] = $vat_code;
+        $this->container['lng'] = $lng;
 
         return $this;
     }

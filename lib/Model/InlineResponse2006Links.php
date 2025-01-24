@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2005Data
+ * InlineResponse2006Links
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2005Data Class Doc Comment
+ * InlineResponse2006Links Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2005Data implements ModelInterface, ArrayAccess
+class InlineResponse2006Links implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_5_data';
+    protected static $swaggerModelName = 'inline_response_200_6_links';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,13 +56,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'float',
-        'code' => 'string',
-        'name' => 'string',
-        'description' => 'string',
-        'selling_price' => 'float',
-        'vat' => 'float',
-        'vat_code' => 'float'
+        'self' => 'string',
+        'first' => 'string',
+        'last' => 'string',
+        'previous' => 'string',
+        'next' => 'string'
     ];
 
     /**
@@ -71,13 +69,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'code' => null,
-        'name' => null,
-        'description' => null,
-        'selling_price' => null,
-        'vat' => null,
-        'vat_code' => null
+        'self' => null,
+        'first' => null,
+        'last' => null,
+        'previous' => null,
+        'next' => null
     ];
 
     /**
@@ -107,13 +103,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'code' => 'code',
-        'name' => 'name',
-        'description' => 'description',
-        'selling_price' => 'selling_price',
-        'vat' => 'vat',
-        'vat_code' => 'vat_code'
+        'self' => 'self',
+        'first' => 'first',
+        'last' => 'last',
+        'previous' => 'previous',
+        'next' => 'next'
     ];
 
     /**
@@ -122,13 +116,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'code' => 'setCode',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'selling_price' => 'setSellingPrice',
-        'vat' => 'setVat',
-        'vat_code' => 'setVatCode'
+        'self' => 'setSelf',
+        'first' => 'setFirst',
+        'last' => 'setLast',
+        'previous' => 'setPrevious',
+        'next' => 'setNext'
     ];
 
     /**
@@ -137,13 +129,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'code' => 'getCode',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'selling_price' => 'getSellingPrice',
-        'vat' => 'getVat',
-        'vat_code' => 'getVatCode'
+        'self' => 'getSelf',
+        'first' => 'getFirst',
+        'last' => 'getLast',
+        'previous' => 'getPrevious',
+        'next' => 'getNext'
     ];
 
     /**
@@ -204,13 +194,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['selling_price'] = isset($data['selling_price']) ? $data['selling_price'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
+        $this->container['self'] = isset($data['self']) ? $data['self'] : null;
+        $this->container['first'] = isset($data['first']) ? $data['first'] : null;
+        $this->container['last'] = isset($data['last']) ? $data['last'] : null;
+        $this->container['previous'] = isset($data['previous']) ? $data['previous'] : null;
+        $this->container['next'] = isset($data['next']) ? $data['next'] : null;
     }
 
     /**
@@ -238,169 +226,121 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
-     *
-     * @return float
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param float $id id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets code
+     * Gets self
      *
      * @return string
      */
-    public function getCode()
+    public function getSelf()
     {
-        return $this->container['code'];
+        return $this->container['self'];
     }
 
     /**
-     * Sets code
+     * Sets self
      *
-     * @param string $code code
+     * @param string $self self
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setSelf($self)
     {
-        $this->container['code'] = $code;
+        $this->container['self'] = $self;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets first
      *
      * @return string
      */
-    public function getName()
+    public function getFirst()
     {
-        return $this->container['name'];
+        return $this->container['first'];
     }
 
     /**
-     * Sets name
+     * Sets first
      *
-     * @param string $name name
+     * @param string $first first
      *
      * @return $this
      */
-    public function setName($name)
+    public function setFirst($first)
     {
-        $this->container['name'] = $name;
+        $this->container['first'] = $first;
 
         return $this;
     }
 
     /**
-     * Gets description
+     * Gets last
      *
      * @return string
      */
-    public function getDescription()
+    public function getLast()
     {
-        return $this->container['description'];
+        return $this->container['last'];
     }
 
     /**
-     * Sets description
+     * Sets last
      *
-     * @param string $description description
+     * @param string $last last
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setLast($last)
     {
-        $this->container['description'] = $description;
+        $this->container['last'] = $last;
 
         return $this;
     }
 
     /**
-     * Gets selling_price
+     * Gets previous
      *
-     * @return float
+     * @return string
      */
-    public function getSellingPrice()
+    public function getPrevious()
     {
-        return $this->container['selling_price'];
+        return $this->container['previous'];
     }
 
     /**
-     * Sets selling_price
+     * Sets previous
      *
-     * @param float $selling_price selling_price
+     * @param string $previous previous
      *
      * @return $this
      */
-    public function setSellingPrice($selling_price)
+    public function setPrevious($previous)
     {
-        $this->container['selling_price'] = $selling_price;
+        $this->container['previous'] = $previous;
 
         return $this;
     }
 
     /**
-     * Gets vat
+     * Gets next
      *
-     * @return float
+     * @return string
      */
-    public function getVat()
+    public function getNext()
     {
-        return $this->container['vat'];
+        return $this->container['next'];
     }
 
     /**
-     * Sets vat
+     * Sets next
      *
-     * @param float $vat vat
+     * @param string $next next
      *
      * @return $this
      */
-    public function setVat($vat)
+    public function setNext($next)
     {
-        $this->container['vat'] = $vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat_code
-     *
-     * @return float
-     */
-    public function getVatCode()
-    {
-        return $this->container['vat_code'];
-    }
-
-    /**
-     * Sets vat_code
-     *
-     * @param float $vat_code vat_code
-     *
-     * @return $this
-     */
-    public function setVatCode($vat_code)
-    {
-        $this->container['vat_code'] = $vat_code;
+        $this->container['next'] = $next;
 
         return $this;
     }

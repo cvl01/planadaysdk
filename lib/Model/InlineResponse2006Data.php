@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2005Data
+ * InlineResponse2006Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \YellowWave\SwaggerClient\ObjectSerializer;
 
 /**
- * InlineResponse2005Data Class Doc Comment
+ * InlineResponse2006Data Class Doc Comment
  *
  * @category Class
  * @package  YellowWave\SwaggerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2005Data implements ModelInterface, ArrayAccess
+class InlineResponse2006Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_5_data';
+    protected static $swaggerModelName = 'inline_response_200_6_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'float',
-        'code' => 'string',
-        'name' => 'string',
-        'description' => 'string',
-        'selling_price' => 'float',
-        'vat' => 'float',
-        'vat_code' => 'float'
+        'last_name' => 'string',
+        'first_name' => 'string',
+        'initials' => '',
+        'prefix' => '',
+        'href' => 'string'
     ];
 
     /**
@@ -72,12 +71,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'code' => null,
-        'name' => null,
-        'description' => null,
-        'selling_price' => null,
-        'vat' => null,
-        'vat_code' => null
+        'last_name' => null,
+        'first_name' => null,
+        'initials' => null,
+        'prefix' => null,
+        'href' => null
     ];
 
     /**
@@ -108,12 +106,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'code' => 'code',
-        'name' => 'name',
-        'description' => 'description',
-        'selling_price' => 'selling_price',
-        'vat' => 'vat',
-        'vat_code' => 'vat_code'
+        'last_name' => 'last_name',
+        'first_name' => 'first_name',
+        'initials' => 'initials',
+        'prefix' => 'prefix',
+        'href' => 'href'
     ];
 
     /**
@@ -123,12 +120,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'code' => 'setCode',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'selling_price' => 'setSellingPrice',
-        'vat' => 'setVat',
-        'vat_code' => 'setVatCode'
+        'last_name' => 'setLastName',
+        'first_name' => 'setFirstName',
+        'initials' => 'setInitials',
+        'prefix' => 'setPrefix',
+        'href' => 'setHref'
     ];
 
     /**
@@ -138,12 +134,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'code' => 'getCode',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'selling_price' => 'getSellingPrice',
-        'vat' => 'getVat',
-        'vat_code' => 'getVatCode'
+        'last_name' => 'getLastName',
+        'first_name' => 'getFirstName',
+        'initials' => 'getInitials',
+        'prefix' => 'getPrefix',
+        'href' => 'getHref'
     ];
 
     /**
@@ -205,12 +200,11 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['selling_price'] = isset($data['selling_price']) ? $data['selling_price'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['vat_code'] = isset($data['vat_code']) ? $data['vat_code'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
+        $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
+        $this->container['href'] = isset($data['href']) ? $data['href'] : null;
     }
 
     /**
@@ -222,6 +216,24 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['last_name'] === null) {
+            $invalidProperties[] = "'last_name' can't be null";
+        }
+        if ($this->container['first_name'] === null) {
+            $invalidProperties[] = "'first_name' can't be null";
+        }
+        if ($this->container['initials'] === null) {
+            $invalidProperties[] = "'initials' can't be null";
+        }
+        if ($this->container['prefix'] === null) {
+            $invalidProperties[] = "'prefix' can't be null";
+        }
+        if ($this->container['href'] === null) {
+            $invalidProperties[] = "'href' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -262,145 +274,121 @@ class InlineResponse2005Data implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets code
+     * Gets last_name
      *
      * @return string
      */
-    public function getCode()
+    public function getLastName()
     {
-        return $this->container['code'];
+        return $this->container['last_name'];
     }
 
     /**
-     * Sets code
+     * Sets last_name
      *
-     * @param string $code code
+     * @param string $last_name last_name
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setLastName($last_name)
     {
-        $this->container['code'] = $code;
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets first_name
      *
      * @return string
      */
-    public function getName()
+    public function getFirstName()
     {
-        return $this->container['name'];
+        return $this->container['first_name'];
     }
 
     /**
-     * Sets name
+     * Sets first_name
      *
-     * @param string $name name
+     * @param string $first_name first_name
      *
      * @return $this
      */
-    public function setName($name)
+    public function setFirstName($first_name)
     {
-        $this->container['name'] = $name;
+        $this->container['first_name'] = $first_name;
 
         return $this;
     }
 
     /**
-     * Gets description
+     * Gets initials
+     *
+     * @return 
+     */
+    public function getInitials()
+    {
+        return $this->container['initials'];
+    }
+
+    /**
+     * Sets initials
+     *
+     * @param  $initials initials
+     *
+     * @return $this
+     */
+    public function setInitials($initials)
+    {
+        $this->container['initials'] = $initials;
+
+        return $this;
+    }
+
+    /**
+     * Gets prefix
+     *
+     * @return 
+     */
+    public function getPrefix()
+    {
+        return $this->container['prefix'];
+    }
+
+    /**
+     * Sets prefix
+     *
+     * @param  $prefix prefix
+     *
+     * @return $this
+     */
+    public function setPrefix($prefix)
+    {
+        $this->container['prefix'] = $prefix;
+
+        return $this;
+    }
+
+    /**
+     * Gets href
      *
      * @return string
      */
-    public function getDescription()
+    public function getHref()
     {
-        return $this->container['description'];
+        return $this->container['href'];
     }
 
     /**
-     * Sets description
+     * Sets href
      *
-     * @param string $description description
+     * @param string $href href
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setHref($href)
     {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets selling_price
-     *
-     * @return float
-     */
-    public function getSellingPrice()
-    {
-        return $this->container['selling_price'];
-    }
-
-    /**
-     * Sets selling_price
-     *
-     * @param float $selling_price selling_price
-     *
-     * @return $this
-     */
-    public function setSellingPrice($selling_price)
-    {
-        $this->container['selling_price'] = $selling_price;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat
-     *
-     * @return float
-     */
-    public function getVat()
-    {
-        return $this->container['vat'];
-    }
-
-    /**
-     * Sets vat
-     *
-     * @param float $vat vat
-     *
-     * @return $this
-     */
-    public function setVat($vat)
-    {
-        $this->container['vat'] = $vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat_code
-     *
-     * @return float
-     */
-    public function getVatCode()
-    {
-        return $this->container['vat_code'];
-    }
-
-    /**
-     * Sets vat_code
-     *
-     * @param float $vat_code vat_code
-     *
-     * @return $this
-     */
-    public function setVatCode($vat_code)
-    {
-        $this->container['vat_code'] = $vat_code;
+        $this->container['href'] = $href;
 
         return $this;
     }

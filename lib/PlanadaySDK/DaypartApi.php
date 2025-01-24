@@ -95,11 +95,12 @@ class DaypartApi
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2004
      */
     public function viewDaypartDetail($daypart_id)
     {
-        $this->viewDaypartDetailWithHttpInfo($daypart_id);
+        list($response) = $this->viewDaypartDetailWithHttpInfo($daypart_id);
+        return $response;
     }
 
     /**
@@ -111,11 +112,11 @@ class DaypartApi
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function viewDaypartDetailWithHttpInfo($daypart_id)
     {
-        $returnType = '';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2004';
         $request = $this->viewDaypartDetailRequest($daypart_id);
 
         try {
@@ -146,10 +147,32 @@ class DaypartApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2004',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -187,14 +210,28 @@ class DaypartApi
      */
     public function viewDaypartDetailAsyncWithHttpInfo($daypart_id)
     {
-        $returnType = '';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2004';
         $request = $this->viewDaypartDetailRequest($daypart_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -252,11 +289,11 @@ class DaypartApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -327,7 +364,7 @@ class DaypartApi
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \YellowWave\SwaggerClient\Model\InlineResponse2004
+     * @return \YellowWave\SwaggerClient\Model\InlineResponse2005
      */
     public function viewListOfMaterialsOfADaypart($daypart_id, $offset, $limit)
     {
@@ -346,11 +383,11 @@ class DaypartApi
      *
      * @throws \YellowWave\SwaggerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \YellowWave\SwaggerClient\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function viewListOfMaterialsOfADaypartWithHttpInfo($daypart_id, $offset, $limit)
     {
-        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2004';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2005';
         $request = $this->viewListOfMaterialsOfADaypartRequest($daypart_id, $offset, $limit);
 
         try {
@@ -402,7 +439,7 @@ class DaypartApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\YellowWave\SwaggerClient\Model\InlineResponse2004',
+                        '\YellowWave\SwaggerClient\Model\InlineResponse2005',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -448,7 +485,7 @@ class DaypartApi
      */
     public function viewListOfMaterialsOfADaypartAsyncWithHttpInfo($daypart_id, $offset, $limit)
     {
-        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2004';
+        $returnType = '\YellowWave\SwaggerClient\Model\InlineResponse2005';
         $request = $this->viewListOfMaterialsOfADaypartRequest($daypart_id, $offset, $limit);
 
         return $this->client
